@@ -1,0 +1,6 @@
+==> Running stage: pilot
+
+==> Stage pilot: FAIL
+    Wall-clock: 0.3s
+    LLM calls: 0  (cache hits: 0)
+    Report: /Users/salih/Desktop/HAPI_SIMULATION2/results/pilot/STAGE_REPORT.md

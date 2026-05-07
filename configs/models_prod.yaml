@@ -1,0 +1,103 @@
+# Prod model config: scientific run on A100 80 GB.
+# Used in Stages 3-8.
+#
+# Spec §4.1 originally named:
+#   agent   = Qwen/Qwen3.6-35B-A3B-FP8       (research-context, may not exist on HF)
+#   patient = google/gemma-4-26B-A4B-it      (CONFIRMED real, see HF)
+#   judge   = microsoft/Phi-4                (real)
+#
+# Per the OPEN_QUESTIONS.md #31 lesson (Qwen/Qwen3-4B-Instruct → -2507 suffix
+# was needed), the prod-stack names are likely the same — verify before
+# launching. The defaults below use the closest confirmed-real models. Spec
+# names are kept under `original_spec_id` for traceability and `fallback_id`
+# is a last-resort known-good model. **If a model 404s on launch:** update
+# `id` to the value from huggingface.co; the rest of the codebase doesn't
+# care which exact checkpoint loads.
+
+backend: server
+
+models:
+  agent:
+    # MoE 30B with 3B active. FP8 variant ~ 21 GB on GPU. Fits comfortably
+    # alongside patient on a single A100 80 GB. Spec asked for 35B-A3B but
+    # the publicly available Qwen MoE in this size range is Qwen3-30B-A3B
+    # (released April 2025; FP8 variants typical from Qwen).
+    id: Qwen/Qwen3-30B-A3B-Instruct-2507-FP8
+    original_spec_id: Qwen/Qwen3.6-35B-A3B-FP8
+    fallback_id: Qwen/Qwen3-30B-A3B-Instruct-2507
+    role: agent
+    port: 8001
+    gpu_memory_utilization: 0.45
+    max_model_len: 8192
+    extra_args:
+      # `--enforce-eager` disables vLLM's torch.compile / CUDA-graph path.
+      # Per spec §11 (and OPEN_QUESTIONS #30) prod stays in eager mode for
+      # bit-deterministic generation across vLLM patch versions. Side effect:
+      # we never enter the Triton inductor compile path that needs gcc +
+      # python3-dev + libcuda headers (see OPEN_QUESTIONS #42).
+      - "--enforce-eager"
+      - "--seed"
+      - "0"
+
+  patient:
+    # Per spec §4.1 — Gemma-4 26B-A4B-it does exist on HuggingFace
+    # (https://huggingface.co/google/gemma-4-26B-A4B-it). MoE with 4B active
+    # per token. At bf16 the full weights are ~ 52 GB which won't co-fit
+    # with the FP8 agent on a single A100 80 GB, so we run it with
+    # **runtime FP8 quantization** via vLLM's `--quantization fp8` flag.
+    # That brings effective resident weight ≈ 26 GB.
+    #
+    # If `--quantization fp8` doesn't apply to this architecture cleanly,
+    # the orchestrator's `vllm_patient.log` will say so; fall back to
+    # `google/gemma-3-27b-it` at bf16 (also too big for naive co-fit but
+    # works with `--quantization fp8`), or further to `google/gemma-3-12b-it`.
+    id: google/gemma-4-26B-A4B-it
+    original_spec_id: google/gemma-4-26B-A4B-it
+    fallback_id: google/gemma-3-27b-it
+    role: patient
+    port: 8002
+    # Patient gets the bigger slice of the GPU since FP8 runtime weights are
+    # ~ 26 GB. With agent at 0.45 (≈ 36 GB) the sum is 0.85 — within the
+    # 0.90 ServerPool budget, ~ 12 GB headroom for KV + framework.
+    gpu_memory_utilization: 0.40
+    max_model_len: 8192
+    # Cold-boot Gemma 4 with runtime FP8 quantization takes ~6 minutes:
+    # 48 GB safetensors → bf16 → Marlin FP8 conversion is sequential per
+    # shard, and Ampere's lack of native FP8 support means every weight
+    # block goes through Marlin's CPU-side compression path. The default
+    # 300 s timeout was tripping ~50 s before "Application startup
+    # complete". 600 s gives comfortable headroom; the 0.90 GPU-budget
+    # check still catches genuine OOM-on-load failures fast (vLLM exits
+    # before the timeout in those cases). See OPEN_QUESTIONS #45.
+    health_timeout_seconds: 600
+    extra_args:
+      - "--quantization"
+      - "fp8"
+      - "--enforce-eager"
+      # Gemma 4 is a multimodal architecture with heterogeneous head dims;
+      # vLLM auto-disables chunked-MM input and then requires
+      # `max_num_batched_tokens >= max_tokens_per_mm_item` (= 2496 for this
+      # model). Default is 2048 and the engine fails to boot. We bump to
+      # 8192 (= max_model_len) so MM-budget checks always pass; the patient
+      # is a text-only simulator so the MM encoder cache is provisioned but
+      # never used. See OPEN_QUESTIONS #43.
+      - "--max-num-batched-tokens"
+      - "8192"
+      - "--seed"
+      - "0"
+
+  judge:
+    # Phi-4 14B dense, bf16 ~ 28 GB — runs alone after agent + patient
+    # servers stop in Stage 6 (probes). Different lab from agent
+    # (Microsoft) and patient (Google) — clean three-lab judge per
+    # spec §8.2.
+    id: microsoft/Phi-4
+    original_spec_id: microsoft/Phi-4
+    fallback_id: microsoft/Phi-4
+    role: judge
+    port: 8003
+    gpu_memory_utilization: 0.85
+    max_model_len: 16384
+    extra_args:
+      - "--seed"
+      - "0"

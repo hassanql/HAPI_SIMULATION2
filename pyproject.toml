@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools>=80", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "a2-sim"
+version = "0.0.1"
+description = "A2 Simulation: adversarial-principal attribute extraction in human-querying diagnostic agents"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{ name = "A2 Simulation Authors" }]
+license = { text = "MIT" }
+
+# Stages 0–2 base dependencies. Pure-Python or have Python-3.11 wheels with
+# no GPU/CUDA hard requirement. Exact pins are in `requirements.txt`; the
+# floor constraints here document the minimum versions we have validated.
+dependencies = [
+    "pydantic>=2.10",
+    "diskcache>=5.6",
+    "numpy>=2.2",
+    "pyyaml>=6.0.2",
+    "rich>=13.9",
+    "tenacity>=9.0",
+    "scikit-learn>=1.6",
+    "scipy>=1.15",
+    "openai>=1.50",
+    # Stage 1 onwards needs the HuggingFace dataset toolchain. These are pure
+    # pyarrow/requests under the hood — they have universal wheels and do not
+    # pull in torch.
+    "datasets>=2.18.0",
+    "huggingface-hub>=0.25",
+]
+
+[project.optional-dependencies]
+# Activated only on the GCP A100 VM from Stage 3 onwards.
+prod = [
+    "vllm>=0.19.0",
+    "torch>=2.4.0",
+    "transformers>=4.46.0",
+    "hydra-core>=1.3.2",
+    "matplotlib>=3.9",
+    "pandas>=2.2",
+]
+
+dev = [
+    "pytest>=8.3",
+    "pytest-asyncio>=0.24",
+]
+
+[tool.setuptools.packages.find]
+include = ["src*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-q --tb=short"
+filterwarnings = [
+    "ignore::DeprecationWarning",
+    "ignore::UserWarning",
+]

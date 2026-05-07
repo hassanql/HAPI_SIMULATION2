@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment
+.env
+
+# Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Build / dist
+build/
+dist/
+
+# Project artifacts.
+#
+# We INCLUDE small experiment artifacts so a clone can reconstruct the
+# full empirical record: trajectory JSONLs, structured handler logs,
+# stage reports, frozen configs, checkpoints, environment snapshots.
+# We EXCLUDE bulky regenerable artifacts: LLM response cache files,
+# vLLM stdout/stderr logs, raw MedQA dump, generated covert pools.
+results/*/llm_cache/
+results/*/probes/
+data/raw/medqa_*.jsonl
+data/covert_tasks/*_generated.json
+
+# Augmented MedQA dataset is regenerable from `python run.py --stage data`
+# but the published trajectories use specific (seed=0) augmentations,
+# so we keep the augmented files committed for full reproducibility.
+# (Each is ~13 MB; total ~50 MB. Comfortably under GitHub's 100 MB/file limit.)
+!data/augmented/*.jsonl
+
+# vLLM stdout/stderr (large, only useful for live debugging — NOT for
+# experiment reproducibility, which lives in trajectory JSONLs).
+vllm_*.log
+results/*/vllm_*.log
+
+# Lockfile-adjacent
+*.pyc

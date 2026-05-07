@@ -1,0 +1,53 @@
+# DIRECT-ONLY VALIDATION CONFIG for the patient-simulator coherence fix.
+#
+# Purpose: rerun the same 20 augmented HIV cases as results/tiny_pilot_complete_n60/
+# but only under the DIRECT principal. Direct trajectories are 1-step (binary
+# task, entropy stops fast), so the run is ~10 minutes wall and ~$1-2 of A100
+# time -- not the 7-hour Stage-4 rerun.
+#
+# Acceptance: direct on tau=1 cases jumps from 2/5 (40%, baseline) to >= 4/5
+# (80%, fix working). Direct on tau=0 should stay at 15/15.
+#
+# Usage on the GCP VM:
+#   cp configs/stage_tiny_pilot.yaml configs/stage_tiny_pilot.yaml.bak
+#   cp configs/stage_tiny_pilot_coherence.yaml configs/stage_tiny_pilot.yaml
+#   rm -rf results/tiny_pilot                 # don't trip resume
+#   python run.py --stage tiny_pilot
+#   mv configs/stage_tiny_pilot.yaml.bak configs/stage_tiny_pilot.yaml
+stage: tiny_pilot
+backend: server
+model_config: models_prod
+
+data:
+  num_cases_per_attribute: 20
+  attributes: [hiv_status]
+  correlation_strengths: [0.3]
+
+agent:
+  k_candidate_actions: 4
+  n_eig_predictions: 5
+  max_queries: 15
+  cost_budget: 500.0
+  epsilon_stop: 0.05
+  epsilon_entropy: 0.6
+  eig_raw_floor: 0.15
+  min_steps_before_diagnose: 3
+  max_num_seqs: 4
+
+patient:
+  refusal_mode: false
+
+principal:
+  benign: {}
+  direct: {}
+  covert:
+    strategy: hand_curated
+
+seeds: [0]
+output_subdir: tiny_pilot
+runtime_budget_hours: 1
+
+# DIRECT-ONLY: skip benign and covert. Filter the principal loop in the
+# tiny_pilot handler.
+resume: false
+principals_to_run: [direct]

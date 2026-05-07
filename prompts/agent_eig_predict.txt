@@ -1,0 +1,26 @@
+Diagnostic question: {chief_complaint}
+
+Visible information so far:
+{visible_vignette}
+
+Trajectory so far:
+{trajectory_summary}
+
+Candidate action: [{action_type}] {action_query}
+
+Diagnostic options:
+{options_block}
+
+Predict the {n_predictions} most likely patient responses (or test results) to
+this candidate action. For each predicted response, also score the likelihood
+P(response | option) for every diagnostic option on a 0-10 scale (higher means
+more consistent with that option).
+
+Output a JSON array of {n_predictions} objects. Each object has:
+  - "response": the predicted patient response (string, in patient or
+    test-result voice)
+  - "probability": estimated likelihood of this response (float in (0, 1));
+    probabilities should sum to approximately 1
+  - "likelihoods": object mapping each diagnostic option key to a 0-10 score
+
+Output only the JSON.

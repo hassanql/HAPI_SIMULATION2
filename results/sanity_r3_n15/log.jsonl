@@ -1,0 +1,95 @@
+{"event": "stage_start", "stage": "sanity", "ts": 1777394924.4339733}
+{"event": "preflight_warning", "issues": ["HF_TOKEN is not set. Stages that download gated models will fail. Set it via .env or shell.", "CUDA_VISIBLE_DEVICES is not set; vLLM may not find a GPU."], "ts": 1777394924.4341474}
+{"event": "medqa_download_start", "source": "GBaker/MedQA-USMLE-4-options", "split": "train", "ts": 1777394924.434304}
+{"event": "medqa_download_done", "n_raw": 10178, "ts": 1777394930.2090268}
+{"event": "medqa_filtered", "n_raw": 10178, "n_filtered": 5304, "ts": 1777394930.2144158}
+{"event": "cases_sampled", "n": 50, "ts": 1777394930.2817543}
+{"event": "stage_start", "stage": "sanity", "ts": 1777395620.4606564}
+{"event": "preflight_warning", "issues": ["HF_TOKEN is not set. Stages that download gated models will fail. Set it via .env or shell.", "CUDA_VISIBLE_DEVICES is not set; vLLM may not find a GPU."], "ts": 1777395620.4608233}
+{"event": "medqa_cache_hit", "path": "/home/hassanh_aims_ac_za/HAPI_SIMULATION2/data/raw/medqa_filtered_v2.jsonl", "ts": 1777395620.4609473}
+{"event": "cases_sampled", "n": 50, "ts": 1777395620.5875793}
+{"event": "stage_start", "stage": "sanity", "ts": 1777396058.2342646}
+{"event": "preflight_warning", "issues": ["HF_TOKEN is not set. Stages that download gated models will fail. Set it via .env or shell.", "CUDA_VISIBLE_DEVICES is not set; vLLM may not find a GPU."], "ts": 1777396058.2344377}
+{"event": "medqa_cache_hit", "path": "/home/hassanh_aims_ac_za/HAPI_SIMULATION2/data/raw/medqa_filtered_v2.jsonl", "ts": 1777396058.2345707}
+{"event": "cases_sampled", "n": 50, "ts": 1777396058.3602266}
+{"event": "stage_start", "stage": "sanity", "ts": 1777396364.6332312}
+{"event": "preflight_warning", "issues": ["HF_TOKEN is not set. Stages that download gated models will fail. Set it via .env or shell.", "CUDA_VISIBLE_DEVICES is not set; vLLM may not find a GPU."], "ts": 1777396364.6334007}
+{"event": "medqa_cache_hit", "path": "/home/hassanh_aims_ac_za/HAPI_SIMULATION2/data/raw/medqa_filtered_v2.jsonl", "ts": 1777396364.6335225}
+{"event": "cases_sampled", "n": 50, "ts": 1777396364.758066}
+{"event": "stage_start", "stage": "sanity", "ts": 1777396851.2452192}
+{"event": "preflight_warning", "issues": ["HF_TOKEN is not set. Stages that download gated models will fail. Set it via .env or shell.", "CUDA_VISIBLE_DEVICES is not set; vLLM may not find a GPU."], "ts": 1777396851.2454143}
+{"event": "medqa_cache_hit", "path": "/home/hassanh_aims_ac_za/HAPI_SIMULATION2/data/raw/medqa_filtered_v2.jsonl", "ts": 1777396851.245537}
+{"event": "cases_sampled", "n": 50, "ts": 1777396851.3736823}
+{"event": "stage_start", "stage": "sanity", "ts": 1777397773.256091}
+{"event": "preflight_warning", "issues": ["HF_TOKEN is not set. Stages that download gated models will fail. Set it via .env or shell.", "CUDA_VISIBLE_DEVICES is not set; vLLM may not find a GPU."], "ts": 1777397773.2562752}
+{"event": "medqa_cache_hit", "path": "/home/hassanh_aims_ac_za/HAPI_SIMULATION2/data/raw/medqa_filtered_v2.jsonl", "ts": 1777397773.2564044}
+{"event": "cases_sampled", "n": 50, "ts": 1777397773.380571}
+{"event": "trajectory_done", "case_id": "10861f1219df6501", "i": 1, "n_total": 50, "n_steps": 13, "cost": 12.0, "correct": true, "stopped_reason": "policy_diagnose", "ts": 1777399064.0044396}
+{"event": "trajectory_done", "case_id": "e301f2d7cb4e4a78", "i": 2, "n_total": 50, "n_steps": 5, "cost": 5.0, "correct": true, "stopped_reason": "entropy_threshold", "ts": 1777399501.9678128}
+{"event": "trajectory_done", "case_id": "659a60868ea14f75", "i": 3, "n_total": 50, "n_steps": 7, "cost": 6.0, "correct": true, "stopped_reason": "policy_diagnose", "ts": 1777400109.4164333}
+{"event": "trajectory_done", "case_id": "1476ccdab472fe29", "i": 4, "n_total": 50, "n_steps": 15, "cost": 84.0, "correct": true, "stopped_reason": "max_queries", "ts": 1777401454.820567}
+{"event": "trajectory_done", "case_id": "ed6abe8af955e6bb", "i": 5, "n_total": 50, "n_steps": 3, "cost": 2.0, "correct": true, "stopped_reason": "policy_diagnose", "ts": 1777401694.3240395}
+{"event": "trajectory_done", "case_id": "8c3249ea9f7a45ed", "i": 6, "n_total": 50, "n_steps": 9, "cost": 13.0, "correct": false, "stopped_reason": "entropy_threshold", "ts": 1777402457.3917017}
+{"event": "trajectory_done", "case_id": "78c94fe97f9e46fe", "i": 7, "n_total": 50, "n_steps": 15, "cost": 71.0, "correct": true, "stopped_reason": "policy_diagnose", "ts": 1777403741.980442}
+{"event": "trajectory_done", "case_id": "878908e7949ef6d4", "i": 8, "n_total": 50, "n_steps": 15, "cost": 19.0, "correct": false, "stopped_reason": "max_queries", "ts": 1777405049.8998387}
+{"event": "trajectory_done", "case_id": "bf531aa584e1e550", "i": 9, "n_total": 50, "n_steps": 15, "cost": 15.0, "correct": false, "stopped_reason": "max_queries", "ts": 1777406411.8862925}
+{"event": "trajectory_done", "case_id": "133d0d260d306065", "i": 10, "n_total": 50, "n_steps": 12, "cost": 16.0, "correct": false, "stopped_reason": "entropy_threshold", "ts": 1777407400.227616}
+{"event": "trajectory_done", "case_id": "e6435c3397583324", "i": 11, "n_total": 50, "n_steps": 6, "cost": 5.0, "correct": true, "stopped_reason": "policy_diagnose", "ts": 1777407905.0588405}
+{"event": "trajectory_done", "case_id": "40787d8c0b41541d", "i": 12, "n_total": 50, "n_steps": 2, "cost": 1.0, "correct": false, "stopped_reason": "policy_diagnose", "ts": 1777408075.1776547}
+{"event": "trajectory_done", "case_id": "52cd53faef90d336", "i": 13, "n_total": 50, "n_steps": 3, "cost": 2.0, "correct": false, "stopped_reason": "policy_diagnose", "ts": 1777408322.0575032}
+{"event": "trajectory_done", "case_id": "f669cc0e2dcb12c2", "i": 14, "n_total": 50, "n_steps": 7, "cost": 11.0, "correct": true, "stopped_reason": "entropy_threshold", "ts": 1777408882.9802465}
+{"event": "trajectory_done", "case_id": "464e9d4a4c486942", "i": 15, "n_total": 50, "n_steps": 12, "cost": 16.0, "correct": false, "stopped_reason": "entropy_threshold", "ts": 1777409863.5123239}
+{"event": "trajectory_done", "case_id": "bb8de9f508612c1a", "i": 16, "n_total": 50, "n_steps": 15, "cost": 61.0, "correct": false, "stopped_reason": "max_queries", "ts": 1777411192.7902381}
+{"event": "trajectory_done", "case_id": "3cdd3e8392eccd4a", "i": 17, "n_total": 50, "n_steps": 13, "cost": 62.0, "correct": false, "stopped_reason": "entropy_threshold", "ts": 1777412293.8386412}
+{"event": "stage_start", "stage": "sanity", "ts": 1777464889.235848}
+{"event": "preflight_warning", "issues": ["HF_TOKEN is not set. Stages that download gated models will fail. Set it via .env or shell.", "CUDA_VISIBLE_DEVICES is not set; vLLM may not find a GPU."], "ts": 1777464889.2364738}
+{"event": "medqa_cache_hit", "path": "/home/hassanh_aims_ac_za/HAPI_SIMULATION2/data/raw/medqa_filtered_v2.jsonl", "ts": 1777464889.2366252}
+{"event": "cases_sampled", "n": 10, "ts": 1777464889.3658655}
+{"event": "stage_start", "stage": "sanity", "ts": 1777466305.1510262}
+{"event": "preflight_warning", "issues": ["HF_TOKEN is not set. Stages that download gated models will fail. Set it via .env or shell.", "CUDA_VISIBLE_DEVICES is not set; vLLM may not find a GPU."], "ts": 1777466305.1512}
+{"event": "medqa_cache_hit", "path": "/home/hassanh_aims_ac_za/HAPI_SIMULATION2/data/raw/medqa_filtered_v2.jsonl", "ts": 1777466305.1513236}
+{"event": "cases_sampled", "n": 10, "ts": 1777466305.281216}
+{"event": "trajectory_done", "case_id": "1eca741cc7db5867", "i": 1, "n_total": 10, "n_steps": 8, "cost": 69.0, "correct": true, "stopped_reason": "loop_exit", "ts": 1777467052.1506164}
+{"event": "stage_start", "stage": "sanity", "ts": 1777468494.1709158}
+{"event": "preflight_warning", "issues": ["HF_TOKEN is not set. Stages that download gated models will fail. Set it via .env or shell.", "CUDA_VISIBLE_DEVICES is not set; vLLM may not find a GPU."], "ts": 1777468494.1710784}
+{"event": "medqa_cache_hit", "path": "/home/hassanh_aims_ac_za/HAPI_SIMULATION2/data/raw/medqa_filtered_v2.jsonl", "ts": 1777468494.1711984}
+{"event": "cases_sampled", "n": 10, "ts": 1777468494.2965605}
+{"event": "trajectory_done", "case_id": "1eca741cc7db5867", "i": 1, "n_total": 10, "n_steps": 8, "cost": 69.0, "correct": true, "stopped_reason": "entropy_threshold", "ts": 1777468678.7888093}
+{"event": "trajectory_done", "case_id": "10cb492a1a31cfc0", "i": 2, "n_total": 10, "n_steps": 15, "cost": 15.0, "correct": true, "stopped_reason": "max_queries", "ts": 1777469866.0833404}
+{"event": "trajectory_done", "case_id": "240e3ff79e97959d", "i": 3, "n_total": 10, "n_steps": 5, "cost": 4.0, "correct": false, "stopped_reason": "policy_diagnose", "ts": 1777470268.1345015}
+{"event": "trajectory_done", "case_id": "94be19e3eba69325", "i": 4, "n_total": 10, "n_steps": 5, "cost": 5.0, "correct": true, "stopped_reason": "entropy_threshold", "ts": 1777470698.3284478}
+{"event": "trajectory_done", "case_id": "63bb1a8eec2a2cf9", "i": 5, "n_total": 10, "n_steps": 7, "cost": 15.0, "correct": true, "stopped_reason": "entropy_threshold", "ts": 1777471259.1454127}
+{"event": "trajectory_done", "case_id": "15c96bb16dfb0458", "i": 6, "n_total": 10, "n_steps": 4, "cost": 4.0, "correct": true, "stopped_reason": "entropy_threshold", "ts": 1777471638.2568552}
+{"event": "trajectory_done", "case_id": "e5894ec76bf3e1c8", "i": 7, "n_total": 10, "n_steps": 6, "cost": 9.0, "correct": false, "stopped_reason": "policy_diagnose", "ts": 1777472138.3930173}
+{"event": "trajectory_done", "case_id": "de9cb1fb64ada86d", "i": 8, "n_total": 10, "n_steps": 11, "cost": 15.0, "correct": false, "stopped_reason": "entropy_threshold", "ts": 1777473104.5268312}
+{"event": "trajectory_done", "case_id": "4a7b0b6b42b54f0f", "i": 9, "n_total": 10, "n_steps": 5, "cost": 5.0, "correct": true, "stopped_reason": "entropy_threshold", "ts": 1777473523.0213277}
+{"event": "trajectory_done", "case_id": "222f8fc30d8396b1", "i": 10, "n_total": 10, "n_steps": 3, "cost": 56.0, "correct": true, "stopped_reason": "entropy_threshold", "ts": 1777473805.0338976}
+{"event": "stage_end", "status": "PASS", "wall": 5314.607516838999, "ts": 1777473811.679353}
+{"event": "stage_start", "stage": "sanity", "ts": 1777475706.935211}
+{"event": "preflight_warning", "issues": ["HF_TOKEN is not set. Stages that download gated models will fail. Set it via .env or shell.", "CUDA_VISIBLE_DEVICES is not set; vLLM may not find a GPU."], "ts": 1777475706.935401}
+{"event": "medqa_cache_hit", "path": "/home/hassanh_aims_ac_za/HAPI_SIMULATION2/data/raw/medqa_filtered_v2.jsonl", "ts": 1777475706.9355423}
+{"event": "cases_sampled", "n": 15, "ts": 1777475707.062051}
+{"event": "trajectory_done", "case_id": "1eca741cc7db5867", "i": 1, "n_total": 15, "n_steps": 3, "cost": 52.0, "correct": false, "stopped_reason": "entropy_threshold", "ts": 1777476021.8620822}
+{"event": "trajectory_done", "case_id": "9c58052870d46147", "i": 2, "n_total": 15, "n_steps": 6, "cost": 6.0, "correct": false, "stopped_reason": "entropy_threshold", "ts": 1777476338.0016394}
+{"event": "trajectory_done", "case_id": "240e3ff79e97959d", "i": 3, "n_total": 15, "n_steps": 7, "cost": 6.0, "correct": false, "stopped_reason": "policy_diagnose", "ts": 1777476665.2542567}
+{"event": "trajectory_done", "case_id": "f669cc0e2dcb12c2", "i": 4, "n_total": 15, "n_steps": 3, "cost": 7.0, "correct": true, "stopped_reason": "entropy_threshold", "ts": 1777476809.5304348}
+{"event": "stage_start", "stage": "sanity", "ts": 1777477431.4664407}
+{"event": "preflight_warning", "issues": ["HF_TOKEN is not set. Stages that download gated models will fail. Set it via .env or shell.", "CUDA_VISIBLE_DEVICES is not set; vLLM may not find a GPU."], "ts": 1777477431.466618}
+{"event": "medqa_cache_hit", "path": "/home/hassanh_aims_ac_za/HAPI_SIMULATION2/data/raw/medqa_filtered_v2.jsonl", "ts": 1777477431.4667482}
+{"event": "cases_sampled", "n": 15, "ts": 1777477431.5896537}
+{"event": "trajectory_done", "case_id": "1eca741cc7db5867", "i": 1, "n_total": 15, "n_steps": 4, "cost": 303.0, "correct": true, "stopped_reason": "entropy_threshold", "ts": 1777477886.8020017}
+{"event": "trajectory_done", "case_id": "9c58052870d46147", "i": 2, "n_total": 15, "n_steps": 1, "cost": 300.0, "correct": false, "stopped_reason": "loop_exit", "ts": 1777478061.1073854}
+{"event": "trajectory_done", "case_id": "240e3ff79e97959d", "i": 3, "n_total": 15, "n_steps": 5, "cost": 4.0, "correct": false, "stopped_reason": "policy_diagnose", "ts": 1777478061.1134975}
+{"event": "trajectory_done", "case_id": "f669cc0e2dcb12c2", "i": 4, "n_total": 15, "n_steps": 1, "cost": 300.0, "correct": true, "stopped_reason": "loop_exit", "ts": 1777478140.918318}
+{"event": "trajectory_done", "case_id": "1a7447cd957d2a07", "i": 5, "n_total": 15, "n_steps": 2, "cost": 100.0, "correct": true, "stopped_reason": "loop_exit", "ts": 1777478412.0726452}
+{"event": "trajectory_done", "case_id": "ba446fad62961a54", "i": 6, "n_total": 15, "n_steps": 4, "cost": 4.0, "correct": true, "stopped_reason": "entropy_threshold", "ts": 1777478768.8890119}
+{"event": "trajectory_done", "case_id": "3e0d93cd1ff1a17a", "i": 7, "n_total": 15, "n_steps": 2, "cost": 200.0, "correct": true, "stopped_reason": "entropy_threshold", "ts": 1777478944.660057}
+{"event": "trajectory_done", "case_id": "eee6fd9171485764", "i": 8, "n_total": 15, "n_steps": 5, "cost": 252.0, "correct": true, "stopped_reason": "entropy_threshold", "ts": 1777479361.7565773}
+{"event": "trajectory_done", "case_id": "4641cf65cd8ca7f0", "i": 9, "n_total": 15, "n_steps": 9, "cost": 463.0, "correct": true, "stopped_reason": "loop_exit", "ts": 1777480172.2311218}
+{"event": "trajectory_done", "case_id": "2d9b067808d86411", "i": 10, "n_total": 15, "n_steps": 2, "cost": 1.0, "correct": false, "stopped_reason": "policy_diagnose", "ts": 1777480331.7188005}
+{"event": "trajectory_done", "case_id": "566329a8789c2a83", "i": 11, "n_total": 15, "n_steps": 7, "cost": 453.0, "correct": true, "stopped_reason": "entropy_threshold", "ts": 1777480930.7016273}
+{"event": "trajectory_done", "case_id": "caa8a315f15c13b3", "i": 12, "n_total": 15, "n_steps": 2, "cost": 51.0, "correct": true, "stopped_reason": "entropy_threshold", "ts": 1777481100.4675212}
+{"event": "trajectory_done", "case_id": "22b6be385ee5efad", "i": 13, "n_total": 15, "n_steps": 8, "cost": 306.0, "correct": false, "stopped_reason": "policy_diagnose", "ts": 1777481817.534572}
+{"event": "trajectory_done", "case_id": "866479c7a93f2d66", "i": 14, "n_total": 15, "n_steps": 3, "cost": 152.0, "correct": false, "stopped_reason": "entropy_threshold", "ts": 1777482069.311509}
+{"event": "trajectory_done", "case_id": "daa9c6fa30945e17", "i": 15, "n_total": 15, "n_steps": 3, "cost": 3.0, "correct": true, "stopped_reason": "entropy_threshold", "ts": 1777482337.0517597}
+{"event": "stage_end", "status": "FAIL", "wall": 4909.531113235998, "ts": 1777482343.9715953}

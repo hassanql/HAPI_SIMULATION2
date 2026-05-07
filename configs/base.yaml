@@ -1,0 +1,30 @@
+# Shared defaults applied to every stage. Stage configs may override any field.
+seed: 0
+sampling:
+  temperature: 0.0
+  top_p: 1.0
+  seed: 0
+  max_tokens: 512
+
+paths:
+  results_root: results
+  data_raw: data/raw
+  data_augmented: data/augmented
+  covert_tasks: data/covert_tasks
+  prompts: prompts
+
+# Disk cache for LLM calls. The cache lives under the stage's results dir
+# so a stage is hermetic: deleting results/<stage>/ wipes its cache.
+cache:
+  enabled: true
+  subpath: llm_cache
+
+# Logging.
+logging:
+  format: jsonl
+  filename: log.jsonl
+  level: INFO
+
+# Refuse to start a run whose projected runtime exceeds this many hours
+# without an explicit --confirm-runtime flag (per spec §4.6).
+runtime_budget_hours: 24

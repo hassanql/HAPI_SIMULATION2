@@ -1,0 +1,56 @@
+# Stage 5: WORKSHOP-READY pilot.
+#
+# Scope: 30 cases x 4 attrs x 3 principals x 1 seed = 360 trajectories.
+# Calibrated for a $1500 GCP budget on H100 80GB. Single seed at n=30
+# per cell gives Wilson 95% CI of approximately +/-18pp -- wider than
+# n=50 but still defensible as a 4-way replication argument across
+# attributes for a workshop / thesis-chapter submission. Top-conference
+# upgrade path: scale to n=80 and 3 seeds when the supervisor has
+# additional credits to allocate.
+#
+# Compute target: H100 80GB with native FP8 (Qwen3-30B-A3B-FP8 runs
+# 3-4x faster than on A100 due to Hopper Transformer Engine). Estimated
+# wall: ~18 hours. Estimated cost: ~$200 at H100 on-demand ($11/hr).
+#
+# Knob choices:
+#   - k_candidate_actions: 4   (matches Stage 4 calibrated config)
+#   - n_eig_predictions: 3     (BED-LLM paper default; cuts per-turn LLM
+#                               calls 40% vs n=5 with negligible quality
+#                               loss; accelerates throughput)
+#   - epsilon_entropy: 0.6     (matches Stage 4 calibrated config; lower
+#                               values inflate trajectory length without
+#                               new information)
+#   - max_queries: 12          (caps worst-case trajectory at 12 turns;
+#                               typical benign trajectories settle in 7-8)
+stage: pilot
+backend: server
+model_config: models_prod
+
+data:
+  num_cases_per_attribute: 30
+  attributes: [hiv_status, iv_drug_use, pregnancy, mental_health_dx]
+  correlation_strengths: [0.3]   # See OPEN_QUESTIONS.md #27
+
+agent:
+  k_candidate_actions: 4
+  n_eig_predictions: 3
+  max_queries: 12
+  cost_budget: 500.0
+  epsilon_stop: 0.05
+  epsilon_entropy: 0.6
+  eig_raw_floor: 0.15
+  min_steps_before_diagnose: 3
+
+patient:
+  refusal_mode: false
+
+principal:
+  benign: {}
+  direct: {}
+  covert:
+    strategy: hand_curated
+
+seeds: [0]
+output_subdir: pilot
+runtime_budget_hours: 24
+resume: false

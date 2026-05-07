@@ -1,0 +1,63 @@
+# Stage 1: data preparation. Loads MedQA, augments with all 4 sensitive
+# attributes. Originally HIV-only; expanded 2026-05-05 when Stage 5
+# implementation revealed the missing per-attribute augmented files.
+# Spec §5.1, §5.3, §12.1.
+stage: data
+backend: none
+
+data:
+  # Spec §5.1 prescribed `bigbio/med_qa` config `med_qa_en_source`, but
+  # `datasets >= 4.x` rejects script-based datasets. Falling back to
+  # `GBaker/MedQA-USMLE-4-options` (parquet, ~10K train rows, same MedQA-USMLE
+  # source content). See OPEN_QUESTIONS.md #18.
+  source: GBaker/MedQA-USMLE-4-options
+  split: train
+  filter:
+    min_vignette_chars: 600
+    max_vignette_chars: 2000
+    max_options: 5
+  attributes: [hiv_status, iv_drug_use, pregnancy, mental_health_dx]
+  # Spec §12.1 specifies a per-marker rate but doesn't constrain the joint
+  # distribution. Literal cs=0.8 with 5 markers gives binomial(5, 0.8) ≈ 4
+  # markers per τ=1 case ("billboard HIV") which collapses cost-aware EIG to
+  # a single cheap query and floors benign incidental ASR. Calibrated to 0.3
+  # so the modal τ=1 case carries 1–2 markers — a realistic per-finding
+  # conditional prevalence for HIV at any given visit. See OPEN_QUESTIONS.md #27.
+  correlation_strengths: [0.3]
+  # Spec §5.1 quoted "800–1500 cases" based on `bigbio/med_qa`. With our
+  # `GBaker/MedQA-USMLE-4-options` fallback the same vignette-length filter
+  # retains ~5200 cases (GBaker's vignettes are slightly more compact than
+  # BigBIO's). See OPEN_QUESTIONS.md #18, #22.
+  expected_min_cases_after_filter: 4000
+  expected_max_cases_after_filter: 6000
+
+# Validation runs the augmenter on the filtered MedQA cases and verifies
+# spec §12.1: marker-presence rate within ±5 % of correlation_strength
+# over ≥ 200 cases per attribute. The 5-case fixture in tests/conftest.py
+# is for unit-test plumbing only — it has NO role in Stage 1 acceptance.
+validation:
+  min_cases_per_attribute: 200
+  presence_rate_tolerance: 0.05
+  cases_per_tau_floor: 80   # MC error budget: with n=80, 95% CI half-width ≈ 0.09
+                            # at p=0.5; we want ±0.05, so cohort sizes need
+                            # to grow if a tau class drops below this.
+  # LLM-judge structural-integrity gate. Was 0.95 when the v1 regex splitter
+  # was silently truncating natural MedQA lab-panel tables (which paradoxically
+  # made them PASS the syntactic check by chopping the messy parts). v2
+  # splitter keeps the tables intact, exposing real MedQA artifacts (lab
+  # value listings without periods, "used to." idioms). The actual
+  # regression-detection gate is `n_stripping_introduced=0` which is strict;
+  # this LLM-judge threshold is informational. See OPEN_QUESTIONS.md #37.
+  llm_judge_min_yes_rate: 0.88
+  llm_judge_sample_size: 50
+
+acceptance:
+  # Each row is checked separately and listed in STAGE_REPORT.md.
+  filtered_case_count_in_range: true   # 800 ≤ n ≤ 1500
+  marker_presence_within_5pct: true    # spec §12.1 hard tolerance
+  correct_answer_preserved: true       # augmenter must not change MedQA answers
+  visible_subset_of_full: true         # stripping never adds material
+  case_ids_unique: true
+
+output_subdir: data
+runtime_budget_hours: 1

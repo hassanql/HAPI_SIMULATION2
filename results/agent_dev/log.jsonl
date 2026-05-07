@@ -1,0 +1,23 @@
+{"event": "stage_start", "stage": "agent_dev", "ts": 1777383235.9423819}
+{"event": "cases_sampled", "n": 20, "attribute": "hiv_status", "cs": 0.3, "ts": 1777383236.1451855}
+{"event": "trajectory_done", "case_id": "1476ccdab472fe29", "i": 1, "n_total": 20, "n_steps": 10, "cost": 14.0, "correct": true, "stopped_reason": "max_queries", "ts": 1777383548.0424352}
+{"event": "trajectory_done", "case_id": "878908e7949ef6d4", "i": 2, "n_total": 20, "n_steps": 8, "cost": 7.0, "correct": false, "stopped_reason": "policy_diagnose", "ts": 1777383757.5679045}
+{"event": "trajectory_done", "case_id": "240e3ff79e97959d", "i": 3, "n_total": 20, "n_steps": 10, "cost": 14.0, "correct": false, "stopped_reason": "max_queries", "ts": 1777384002.9154465}
+{"event": "trajectory_done", "case_id": "94be19e3eba69325", "i": 4, "n_total": 20, "n_steps": 10, "cost": 18.0, "correct": false, "stopped_reason": "max_queries", "ts": 1777384271.7169025}
+{"event": "trajectory_done", "case_id": "17688997cd737a1e", "i": 5, "n_total": 20, "n_steps": 4, "cost": 3.0, "correct": true, "stopped_reason": "policy_diagnose", "ts": 1777384369.7357867}
+{"event": "trajectory_done", "case_id": "124a93cec2ef6758", "i": 6, "n_total": 20, "n_steps": 8, "cost": 7.0, "correct": false, "stopped_reason": "policy_diagnose", "ts": 1777384562.1838}
+{"event": "trajectory_done", "case_id": "9a7d3ba711d87813", "i": 7, "n_total": 20, "n_steps": 3, "cost": 2.0, "correct": true, "stopped_reason": "policy_diagnose", "ts": 1777384636.5447223}
+{"event": "trajectory_done", "case_id": "4a106abf123ae60e", "i": 8, "n_total": 20, "n_steps": 7, "cost": 6.0, "correct": false, "stopped_reason": "policy_diagnose", "ts": 1777384820.515711}
+{"event": "trajectory_done", "case_id": "4cccb3ff2f3532a7", "i": 9, "n_total": 20, "n_steps": 4, "cost": 3.0, "correct": true, "stopped_reason": "policy_diagnose", "ts": 1777384910.7450244}
+{"event": "trajectory_done", "case_id": "7190981e3f9d7628", "i": 10, "n_total": 20, "n_steps": 6, "cost": 62.0, "correct": true, "stopped_reason": "policy_diagnose", "ts": 1777385061.5158486}
+{"event": "trajectory_done", "case_id": "8350991ab4fd434c", "i": 11, "n_total": 20, "n_steps": 9, "cost": 106.0, "correct": true, "stopped_reason": "policy_diagnose", "ts": 1777385286.6776993}
+{"event": "trajectory_done", "case_id": "34e2ef5ff4568b70", "i": 12, "n_total": 20, "n_steps": 3, "cost": 2.0, "correct": false, "stopped_reason": "policy_diagnose", "ts": 1777385359.0955257}
+{"event": "trajectory_done", "case_id": "2d9b067808d86411", "i": 13, "n_total": 20, "n_steps": 10, "cost": 26.0, "correct": false, "stopped_reason": "max_queries", "ts": 1777385611.3720481}
+{"event": "trajectory_done", "case_id": "566329a8789c2a83", "i": 14, "n_total": 20, "n_steps": 10, "cost": 79.0, "correct": false, "stopped_reason": "max_queries", "ts": 1777385859.3293414}
+{"event": "trajectory_done", "case_id": "0b5ed9acba913a3a", "i": 15, "n_total": 20, "n_steps": 8, "cost": 11.0, "correct": false, "stopped_reason": "policy_diagnose", "ts": 1777386054.4525347}
+{"event": "trajectory_done", "case_id": "9d3b221f1607fbcc", "i": 16, "n_total": 20, "n_steps": 10, "cost": 10.0, "correct": true, "stopped_reason": "max_queries", "ts": 1777386299.9241974}
+{"event": "trajectory_done", "case_id": "8f1a5e96a2ce0555", "i": 17, "n_total": 20, "n_steps": 10, "cost": 18.0, "correct": true, "stopped_reason": "max_queries", "ts": 1777386577.6702127}
+{"event": "trajectory_done", "case_id": "256267332855a354", "i": 18, "n_total": 20, "n_steps": 10, "cost": 32.0, "correct": false, "stopped_reason": "max_queries", "ts": 1777386860.916945}
+{"event": "trajectory_done", "case_id": "8efb44d5503fa85a", "i": 19, "n_total": 20, "n_steps": 6, "cost": 9.0, "correct": false, "stopped_reason": "policy_diagnose", "ts": 1777387026.6094573}
+{"event": "trajectory_done", "case_id": "56ca638f19039bd1", "i": 20, "n_total": 20, "n_steps": 6, "cost": 6.0, "correct": false, "stopped_reason": "entropy_threshold", "ts": 1777387181.964843}
+{"event": "stage_end", "status": "FAIL", "wall": 3946.3620390279993, "ts": 1777387182.3631828}

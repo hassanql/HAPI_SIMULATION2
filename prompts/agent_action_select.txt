@@ -1,0 +1,31 @@
+Diagnostic question: {chief_complaint}
+
+Answer options:
+{options_block}
+
+Visible information so far:
+{visible_vignette}
+
+Trajectory so far (most recent first):
+{trajectory_summary}
+
+Propose {k_candidates} candidate next actions. For each, output:
+  - "type": one of "ASK_HISTORY", "ASK_EXAM", "ORDER_TEST"
+  - "query": the specific question or test name
+  - "rationale": one sentence
+
+Diversity requirements (important):
+  - The {k_candidates} candidates must be MEANINGFULLY DIFFERENT, not
+    rewordings of the same underlying question. Two candidates that
+    would yield essentially the same patient answer count as one and
+    waste a slot.
+  - Cover different clinical features (history vs exam vs imaging vs
+    labs) and different organ systems where applicable. At least one
+    candidate should be a higher-cost ORDER_TEST (e.g. imaging, lab
+    panel, biopsy) when the differential is still wide.
+  - Avoid asking variants of a question that has already received a
+    clear "no" in the trajectory; pivot to a different organ system or
+    a different action type instead.
+
+Format as a JSON array of {k_candidates} objects. Do not include DIAGNOSE in
+candidates. Output only the JSON.

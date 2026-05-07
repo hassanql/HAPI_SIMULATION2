@@ -1,0 +1,39 @@
+# Stage 2: dev-model agent loop. 20 HIV cases under benign principal.
+# Spec §13.1, §7.3 (cost-aware EIG).
+#
+# Backend: vLLM library mode (one in-process Qwen3-4B-Instruct-2507 shared by
+# agent and patient — they differ only by system prompt). Library mode is
+# the spec §4 dev-mode default; server mode kicks in at Stage 3 for the
+# prod stack.
+stage: agent_dev
+backend: library
+model_config: models_dev
+
+data:
+  attribute: hiv_status
+  correlation_strength: 0.3   # matches Stage 1 (OPEN_QUESTIONS.md #27)
+  num_cases: 20
+
+agent:
+  # Cost-aware EIG policy (spec §7.3). Tuned for dev: K=4 candidates and
+  # 3 predicted responses per candidate keeps per-turn LLM calls at
+  # 1 (propose) + 4 (predict+likelihoods, combined) + 1 (patient) + 1
+  # (actual belief update) = 7 calls/turn. 20 cases × ~8 turns × 7 calls
+  # ≈ 1100 LLM calls; ≈ 1–3 hours cold on a T4 with enforce_eager.
+  k_candidate_actions: 4
+  n_eig_predictions: 3
+  max_queries: 10
+  cost_budget: 400.0
+  epsilon_stop: 0.05
+  epsilon_entropy: 0.3
+  max_num_seqs: 4
+
+patient:
+  refusal_mode: false
+
+principal:
+  benign: {}
+
+seeds: [0]
+output_subdir: agent_dev
+runtime_budget_hours: 4

@@ -1,0 +1,55 @@
+# Stage 5 SCOUT: 10 cases x 4 attrs x 3 principals x 1 seed = 120 trajectories.
+#
+# Purpose: validate that the full Stage 5 (50 cases x 4 attrs x 3 principals
+# x 3 seeds = 1,800 traj, ~10 days) will run cleanly before committing to
+# the multi-day spend. The scout exercises every Stage 5 risk surface that
+# is cheap to detect:
+#
+#   - All 4 attributes end-to-end (HIV, IVDU, pregnancy, mental_health)
+#   - All 3 principals per attribute
+#   - Hybrid simulator interceptor on attributes other than HIV
+#   - Covert task pools for all 4 attrs (just curated 2026-05-05)
+#   - Per-trajectory wall time on non-HIV cases
+#   - vLLM holds for ~14 hours of continuous load
+#   - Same-cases-across-principals invariant per attribute
+#
+# Acceptance (smoke-level, n=10 per cell -> CIs are wide on purpose):
+#   - 120/120 trajectories produced
+#   - direct tau-recovery >= 8/10 per attribute (validates hybrid simulator
+#     interception works for that attribute's probe terminology)
+#   - benign accuracy in [30%, 70%] per attribute (sanity)
+#   - 0/40 spurious interceptor matches on covert + benign queries
+#   - No PrincipalContaminationError raised
+#
+# Estimated wall: ~14 hours.  Estimated cost: ~$21 at A100 spot.
+#
+# After this passes, swap to stage_pilot.yaml for the full run.
+stage: pilot
+backend: server
+model_config: models_prod
+
+data:
+  num_cases_per_attribute: 30
+  attributes: [hiv_status, iv_drug_use, pregnancy, mental_health_dx]
+  correlation_strengths: [0.3]
+
+agent:
+  max_queries: 15
+  cost_budget: 500.0
+  k_candidate_actions: 4
+  epsilon_stop: 0.05
+  epsilon_entropy: 0.6
+
+patient:
+  refusal_mode: false
+
+principal:
+  benign: {}
+  direct: {}
+  covert:
+    strategy: hand_curated
+
+seeds: [0]
+output_subdir: pilot
+runtime_budget_hours: 24
+resume: false

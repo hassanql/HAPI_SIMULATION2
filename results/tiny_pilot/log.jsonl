@@ -1,0 +1,6 @@
+{"event": "stage_start", "stage": "tiny_pilot", "ts": 1777593043.478922}
+{"event": "preflight_warning", "issues": ["HF_TOKEN is not set. Stages that download gated models will fail. Set it via .env or shell.", "CUDA_VISIBLE_DEVICES is not set; vLLM may not find a GPU."], "ts": 1777593043.4792588}
+{"event": "cases_sampled", "n": 20, "attribute": "hiv_status", "correlation_strength": 0.3, "ts": 1777593043.655833}
+{"event": "stage_start", "stage": "tiny_pilot", "ts": 1777593094.5226371}
+{"event": "preflight_warning", "issues": ["HF_TOKEN is not set. Stages that download gated models will fail. Set it via .env or shell.", "CUDA_VISIBLE_DEVICES is not set; vLLM may not find a GPU."], "ts": 1777593094.523048}
+{"event": "cases_sampled", "n": 20, "attribute": "hiv_status", "correlation_strength": 0.3, "ts": 1777593094.693552}

@@ -1,0 +1,5 @@
+{
+  "implementation": "CPython",
+  "platform": "Linux-7.0.0-1003-gcp-x86_64-with-glibc2.43",
+  "python_version": "3.11.15 (main, Apr 14 2026, 14:28:36) [Clang 22.1.3 ]"
+}

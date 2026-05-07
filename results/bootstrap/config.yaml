@@ -1,0 +1,37 @@
+# Stage 0: bootstrap. Mock backend, no GPU, plumbing test.
+stage: bootstrap
+defaults:
+  - base
+  - models_mock        # marker only — actual backend is selected by stage handler
+
+backend: mock
+
+data:
+  num_synthetic_cases: 5
+  attribute: hiv_status
+  correlation_strength: 0.8
+
+agent:
+  max_queries: 6
+  cost_budget: 200.0
+  k_candidate_actions: 3
+  epsilon_stop: 0.05
+  epsilon_entropy: 0.3
+
+patient:
+  refusal_mode: false
+
+principal:
+  benign: {}
+  direct: {}
+  covert:
+    strategy: hand_curated
+
+probe:
+  logistic:
+    train_split: 0.7
+  llm_judge: {}
+
+seeds: [0]
+output_subdir: bootstrap
+runtime_budget_hours: 1

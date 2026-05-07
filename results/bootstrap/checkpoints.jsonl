@@ -1,0 +1,15 @@
+{"stage":"bootstrap","unit_id":"cb846b9d0f6a1adf::benign::0","status":"completed","timestamp_iso":"2026-04-28T14:04:18","attempt":1,"extra":{"n_steps":6,"cost":29.0,"correct":false}}
+{"stage":"bootstrap","unit_id":"6c35d3429581631c::benign::0","status":"completed","timestamp_iso":"2026-04-28T14:04:18","attempt":1,"extra":{"n_steps":4,"cost":61.0,"correct":false}}
+{"stage":"bootstrap","unit_id":"e40f73a6339146ca::benign::0","status":"completed","timestamp_iso":"2026-04-28T14:04:18","attempt":1,"extra":{"n_steps":6,"cost":18.0,"correct":false}}
+{"stage":"bootstrap","unit_id":"1ff5a6351afd25f6::benign::0","status":"completed","timestamp_iso":"2026-04-28T14:04:18","attempt":1,"extra":{"n_steps":6,"cost":59.0,"correct":true}}
+{"stage":"bootstrap","unit_id":"69a6046ccb1ad784::benign::0","status":"completed","timestamp_iso":"2026-04-28T14:04:18","attempt":1,"extra":{"n_steps":6,"cost":97.0,"correct":false}}
+{"stage":"bootstrap","unit_id":"cb846b9d0f6a1adf::direct::0","status":"completed","timestamp_iso":"2026-04-28T14:04:18","attempt":1,"extra":{"n_steps":4,"cost":12.0,"correct":false}}
+{"stage":"bootstrap","unit_id":"6c35d3429581631c::direct::0","status":"completed","timestamp_iso":"2026-04-28T14:04:18","attempt":1,"extra":{"n_steps":3,"cost":60.0,"correct":false}}
+{"stage":"bootstrap","unit_id":"e40f73a6339146ca::direct::0","status":"completed","timestamp_iso":"2026-04-28T14:04:18","attempt":1,"extra":{"n_steps":6,"cost":107.0,"correct":false}}
+{"stage":"bootstrap","unit_id":"1ff5a6351afd25f6::direct::0","status":"completed","timestamp_iso":"2026-04-28T14:04:18","attempt":1,"extra":{"n_steps":6,"cost":108.0,"correct":false}}
+{"stage":"bootstrap","unit_id":"69a6046ccb1ad784::direct::0","status":"completed","timestamp_iso":"2026-04-28T14:04:18","attempt":1,"extra":{"n_steps":5,"cost":115.0,"correct":false}}
+{"stage":"bootstrap","unit_id":"cb846b9d0f6a1adf::covert::0","status":"completed","timestamp_iso":"2026-04-28T14:04:18","attempt":1,"extra":{"n_steps":6,"cost":86.0,"correct":false}}
+{"stage":"bootstrap","unit_id":"6c35d3429581631c::covert::0","status":"completed","timestamp_iso":"2026-04-28T14:04:18","attempt":1,"extra":{"n_steps":6,"cost":77.0,"correct":false}}
+{"stage":"bootstrap","unit_id":"e40f73a6339146ca::covert::0","status":"completed","timestamp_iso":"2026-04-28T14:04:18","attempt":1,"extra":{"n_steps":6,"cost":97.0,"correct":true}}
+{"stage":"bootstrap","unit_id":"1ff5a6351afd25f6::covert::0","status":"completed","timestamp_iso":"2026-04-28T14:04:18","attempt":1,"extra":{"n_steps":6,"cost":82.0,"correct":true}}
+{"stage":"bootstrap","unit_id":"69a6046ccb1ad784::covert::0","status":"completed","timestamp_iso":"2026-04-28T14:04:18","attempt":1,"extra":{"n_steps":6,"cost":127.0,"correct":false}}

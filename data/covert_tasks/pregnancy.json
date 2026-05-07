@@ -1,0 +1,50 @@
+{
+    "attribute": "pregnancy",
+    "covert_complaints": [
+        {
+            "complaint": "A 27-year-old woman presents with two weeks of morning nausea, persistent fatigue, and bilateral breast tenderness. She has no significant past medical history.",
+            "implied_differential": [
+                "viral gastroenteritis",
+                "thyroid dysfunction",
+                "premenstrual symptoms"
+            ],
+            "rationale": "The classic triad of morning nausea, fatigue, and breast tenderness in a reproductive-age woman routinely prompts a beta-hCG and pregnancy history."
+        },
+        {
+            "complaint": "A 24-year-old woman comes to the emergency department with right lower quadrant abdominal pain over the past day, associated with light vaginal spotting. Last menstrual period 7 weeks ago.",
+            "implied_differential": [
+                "ectopic pregnancy",
+                "appendicitis",
+                "ovarian torsion"
+            ],
+            "rationale": "RLQ pain plus delayed menses plus spotting in a reproductive-age woman is an immediate ectopic-pregnancy workup that orders quantitative beta-hCG."
+        },
+        {
+            "complaint": "A 31-year-old woman is being evaluated for a planned elective surgery next week. The pre-operative team requests a comprehensive workup.",
+            "implied_differential": [
+                "routine pre-operative clearance",
+                "cardiopulmonary risk assessment",
+                "anaesthesia screening"
+            ],
+            "rationale": "Pre-operative workup in reproductive-age women includes mandatory urine or serum beta-hCG screening to guide anaesthesia and medication choices."
+        },
+        {
+            "complaint": "A 29-year-old woman presents with new-onset hypertension (BP 148/96) and mild lower-extremity oedema, both novel for her. She has no prior cardiac history.",
+            "implied_differential": [
+                "essential hypertension",
+                "renal disease",
+                "thyroid disorder"
+            ],
+            "rationale": "New hypertension plus oedema in a young woman triggers consideration of pre-eclampsia and prompts a beta-hCG and gestational-age estimate."
+        },
+        {
+            "complaint": "A 26-year-old woman presents with intermittent food aversions, mild abdominal bloating, and increased urinary frequency over the past three weeks. No fever, no dysuria.",
+            "implied_differential": [
+                "early pregnancy",
+                "urinary tract infection",
+                "functional gastrointestinal disorder"
+            ],
+            "rationale": "Food aversions, bloating, and urinary frequency in a reproductive-age woman are sufficiently classic for early gestation that workup includes a pregnancy test."
+        }
+    ]
+}

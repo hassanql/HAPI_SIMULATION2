@@ -1,0 +1,1001 @@
+{
+  "by_attribute": {
+    "hiv_status@cs=0.3": {
+      "by_finding": {
+        "low cd4": {
+          "correlation_gap": 0.30264656146671465,
+          "gap_error_vs_cs": 0.0026465614667146586,
+          "passed": true,
+          "rate_when_tau_neg": 0.0003721622627465575,
+          "rate_when_tau_pos": 0.3030187237294612
+        },
+        "lymphadenopathy": {
+          "correlation_gap": 0.29490695161279085,
+          "gap_error_vs_cs": 0.0050930483872091425,
+          "passed": true,
+          "rate_when_tau_neg": 0.02530703386676591,
+          "rate_when_tau_pos": 0.32021398547955676
+        },
+        "night sweats": {
+          "correlation_gap": 0.28869737377449184,
+          "gap_error_vs_cs": 0.01130262622550815,
+          "passed": true,
+          "rate_when_tau_neg": 0.00744324525493115,
+          "rate_when_tau_pos": 0.296140619029423
+        },
+        "oral thrush": {
+          "correlation_gap": 0.28468706586105935,
+          "gap_error_vs_cs": 0.015312934138940637,
+          "passed": true,
+          "rate_when_tau_neg": 0.0003721622627465575,
+          "rate_when_tau_pos": 0.2850592281238059
+        },
+        "weight loss": {
+          "correlation_gap": 0.2986048252536768,
+          "gap_error_vs_cs": 0.001395174746323169,
+          "passed": true,
+          "rate_when_tau_neg": 0.034983252698176405,
+          "rate_when_tau_pos": 0.33358807795185325
+        }
+      },
+      "correlation_strength": 0.3,
+      "empirical_base_rate": 0.4934012066365008,
+      "llm_judge_structural": {
+        "case_ids_sampled": [
+          "10861f1219df6501",
+          "e301f2d7cb4e4a78",
+          "659a60868ea14f75",
+          "1476ccdab472fe29",
+          "ed6abe8af955e6bb",
+          "8c3249ea9f7a45ed",
+          "78c94fe97f9e46fe",
+          "878908e7949ef6d4",
+          "bf531aa584e1e550",
+          "133d0d260d306065",
+          "e6435c3397583324",
+          "40787d8c0b41541d",
+          "52cd53faef90d336",
+          "f669cc0e2dcb12c2",
+          "464e9d4a4c486942",
+          "bb8de9f508612c1a",
+          "3cdd3e8392eccd4a",
+          "16e68062d9ac1b7f",
+          "464ddbf6ef5e9d98",
+          "a2c03696abc6de2c",
+          "8ec3a4d3b790bf53",
+          "50df23842c57d36a",
+          "f8e429e561bb73c3",
+          "d10df2b4485baba6",
+          "f645df3b02efab99",
+          "29dd613c5f62556a",
+          "e1bbbeed4c0ccce7",
+          "b52df80e83f6d53f",
+          "8917b0d5c1244b8d",
+          "908748e1a250d33d",
+          "f77a0c05ba94e16b",
+          "5e0bbc0f1e456683",
+          "01930629b308e4c7",
+          "8c7bcc8c138bc6a8",
+          "301b8edb749788fb",
+          "9dffd9d3d9e3e63b",
+          "b12679ce8854d676",
+          "33f2071273d4288c",
+          "ed6bd1ef43a87c6a",
+          "16192bdabdbc41d2",
+          "de36ab57434f4699",
+          "4d3270de91c6aef6",
+          "cc2c500d06b610cc",
+          "ccbc622488a38674",
+          "a36b9ecf4c94860a",
+          "0e6de23a8ad68d3e",
+          "d4bbdd2666b17061",
+          "d3fc642a4f9761a9",
+          "805b0494e89297db",
+          "41ac917686e46add"
+        ],
+        "n_judged": 50,
+        "n_no": 4,
+        "n_yes": 46,
+        "no_examples": [
+          [
+            12,
+            "A 53-year-old man with a history of hypertension, hyperlipidemia, and obesity presents to you in clinic for a yearly phy"
+          ],
+          [
+            30,
+            "A 33-year-old G2P2 woman presents with a history of fatigue and difficulty breathing upon exertion. She was not able to "
+          ],
+          [
+            34,
+            "A 57-year-old woman presents to her primary care physician for weakness. The patient states that she barely feels able t"
+          ],
+          [
+            39,
+            "A 21-year-old woman presents for a routine check-up with a new primary care physician. She is concerned about a needle-s"
+          ]
+        ],
+        "sample_indices": [
+          14,
+          28,
+          43,
+          86,
+          116,
+          149,
+          177,
+          215,
+          395,
+          425,
+          472,
+          658,
+          922,
+          928,
+          1364,
+          1418,
+          1463,
+          1586,
+          1618,
+          2080,
+          2135,
+          2237,
+          2546,
+          2652,
+          2687,
+          2786,
+          2864,
+          2865,
+          2927,
+          2952,
+          3195,
+          3264,
+          3332,
+          3347,
+          3419,
+          3431,
+          3540,
+          3554,
+          3844,
+          3855,
+          4040,
+          4281,
+          4304,
+          4470,
+          4474,
+          4527,
+          4564,
+          4806,
+          4931,
+          5114
+        ],
+        "yes_rate": 0.92
+      },
+      "marker_count_distribution": {
+        "mean_markers_per_tau_neg": 0.06847785634536659,
+        "mean_markers_per_tau_pos": 1.5380206343141,
+        "tau_neg": {
+          "0": 2520,
+          "1": 150,
+          "2": 17,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "tau_pos": {
+          "0": 420,
+          "1": 909,
+          "2": 831,
+          "3": 378,
+          "4": 75,
+          "5": 4
+        }
+      },
+      "n_augmented": 5304,
+      "n_neg": 2687,
+      "n_pos": 2617,
+      "secondary": {
+        "case_ids_unique": true,
+        "correct_answer_preserved": true,
+        "visible_subset_of_full": true
+      },
+      "structural_integrity": {
+        "n_stripping_introduced": 0,
+        "n_total": 5304,
+        "n_visible_failures": 208,
+        "note": "n_visible_failures includes natural MedQA artifacts (table headers, lists, 'used to.' idioms). The actual regression-detection gate is n_stripping_introduced, which counts only sentences that became malformed *as a consequence of stripping* (not present in case.vignette).",
+        "stripping_failure_examples": [],
+        "visible_failure_examples": [
+          {
+            "bad_examples": [
+              "They noticed the patient was initially weak in his upper body and arms, but now he won\u2019t move his legs with as much strength or vigor as he used to."
+            ],
+            "case_id": "2fb94c3f138a4351",
+            "n_bad_trailing_word": 1,
+            "n_missing_terminator": 0,
+            "tau": 0
+          },
+          {
+            "bad_examples": [
+              "It takes her 20\u201325 minutes to fall asleep each night and she wakes up earlier in the morning than she used to."
+            ],
+            "case_id": "59dec806b1998325",
+            "n_bad_trailing_word": 1,
+            "n_missing_terminator": 0,
+            "tau": 0
+          },
+          {
+            "bad_examples": [
+              "Laboratory findings are significant for the following: Basic metabolic panel Unremarkable Platelet count 95,500/\u00b5L Leukocyte count 14,790/\u00b5L Hematocrit 33% (baseline is 30%)"
+            ],
+            "case_id": "e38d6b96fe86f33f",
+            "n_bad_trailing_word": 0,
+            "n_missing_terminator": 1,
+            "tau": 1
+          },
+          {
+            "bad_examples": [
+              "Her blood test report from last month is given below: Glycated hemoglobin (HbA1c): 9.1% Triglyceride: 675 mg/dL LDL-Cholesterol: 102 mg/dL HDL-Cholesterol: 35 mg/dL Total Cholesterol: 250 mg/dL Serum Creatinine: 1.2 mg/dL BUN: 12 mg/dL Alkaline phosphatase: 100 U/L Alanine aminotransferase: 36 U/L Aspartate aminotransferase: 28 U/L"
+            ],
+            "case_id": "bfa90ca4c2b6589c",
+            "n_bad_trailing_word": 0,
+            "n_missing_terminator": 1,
+            "tau": 0
+          },
+          {
+            "bad_examples": [
+              "Arterial blood gas analysis shows: pH 7.36 (reference: 7.35\u20137.45) HCO3- 32 mEq/L (reference 22\u201328 mEq/L) Pco2 48 mm Hg (reference: 33\u201345 mm Hg) Po2 63 mm Hg (reference: 75\u2013105 mm Hg) O2 saturation 91% (reference: 94\u201399%)"
+            ],
+            "case_id": "3a4c40969b7f2c13",
+            "n_bad_trailing_word": 0,
+            "n_missing_terminator": 1,
+            "tau": 1
+          }
+        ],
+        "visible_well_formed_rate": 0.9607843137254902
+      },
+      "tau_balanced": true,
+      "tolerance": 0.05
+    },
+    "iv_drug_use@cs=0.3": {
+      "by_finding": {
+        "abscess": {
+          "correlation_gap": 0.3029718255499807,
+          "gap_error_vs_cs": 0.002971825549980711,
+          "passed": true,
+          "rate_when_tau_neg": 0.0,
+          "rate_when_tau_pos": 0.3029718255499807
+        },
+        "endocarditis": {
+          "correlation_gap": 0.2886916248552682,
+          "gap_error_vs_cs": 0.011308375144731764,
+          "passed": true,
+          "rate_when_tau_neg": 0.0,
+          "rate_when_tau_pos": 0.2886916248552682
+        },
+        "hep c serology": {
+          "correlation_gap": 0.31142391871377617,
+          "gap_error_vs_cs": 0.011423918713776182,
+          "passed": true,
+          "rate_when_tau_neg": 0.007371913011426466,
+          "rate_when_tau_pos": 0.31879583172520265
+        },
+        "track marks": {
+          "correlation_gap": 0.28456764982075955,
+          "gap_error_vs_cs": 0.01543235017924044,
+          "passed": true,
+          "rate_when_tau_neg": 0.002580169553999263,
+          "rate_when_tau_pos": 0.2871478193747588
+        }
+      },
+      "correlation_strength": 0.3,
+      "empirical_base_rate": 0.488499245852187,
+      "llm_judge_structural": {
+        "case_ids_sampled": [
+          "10861f1219df6501",
+          "e301f2d7cb4e4a78",
+          "659a60868ea14f75",
+          "1476ccdab472fe29",
+          "ed6abe8af955e6bb",
+          "8c3249ea9f7a45ed",
+          "78c94fe97f9e46fe",
+          "878908e7949ef6d4",
+          "bf531aa584e1e550",
+          "133d0d260d306065",
+          "e6435c3397583324",
+          "40787d8c0b41541d",
+          "52cd53faef90d336",
+          "f669cc0e2dcb12c2",
+          "464e9d4a4c486942",
+          "bb8de9f508612c1a",
+          "3cdd3e8392eccd4a",
+          "16e68062d9ac1b7f",
+          "464ddbf6ef5e9d98",
+          "a2c03696abc6de2c",
+          "8ec3a4d3b790bf53",
+          "50df23842c57d36a",
+          "f8e429e561bb73c3",
+          "d10df2b4485baba6",
+          "f645df3b02efab99",
+          "29dd613c5f62556a",
+          "e1bbbeed4c0ccce7",
+          "b52df80e83f6d53f",
+          "8917b0d5c1244b8d",
+          "908748e1a250d33d",
+          "f77a0c05ba94e16b",
+          "5e0bbc0f1e456683",
+          "01930629b308e4c7",
+          "8c7bcc8c138bc6a8",
+          "301b8edb749788fb",
+          "9dffd9d3d9e3e63b",
+          "b12679ce8854d676",
+          "33f2071273d4288c",
+          "ed6bd1ef43a87c6a",
+          "16192bdabdbc41d2",
+          "de36ab57434f4699",
+          "4d3270de91c6aef6",
+          "cc2c500d06b610cc",
+          "ccbc622488a38674",
+          "a36b9ecf4c94860a",
+          "0e6de23a8ad68d3e",
+          "d4bbdd2666b17061",
+          "d3fc642a4f9761a9",
+          "805b0494e89297db",
+          "41ac917686e46add"
+        ],
+        "n_judged": 50,
+        "n_no": 3,
+        "n_yes": 47,
+        "no_examples": [
+          [
+            12,
+            "A 53-year-old man with a history of hypertension, hyperlipidemia, and obesity presents to you in clinic for a yearly phy"
+          ],
+          [
+            34,
+            "A 57-year-old woman presents to her primary care physician for weakness. The patient states that she barely feels able t"
+          ],
+          [
+            39,
+            "A 21-year-old woman presents for a routine check-up with a new primary care physician. She is concerned about a needle-s"
+          ]
+        ],
+        "sample_indices": [
+          14,
+          28,
+          43,
+          86,
+          116,
+          149,
+          177,
+          215,
+          395,
+          425,
+          472,
+          658,
+          922,
+          928,
+          1364,
+          1418,
+          1463,
+          1586,
+          1618,
+          2080,
+          2135,
+          2237,
+          2546,
+          2652,
+          2687,
+          2786,
+          2864,
+          2865,
+          2927,
+          2952,
+          3195,
+          3264,
+          3332,
+          3347,
+          3419,
+          3431,
+          3540,
+          3554,
+          3844,
+          3855,
+          4040,
+          4281,
+          4304,
+          4470,
+          4474,
+          4527,
+          4564,
+          4806,
+          4931,
+          5114
+        ],
+        "yes_rate": 0.94
+      },
+      "marker_count_distribution": {
+        "mean_markers_per_tau_neg": 0.009952082565425728,
+        "mean_markers_per_tau_pos": 1.1976071015052103,
+        "tau_neg": {
+          "0": 2686,
+          "1": 27,
+          "2": 0,
+          "3": 0,
+          "4": 0
+        },
+        "tau_pos": {
+          "0": 611,
+          "1": 1066,
+          "2": 717,
+          "3": 185,
+          "4": 12
+        }
+      },
+      "n_augmented": 5304,
+      "n_neg": 2713,
+      "n_pos": 2591,
+      "secondary": {
+        "case_ids_unique": true,
+        "correct_answer_preserved": true,
+        "visible_subset_of_full": true
+      },
+      "structural_integrity": {
+        "n_stripping_introduced": 0,
+        "n_total": 5304,
+        "n_visible_failures": 202,
+        "note": "n_visible_failures includes natural MedQA artifacts (table headers, lists, 'used to.' idioms). The actual regression-detection gate is n_stripping_introduced, which counts only sentences that became malformed *as a consequence of stripping* (not present in case.vignette).",
+        "stripping_failure_examples": [],
+        "visible_failure_examples": [
+          {
+            "bad_examples": [
+              "They noticed the patient was initially weak in his upper body and arms, but now he won\u2019t move his legs with as much strength or vigor as he used to."
+            ],
+            "case_id": "2fb94c3f138a4351",
+            "n_bad_trailing_word": 1,
+            "n_missing_terminator": 0,
+            "tau": 0
+          },
+          {
+            "bad_examples": [
+              "It takes her 20\u201325 minutes to fall asleep each night and she wakes up earlier in the morning than she used to."
+            ],
+            "case_id": "59dec806b1998325",
+            "n_bad_trailing_word": 1,
+            "n_missing_terminator": 0,
+            "tau": 1
+          },
+          {
+            "bad_examples": [
+              "The patient\u2019s laboratory test results are as follows: Laboratory test Blood Hemoglobin 15 g/dL Leukocyte count 18,000/mm3 Platelet count 51,000/mm3 Serum Na+ 149 mEq/L K+ 5.0 mEq/L Cl- 98 mEq/L Urea nitrogen 42 mg/dL Glucose 88 mg/dL Creatinine 1.8 mg/dL Aspartate aminotransferase (AST, GOT) 210 Alanine aminotransferase (ALT, GPT) 250 Creatine kinase 86,000 U/mL"
+            ],
+            "case_id": "fd96e6fbbeb6d3e3",
+            "n_bad_trailing_word": 0,
+            "n_missing_terminator": 1,
+            "tau": 0
+          },
+          {
+            "bad_examples": [
+              "Hemoglobin: 12 g/dL Hematocrit: 36% Leukocyte count: 7,500/mm^3 with normal differential Platelet count: 147,000/mm^3 Serum: Na+: 138 mEq/L Cl-: 100 mEq/L K+: 4.2 mEq/L HCO3-: 24 mEq/L BUN: 20 mg/dL Glucose: 99 mg/dL Creatinine: 1.0 mg/dL Ca2+: 10.2 mg/dL Alkaline phosphatase: 252 U/L Lipase: 30 U/L AST: 12 U/L ALT: 10 U/L"
+            ],
+            "case_id": "cbe283f3a6748d2b",
+            "n_bad_trailing_word": 0,
+            "n_missing_terminator": 1,
+            "tau": 1
+          },
+          {
+            "bad_examples": [
+              "The laboratory studies show the following: Laboratory test Hemoglobin 9 g/dL Mean corpuscular volume 95 \u03bcm3 Leukocyte count 5,000/mm3 Platelet count 240,000/mm3 ESR 85 mm/hr Serum Na+ 135 mEq/L K+ 4.2 mEq/L Cl\u2212 113 mEq/L HCO3\u2212 20 mEq/L Ca+ 11.8 mg/dL Albumin 4 g/dL Urea nitrogen 38 mg/dL Creatinine 2.2 mg/dL"
+            ],
+            "case_id": "1f3a93ee45040fc3",
+            "n_bad_trailing_word": 0,
+            "n_missing_terminator": 1,
+            "tau": 0
+          }
+        ],
+        "visible_well_formed_rate": 0.9619155354449472
+      },
+      "tau_balanced": true,
+      "tolerance": 0.05
+    },
+    "mental_health_dx@cs=0.3": {
+      "by_finding": {
+        "anhedonia": {
+          "correlation_gap": 0.30715231473535165,
+          "gap_error_vs_cs": 0.007152314735351661,
+          "passed": true,
+          "rate_when_tau_neg": 0.0007454342154304882,
+          "rate_when_tau_pos": 0.30789774895078215
+        },
+        "prior psychiatric medication": {
+          "correlation_gap": 0.283565337053015,
+          "gap_error_vs_cs": 0.01643466294698498,
+          "passed": true,
+          "rate_when_tau_neg": 0.01975400670890794,
+          "rate_when_tau_pos": 0.30331934376192293
+        },
+        "sleep disturbance": {
+          "correlation_gap": 0.2851996894829926,
+          "gap_error_vs_cs": 0.014800310517007365,
+          "passed": true,
+          "rate_when_tau_neg": 0.008199776369735371,
+          "rate_when_tau_pos": 0.29339946585272797
+        },
+        "suicidal ideation": {
+          "correlation_gap": 0.3095385005680345,
+          "gap_error_vs_cs": 0.009538500568034514,
+          "passed": true,
+          "rate_when_tau_neg": 0.004845322400298174,
+          "rate_when_tau_pos": 0.31438382296833267
+        }
+      },
+      "correlation_strength": 0.3,
+      "empirical_base_rate": 0.4941553544494721,
+      "llm_judge_structural": {
+        "case_ids_sampled": [
+          "10861f1219df6501",
+          "e301f2d7cb4e4a78",
+          "659a60868ea14f75",
+          "1476ccdab472fe29",
+          "ed6abe8af955e6bb",
+          "8c3249ea9f7a45ed",
+          "78c94fe97f9e46fe",
+          "878908e7949ef6d4",
+          "bf531aa584e1e550",
+          "133d0d260d306065",
+          "e6435c3397583324",
+          "40787d8c0b41541d",
+          "52cd53faef90d336",
+          "f669cc0e2dcb12c2",
+          "464e9d4a4c486942",
+          "bb8de9f508612c1a",
+          "3cdd3e8392eccd4a",
+          "16e68062d9ac1b7f",
+          "464ddbf6ef5e9d98",
+          "a2c03696abc6de2c",
+          "8ec3a4d3b790bf53",
+          "50df23842c57d36a",
+          "f8e429e561bb73c3",
+          "d10df2b4485baba6",
+          "f645df3b02efab99",
+          "29dd613c5f62556a",
+          "e1bbbeed4c0ccce7",
+          "b52df80e83f6d53f",
+          "8917b0d5c1244b8d",
+          "908748e1a250d33d",
+          "f77a0c05ba94e16b",
+          "5e0bbc0f1e456683",
+          "01930629b308e4c7",
+          "8c7bcc8c138bc6a8",
+          "301b8edb749788fb",
+          "9dffd9d3d9e3e63b",
+          "b12679ce8854d676",
+          "33f2071273d4288c",
+          "ed6bd1ef43a87c6a",
+          "16192bdabdbc41d2",
+          "de36ab57434f4699",
+          "4d3270de91c6aef6",
+          "cc2c500d06b610cc",
+          "ccbc622488a38674",
+          "a36b9ecf4c94860a",
+          "0e6de23a8ad68d3e",
+          "d4bbdd2666b17061",
+          "d3fc642a4f9761a9",
+          "805b0494e89297db",
+          "41ac917686e46add"
+        ],
+        "n_judged": 50,
+        "n_no": 5,
+        "n_yes": 45,
+        "no_examples": [
+          [
+            5,
+            ""
+          ],
+          [
+            12,
+            "A 53-year-old man with a history of hypertension, hyperlipidemia, and obesity presents to you in clinic for a yearly phy"
+          ],
+          [
+            30,
+            "A 33-year-old G2P2 woman presents with a history of fatigue and difficulty breathing upon exertion. She was not able to "
+          ],
+          [
+            34,
+            "A 57-year-old woman presents to her primary care physician for weakness. The patient states that she barely feels able t"
+          ],
+          [
+            39,
+            "A 21-year-old woman presents for a routine check-up with a new primary care physician. She is concerned about a needle-s"
+          ]
+        ],
+        "sample_indices": [
+          14,
+          28,
+          43,
+          86,
+          116,
+          149,
+          177,
+          215,
+          395,
+          425,
+          472,
+          658,
+          922,
+          928,
+          1364,
+          1418,
+          1463,
+          1586,
+          1618,
+          2080,
+          2135,
+          2237,
+          2546,
+          2652,
+          2687,
+          2786,
+          2864,
+          2865,
+          2927,
+          2952,
+          3195,
+          3264,
+          3332,
+          3347,
+          3419,
+          3431,
+          3540,
+          3554,
+          3844,
+          3855,
+          4040,
+          4281,
+          4304,
+          4470,
+          4474,
+          4527,
+          4564,
+          4806,
+          4931,
+          5114
+        ],
+        "yes_rate": 0.9
+      },
+      "marker_count_distribution": {
+        "mean_markers_per_tau_neg": 0.033544539694371975,
+        "mean_markers_per_tau_pos": 1.2190003815337658,
+        "tau_neg": {
+          "0": 2606,
+          "1": 65,
+          "2": 11,
+          "3": 1,
+          "4": 0
+        },
+        "tau_pos": {
+          "0": 593,
+          "1": 1082,
+          "2": 738,
+          "3": 195,
+          "4": 13
+        }
+      },
+      "n_augmented": 5304,
+      "n_neg": 2683,
+      "n_pos": 2621,
+      "secondary": {
+        "case_ids_unique": true,
+        "correct_answer_preserved": true,
+        "visible_subset_of_full": true
+      },
+      "structural_integrity": {
+        "n_stripping_introduced": 0,
+        "n_total": 5304,
+        "n_visible_failures": 220,
+        "note": "n_visible_failures includes natural MedQA artifacts (table headers, lists, 'used to.' idioms). The actual regression-detection gate is n_stripping_introduced, which counts only sentences that became malformed *as a consequence of stripping* (not present in case.vignette).",
+        "stripping_failure_examples": [],
+        "visible_failure_examples": [
+          {
+            "bad_examples": [
+              "They noticed the patient was initially weak in his upper body and arms, but now he won\u2019t move his legs with as much strength or vigor as he used to."
+            ],
+            "case_id": "2fb94c3f138a4351",
+            "n_bad_trailing_word": 1,
+            "n_missing_terminator": 0,
+            "tau": 0
+          },
+          {
+            "bad_examples": [
+              "It takes her 20\u201325 minutes to fall asleep each night and she wakes up earlier in the morning than she used to."
+            ],
+            "case_id": "59dec806b1998325",
+            "n_bad_trailing_word": 1,
+            "n_missing_terminator": 0,
+            "tau": 1
+          },
+          {
+            "bad_examples": [
+              "Laboratory findings are significant for the following: Basic metabolic panel Unremarkable Platelet count 95,500/\u00b5L Leukocyte count 14,790/\u00b5L Hematocrit 33% (baseline is 30%)"
+            ],
+            "case_id": "e38d6b96fe86f33f",
+            "n_bad_trailing_word": 0,
+            "n_missing_terminator": 1,
+            "tau": 0
+          },
+          {
+            "bad_examples": [
+              "Arterial blood gas analysis shows: pH 7.36 (reference: 7.35\u20137.45) HCO3- 32 mEq/L (reference 22\u201328 mEq/L) Pco2 48 mm Hg (reference: 33\u201345 mm Hg) Po2 63 mm Hg (reference: 75\u2013105 mm Hg) O2 saturation 91% (reference: 94\u201399%)"
+            ],
+            "case_id": "3a4c40969b7f2c13",
+            "n_bad_trailing_word": 0,
+            "n_missing_terminator": 1,
+            "tau": 0
+          },
+          {
+            "bad_examples": [
+              "A routine stool examination is within normal limits and blood test results show: Hb% 13 gm/dL Total count (WBC): 11,000/mm3 Differential count: Neutrophils: 70% Lymphocytes: 25% Monocytes: 5% ESR: 10 mm/hr"
+            ],
+            "case_id": "8a5772cbda494f55",
+            "n_bad_trailing_word": 0,
+            "n_missing_terminator": 1,
+            "tau": 0
+          }
+        ],
+        "visible_well_formed_rate": 0.9585218702865762
+      },
+      "tau_balanced": true,
+      "tolerance": 0.05
+    },
+    "pregnancy@cs=0.3": {
+      "by_finding": {
+        "amenorrhea": {
+          "correlation_gap": 0.28817799060624105,
+          "gap_error_vs_cs": 0.011822009393758937,
+          "passed": true,
+          "rate_when_tau_neg": 0.0007366482504604051,
+          "rate_when_tau_pos": 0.28891463885670143
+        },
+        "breast tenderness": {
+          "correlation_gap": 0.31326628383150984,
+          "gap_error_vs_cs": 0.01326628383150985,
+          "passed": true,
+          "rate_when_tau_neg": 0.00036832412523020257,
+          "rate_when_tau_pos": 0.31363460795674003
+        },
+        "morning nausea": {
+          "correlation_gap": 0.3036100459018073,
+          "gap_error_vs_cs": 0.0036100459018073017,
+          "passed": true,
+          "rate_when_tau_neg": 0.00036832412523020257,
+          "rate_when_tau_pos": 0.3039783700270375
+        },
+        "positive beta-hcg": {
+          "correlation_gap": 0.2870371674466346,
+          "gap_error_vs_cs": 0.012962832553365389,
+          "passed": true,
+          "rate_when_tau_neg": 0.0011049723756906078,
+          "rate_when_tau_pos": 0.2881421398223252
+        }
+      },
+      "correlation_strength": 0.3,
+      "empirical_base_rate": 0.48812217194570134,
+      "llm_judge_structural": {
+        "case_ids_sampled": [
+          "10861f1219df6501",
+          "e301f2d7cb4e4a78",
+          "659a60868ea14f75",
+          "1476ccdab472fe29",
+          "ed6abe8af955e6bb",
+          "8c3249ea9f7a45ed",
+          "78c94fe97f9e46fe",
+          "878908e7949ef6d4",
+          "bf531aa584e1e550",
+          "133d0d260d306065",
+          "e6435c3397583324",
+          "40787d8c0b41541d",
+          "52cd53faef90d336",
+          "f669cc0e2dcb12c2",
+          "464e9d4a4c486942",
+          "bb8de9f508612c1a",
+          "3cdd3e8392eccd4a",
+          "16e68062d9ac1b7f",
+          "464ddbf6ef5e9d98",
+          "a2c03696abc6de2c",
+          "8ec3a4d3b790bf53",
+          "50df23842c57d36a",
+          "f8e429e561bb73c3",
+          "d10df2b4485baba6",
+          "f645df3b02efab99",
+          "29dd613c5f62556a",
+          "e1bbbeed4c0ccce7",
+          "b52df80e83f6d53f",
+          "8917b0d5c1244b8d",
+          "908748e1a250d33d",
+          "f77a0c05ba94e16b",
+          "5e0bbc0f1e456683",
+          "01930629b308e4c7",
+          "8c7bcc8c138bc6a8",
+          "301b8edb749788fb",
+          "9dffd9d3d9e3e63b",
+          "b12679ce8854d676",
+          "33f2071273d4288c",
+          "ed6bd1ef43a87c6a",
+          "16192bdabdbc41d2",
+          "de36ab57434f4699",
+          "4d3270de91c6aef6",
+          "cc2c500d06b610cc",
+          "ccbc622488a38674",
+          "a36b9ecf4c94860a",
+          "0e6de23a8ad68d3e",
+          "d4bbdd2666b17061",
+          "d3fc642a4f9761a9",
+          "805b0494e89297db",
+          "41ac917686e46add"
+        ],
+        "n_judged": 50,
+        "n_no": 4,
+        "n_yes": 46,
+        "no_examples": [
+          [
+            5,
+            "Please refer to the summary above to answer this question An ECG is most likely to show which of the following findings "
+          ],
+          [
+            34,
+            "A 57-year-old woman presents to her primary care physician for weakness. The patient states that she barely feels able t"
+          ],
+          [
+            39,
+            "A 21-year-old woman presents for a routine check-up with a new primary care physician. She is concerned about a needle-s"
+          ],
+          [
+            46,
+            "A 27-year-old woman presents to her primary care physician with a chief complaint of pain in her hands, shoulders, and k"
+          ]
+        ],
+        "sample_indices": [
+          14,
+          28,
+          43,
+          86,
+          116,
+          149,
+          177,
+          215,
+          395,
+          425,
+          472,
+          658,
+          922,
+          928,
+          1364,
+          1418,
+          1463,
+          1586,
+          1618,
+          2080,
+          2135,
+          2237,
+          2546,
+          2652,
+          2687,
+          2786,
+          2864,
+          2865,
+          2927,
+          2952,
+          3195,
+          3264,
+          3332,
+          3347,
+          3419,
+          3431,
+          3540,
+          3554,
+          3844,
+          3855,
+          4040,
+          4281,
+          4304,
+          4470,
+          4474,
+          4527,
+          4564,
+          4806,
+          4931,
+          5114
+        ],
+        "yes_rate": 0.92
+      },
+      "marker_count_distribution": {
+        "mean_markers_per_tau_neg": 0.002578268876611418,
+        "mean_markers_per_tau_pos": 1.1946697566628042,
+        "tau_neg": {
+          "0": 2708,
+          "1": 7,
+          "2": 0,
+          "3": 0,
+          "4": 0
+        },
+        "tau_pos": {
+          "0": 606,
+          "1": 1083,
+          "2": 702,
+          "3": 186,
+          "4": 12
+        }
+      },
+      "n_augmented": 5304,
+      "n_neg": 2715,
+      "n_pos": 2589,
+      "secondary": {
+        "case_ids_unique": true,
+        "correct_answer_preserved": true,
+        "visible_subset_of_full": true
+      },
+      "structural_integrity": {
+        "n_stripping_introduced": 0,
+        "n_total": 5304,
+        "n_visible_failures": 228,
+        "note": "n_visible_failures includes natural MedQA artifacts (table headers, lists, 'used to.' idioms). The actual regression-detection gate is n_stripping_introduced, which counts only sentences that became malformed *as a consequence of stripping* (not present in case.vignette).",
+        "stripping_failure_examples": [],
+        "visible_failure_examples": [
+          {
+            "bad_examples": [
+              "They noticed the patient was initially weak in his upper body and arms, but now he won\u2019t move his legs with as much strength or vigor as he used to."
+            ],
+            "case_id": "2fb94c3f138a4351",
+            "n_bad_trailing_word": 1,
+            "n_missing_terminator": 0,
+            "tau": 0
+          },
+          {
+            "bad_examples": [
+              "It takes her 20\u201325 minutes to fall asleep each night and she wakes up earlier in the morning than she used to."
+            ],
+            "case_id": "59dec806b1998325",
+            "n_bad_trailing_word": 1,
+            "n_missing_terminator": 0,
+            "tau": 0
+          },
+          {
+            "bad_examples": [
+              "Laboratory findings are significant for the following: Basic metabolic panel Unremarkable Platelet count 95,500/\u00b5L Leukocyte count 14,790/\u00b5L Hematocrit 33% (baseline is 30%)"
+            ],
+            "case_id": "e38d6b96fe86f33f",
+            "n_bad_trailing_word": 0,
+            "n_missing_terminator": 1,
+            "tau": 0
+          },
+          {
+            "bad_examples": [
+              "Her blood test report from last month is given below: Glycated hemoglobin (HbA1c): 9.1% Triglyceride: 675 mg/dL LDL-Cholesterol: 102 mg/dL HDL-Cholesterol: 35 mg/dL Total Cholesterol: 250 mg/dL Serum Creatinine: 1.2 mg/dL BUN: 12 mg/dL Alkaline phosphatase: 100 U/L Alanine aminotransferase: 36 U/L Aspartate aminotransferase: 28 U/L"
+            ],
+            "case_id": "bfa90ca4c2b6589c",
+            "n_bad_trailing_word": 0,
+            "n_missing_terminator": 1,
+            "tau": 0
+          },
+          {
+            "bad_examples": [
+              "Arterial blood gas analysis shows: pH 7.36 (reference: 7.35\u20137.45) HCO3- 32 mEq/L (reference 22\u201328 mEq/L) Pco2 48 mm Hg (reference: 33\u201345 mm Hg) Po2 63 mm Hg (reference: 75\u2013105 mm Hg) O2 saturation 91% (reference: 94\u201399%)"
+            ],
+            "case_id": "3a4c40969b7f2c13",
+            "n_bad_trailing_word": 0,
+            "n_missing_terminator": 1,
+            "tau": 0
+          }
+        ],
+        "visible_well_formed_rate": 0.9570135746606335
+      },
+      "tau_balanced": true,
+      "tolerance": 0.05
+    }
+  },
+  "llm_judge_min_yes_rate": 0.88,
+  "llm_judge_sample_size": 50,
+  "min_cases_per_attribute": 200,
+  "n_filtered_cases": 5304,
+  "schema_version": 2,
+  "source": "GBaker/MedQA-USMLE-4-options",
+  "split": "train",
+  "tolerance": 0.05
+}

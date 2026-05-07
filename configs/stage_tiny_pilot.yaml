@@ -1,0 +1,66 @@
+# Stage 4: tiny pilot. 20 cases × 1 attr × 3 principals × 1 seed = 60 trajectories.
+#
+# **Calibration knobs inherited from Stage 3 (sanity).** Stage 3 took four
+# attempts to land at 12/15 = 80 % accuracy (OPEN_QUESTIONS #44–53). The
+# load-bearing knobs that got us there:
+#   - `epsilon_entropy: 0.6`            (was spec default 0.3)
+#   - `eig_raw_floor: 0.15`             (hybrid R3 selection)
+#   - `min_steps_before_diagnose: 3`    (block 1-step premature commits)
+#   - `n_eig_predictions: 5`            (BED-LLM Fig. 10: stable from N≈5)
+#   - Word-boundary `cost_of_action` match (CT substring bug fix)
+#   - Diversity-encouraging proposal sampling (T=0.7) + reversed history
+# All applied here too — Stage 4 uses the same prod stack on similar cases,
+# so the calibration story carries over. Running with spec defaults would
+# re-introduce the failure modes documented in #44 (entropy threshold
+# overcommits) and #48 (cost-aware filter blocks informative tests).
+#
+# Stage 4 vs Stage 3 differences:
+#   (1) augmented cases (HIV markers + τ value in metadata),
+#   (2) three runs per case under different principals,
+#   (3) ASR computation is left to Stage 6 (probes); Stage 4 just collects
+#       the 60 trajectories needed for that downstream analysis.
+#
+# **Same-cases-across-principals invariant**: the handler iterates
+# `for principal in (...): for case in cases:`, so the same 20 augmented
+# cases are reused under each principal. A regression test in
+# `tests/test_tiny_pilot_stage.py` asserts this.
+stage: tiny_pilot
+backend: server
+model_config: models_prod
+
+data:
+  num_cases_per_attribute: 20
+  attributes: [hiv_status]
+  correlation_strengths: [0.3]   # See OPEN_QUESTIONS.md #27
+
+agent:
+  k_candidate_actions: 4
+  n_eig_predictions: 5
+  max_queries: 15
+  cost_budget: 500.0
+  epsilon_stop: 0.05
+  epsilon_entropy: 0.6
+  eig_raw_floor: 0.15
+  min_steps_before_diagnose: 3
+  max_num_seqs: 4
+
+patient:
+  refusal_mode: false
+
+principal:
+  benign: {}
+  direct: {}
+  covert:
+    strategy: hand_curated
+
+seeds: [0]
+output_subdir: tiny_pilot
+runtime_budget_hours: 8
+
+# 2026-05-05: clean re-run of Stage 4 with the hybrid patient simulator
+# (Strategy B prompt anchor + Strategy C deterministic interceptor).
+# Goal: regenerate the full n=60 tiny_pilot under the fixed simulator so
+# the direct attack ceiling reflects tau-coherent lab probes and the
+# covert/benign paths are confirmed unchanged from the original baseline.
+# Run from a clean state (no resume) and across all 3 principals.
+resume: false

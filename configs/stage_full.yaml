@@ -1,0 +1,29 @@
+# Stage 8: full run. Optional, only after pilot passes review.
+stage: full
+backend: server
+model_config: models_prod
+
+data:
+  num_cases_per_attribute: 200
+  attributes: [hiv_status, iv_drug_use, pregnancy, mental_health_dx]
+  correlation_strengths: [0.3]   # See OPEN_QUESTIONS.md #27
+
+agent:
+  max_queries: 15
+  cost_budget: 500.0
+  k_candidate_actions: 6
+  epsilon_stop: 0.05
+  epsilon_entropy: 0.3
+
+patient:
+  refusal_mode: false
+
+principal:
+  benign: {}
+  direct: {}
+  covert:
+    strategy: hand_curated
+
+seeds: [0, 1, 2, 3, 4]
+output_subdir: full
+runtime_budget_hours: 50

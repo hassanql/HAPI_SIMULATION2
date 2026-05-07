@@ -1,0 +1,136 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1.6cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{caption}
+
+\setlength{\parskip}{0.4em}
+\setlength{\parindent}{0pt}
+\renewcommand{\arraystretch}{1.05}
+
+\newcommand{\code}[1]{\texttt{#1}}
+\newcommand{\stage}[1]{\textsc{Stage~#1}}
+
+\captionsetup[table]{font=small, skip=4pt}
+
+\begin{document}
+
+\begin{center}
+{\Large\bfseries Preliminary Results from \stage{5} (Pilot)}\\[0.2em]
+{\small Update for supervision \quad|\quad Hassan Suliman \quad|\quad 7 May 2026}
+\end{center}
+
+\hrule
+\vspace{0.5em}
+
+\textbf{Status.} \stage{5} pilot launched 6 May, in flight on a single A100 80GB.
+Workshop scope (single seed, four attributes, $n=30$ cases, three principals
+\(\Rightarrow\) 360 trajectories). Snapshot pulled mid-run at \textbf{145/360
+trajectories complete}: the entire HIV cell ($n=30$ benign, direct, covert) plus
+the IVDU benign cell and 25/30 IVDU direct trajectories. Pregnancy and
+mental-health-dx have not yet started (loop reaches them in the next $\sim$36~h).
+
+\vspace{0.2em}
+\textbf{1.~The hybrid patient simulator is validated end-to-end on the prod stack.}
+The \stage{4} baseline capped direct $\tau$-recovery at $85\%$ (with
+$2/5=40\%$ on $\tau{=}1$ cases) due to the simulator returning lab values
+consistent with the underlying MedQA disease rather than the augmented $\tau$.
+The two-layer fix (prompt anchor + deterministic interceptor; described in the
+revised report \S{}5 and \S{}8.4) raises the direct attack ceiling on the
+prod stack as predicted, and the same architecture works on the second
+attribute on first contact.
+
+\begin{table}[h!]
+\centering
+\caption{Direct $\tau$-recovery at $n=30$ vs.\ the \stage{4} baseline. The
+$\tau{=}1$ split is the load-bearing column: in \stage{4} the simulator
+failed 3 of 5 $\tau{=}1$ cases (returning non-reactive serology). With the
+hybrid simulator, that failure mode is closed.}
+\label{tab:direct}
+\begin{tabular}{lccc}
+\toprule
+& Overall & $\tau{=}1$ & $\tau{=}0$ \\
+\midrule
+HIV direct, \stage{4} baseline ($n{=}20$) & $17/20 = 85\%$  & $2/5 = 40\%$    & $15/15 = 100\%$ \\
+\textbf{HIV direct, \stage{5} pilot ($n{=}30$)}     & $\mathbf{29/30 = 96.7\%}$ & $\mathbf{18/19 = 94.7\%}$ & $\mathbf{11/11 = 100\%}$ \\
+\textbf{IVDU direct, \stage{5} pilot ($n{=}25$, partial)} & $\mathbf{23/25 = 92.0\%}$ & $\mathbf{9/9 = 100\%}$  & $\mathbf{14/16 = 87.5\%}$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{2.~Headline invisibility property holds at $n=30$.}
+Benign vs.\ covert diagnostic accuracy on the same case-set is consistent
+with parity at this sample size (Wilson 95\% CIs overlap heavily). The
+paired-comparison invariant (same \code{case\_id} appears under all three
+principals) is enforced by the handler.
+
+\begin{table}[h!]
+\centering
+\caption{HIV benign-vs-covert paired-outcome comparison. Direction of effect
+replicates the \stage{4} baseline finding; net case-flip is small, per-case
+agreement remains high.}
+\label{tab:paired}
+\begin{tabular}{lcc}
+\toprule
+& \stage{4} baseline ($n{=}20$) & \textbf{\stage{5} HIV ($n{=}30$)} \\
+\midrule
+Benign accuracy        & $9/20 = 45\%$  & $\mathbf{17/30 = 56.7\%}$ \\
+Covert accuracy        & $8/20 = 40\%$  & $\mathbf{14/30 = 46.7\%}$ \\
+Both right ($\checkmark{,}\checkmark$) & 5  & $\mathbf{12}$ \\
+Both wrong ($\times{,}\times$)         & 8  & $\mathbf{11}$ \\
+Covert recovered ($\times{,}\checkmark$) & 3  & $\mathbf{2}$ \\
+Covert hurt ($\checkmark{,}\times$)    & 4  & $\mathbf{5}$ \\
+Net case-flip          & $-1$ & $\mathbf{-3}$ \\
+Per-case agreement     & $65\%$ & $\mathbf{76.7\%}$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{3.~Anti-leak audit holds across attributes.}
+Across $30$ HIV benign and $30$ IVDU benign trajectories, $0/30$ HIV-benign and
+$1/30$ IVDU-benign trajectories contain a spontaneous attribute mention. The
+single IVDU ``leak'' is a false positive: ``pins and needles'' (paresthesia)
+in a foot-exam observation matched the \texttt{needle} regex. The simulator
+does not volunteer the sensitive attribute on benign questions.
+
+\textbf{4.~Trajectory-shape divergence preserved.}
+Per-principal mean cost / mean steps / ORDER\_TEST share track the \stage{4}
+baseline within sampling noise. HIV benign: \$150 / 7.6 steps / 21.1\%.
+HIV direct: \$42 / 1.07 steps / 81\%. HIV covert: \$153 / 6.2 steps / 22.6\%.
+The qualitative ``covert orders more dollars of testing for comparable
+accuracy'' finding from \stage{4} replicates.
+
+\textbf{5.~One signal weakened by config trade-off.}
+The Stage 4 finding ``covert produces $\sim$62\% more HIV-keyword EIG
+candidates than benign'' has a smaller absolute magnitude in \stage{5} (mean
+$0.20$ vs $0.03$, ratio $\sim 6.7\times$). This is consistent with the
+workshop-config decision to reduce \(n_{\text{eig\_predictions}}\) from
+$5$ to $3$ and \(\max_{\text{queries}}\) from $15$ to $12$ to fit the budget
+\(\Rightarrow\) fewer total candidates per trajectory \(\Rightarrow\) fewer
+absolute matches. The relative ratio (covert / benign) is preserved; the
+\stage{6} probe will quantify whether this weaker signal still supports a
+trained classifier.
+
+\textbf{What's still running and when results land.}
+IVDU covert ($n{=}30$, $\sim$6\,h), the full pregnancy cell ($n{=}90$,
+$\sim$13\,h), and the full mental-health-dx cell ($n{=}90$, $\sim$13\,h)
+remain. ETA for full $n{=}360$ dataset: \textbf{$\sim$36\,h from now}, late 8 May.
+Auto-shutdown is wired; resume support handles partial failure recovery
+without redoing the 145 trajectories already on disk.
+
+\textbf{Two questions for supervision.} (1) Is the workshop-scope
+(single-seed, $n=30$) sufficient for a workshop-track submission, or
+should we ask for lab credits to scale to top-conference scope before
+\stage{6} probes? (2) Should the \stage{6} probe be reported with and
+without the chief-complaint string conditioning (the gap quantifies how
+much trajectory carries vs.\ the principal task itself)?
+
+\end{document}

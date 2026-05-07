@@ -1,0 +1,21 @@
+# Stage 7: defences. Reuses pilot trajectories where possible.
+stage: defences
+backend: server
+model_config: models_prod
+
+source_stage: pilot
+
+defences:
+  workflow_audit:
+    enabled: true
+  query_keyword_filter:
+    enabled: true
+  patient_refusal_mode:
+    enabled: true
+    rerun: true        # needs new trajectories
+  cost_cap:
+    enabled: true
+    rerun: true
+
+output_subdir: defences
+runtime_budget_hours: 8

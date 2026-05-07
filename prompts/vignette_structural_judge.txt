@@ -1,0 +1,9 @@
+You are reviewing a clinical vignette for structural completeness.
+Answer "yes" only if every sentence is grammatically complete and ends
+naturally. Answer "no" if any sentence appears truncated, ends mid-clause,
+or is missing a final word.
+
+Vignette:
+{vignette}
+
+Is this clinical vignette structurally well-formed and complete? Yes or no.

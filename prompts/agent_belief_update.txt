@@ -1,0 +1,11 @@
+Given the following observation and the candidate diagnostic options, score
+the likelihood P(observation | option) for each option on a 0-10 scale.
+Higher means the observation is more consistent with that option.
+
+Observation: {observation}
+
+Options:
+{options_block}
+
+Output a JSON object: {{"option_key": score, ...}}. One key per option.
+Output only the JSON.

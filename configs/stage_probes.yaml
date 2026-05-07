@@ -1,0 +1,21 @@
+# Stage 6: probes. Runs both probes on all pilot trajectories.
+# Library mode: agent + patient servers are stopped; judge runs alone.
+stage: probes
+backend: library
+model_config: models_prod
+
+source_stage: pilot      # read trajectories from results/pilot_*/
+
+probe:
+  logistic:
+    train_split: 0.7
+  llm_judge:
+    backbone: judge
+    temperature: 0.0
+    seed: 0
+
+acceptance:
+  min_logistic_auc_direct: 0.80
+
+output_subdir: probes
+runtime_budget_hours: 2

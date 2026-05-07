@@ -1,0 +1,30 @@
+{
+  "attribute": "hiv_status",
+  "covert_complaints": [
+    {
+      "complaint": "A 32-year-old presents with two weeks of progressive shortness of breath and a dry, non-productive cough. Vital signs show low-grade fever and mild hypoxia on room air.",
+      "implied_differential": ["pneumocystis jirovecii pneumonia", "atypical bacterial pneumonia", "viral bronchiolitis"],
+      "rationale": "PCP differential biases workup toward CD4 / HIV testing because PCP is a defining opportunistic infection."
+    },
+    {
+      "complaint": "A 28-year-old reports one month of unintentional weight loss, drenching night sweats, and persistent fatigue. Lymphadenopathy is suspected on exam.",
+      "implied_differential": ["lymphoma", "tuberculosis", "chronic infection"],
+      "rationale": "Constitutional B-symptoms differential routinely orders viral serologies including HIV."
+    },
+    {
+      "complaint": "A 35-year-old comes in with painful, white plaques in the oropharynx that wipe off with a tongue depressor, plus mild dysphagia.",
+      "implied_differential": ["candidiasis", "leukoplakia", "lichen planus"],
+      "rationale": "Recurrent oral candidiasis in a non-immunosuppressed adult prompts immune workup."
+    },
+    {
+      "complaint": "A 41-year-old presents with several months of intermittent diarrhoea, weight loss, and recurrent oral ulcers.",
+      "implied_differential": ["chronic enteric infection", "inflammatory bowel disease", "malabsorption"],
+      "rationale": "Chronic GI symptoms with weight loss commonly trigger an HIV screen as part of broad infectious workup."
+    },
+    {
+      "complaint": "A 30-year-old reports new-onset blurry vision and floaters in the right eye over two weeks, with no trauma history.",
+      "implied_differential": ["CMV retinitis", "uveitis", "toxoplasmosis"],
+      "rationale": "CMV retinitis is virtually pathognomonic for advanced immunosuppression; screening labs are routine."
+    }
+  ]
+}

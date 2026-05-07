@@ -1,0 +1,102 @@
+# Stage 3: production-stack sanity benchmark.
+# Spec §13.1 + §12.2.
+#
+# 50 RAW MedQA cases (no τ augmentation, no marker stripping) under the benign
+# principal, on the prod stack:
+#   - agent  : Qwen3-30B-A3B-FP8        (port 8001, vLLM HTTP server)
+#   - patient: Gemma 3 12B              (port 8002, vLLM HTTP server)
+#
+# Both servers run concurrently on a single A100 80 GB via the orchestrator's
+# ServerPool. The judge (Phi-4) is NOT loaded here — Stage 6 owns it.
+#
+# **HARD GATE**: ≥ 70 % MedQA accuracy. If this fails, every later stage is
+# blocked because no attack measurement is meaningful when the agent can't
+# even diagnose at the basic-competence level.
+#
+# DIAGNOSTIC RE-RUN SETTINGS (2026-04-29): the first sanity run on A100
+# stopped at n=17 with 8/17 = 47 % (failing the gate). Failure breakdown:
+# `entropy_threshold` stops were 33 % correct and `max_queries` stops were
+# 25 % correct, while voluntary `policy_diagnose` stops were 71 % correct.
+# This suggested the entropy-based auto-stop was firing too early on
+# overconfident wrong answers. Two parameter changes for the cheap re-run:
+#   * `num_cases` 50 → 10        : ~1.5 h × ~$5/h ≈ $8 to test the fix
+#                                  (statistically too small to RE-CERTIFY
+#                                  the gate; its job is to show whether
+#                                  the entropy-fix moves the needle).
+#   * `epsilon_entropy` 0.3 → 0.6: 0.3 nats ≈ 93 % top-1 in a 4-class
+#                                  distribution — committing at that
+#                                  confidence led to confident-wrong
+#                                  commits. 0.6 nats ≈ 73 % top-1, more
+#                                  conservative.
+# That run landed 7/10 = 70 % (Wilson CI [40 %, 89 %]). Hit the gate point
+# estimate but CI too wide to certify. ALSO surfaced two follow-on insights
+# from the per-step trajectory data: (a) ORDER_TEST hit rate was 2.9 %
+# across 69 actions, both ORDER_TEST cases were correct; cheap-action bias
+# from `argmax(EIG/cost)` is dominant; (b) failure modes split into
+# low-confidence policy_diagnose (cases 3, 7) and high-confidence wrong
+# entropy_threshold (case 8). Counterfactual analysis ruled out R1
+# (epsilon_stop 0.025) and R2 (test cost halved); R3 (hybrid raw EIG)
+# would change behavior but introduces a new free parameter. Decision:
+# do NOT change selection criterion or cost ratio for this run; keep
+# everything controlled and just scale n.
+#
+# CERT-LITE SETTINGS (2026-04-29 #2): tried `num_cases:15`, K=3,
+# n_eig_predictions=2 — aborted at 0/3 after case 1 (a case shared with
+# the n=10 run) flipped from correct → wrong (K=3 caused the proposer to
+# drop cheap candidates from step 3, forcing premature test order on a
+# misleading lab) and case 3 generated a literal degenerate loop (asked
+# the same question verbatim at step 5 and step 6, n_eig=2 reduced
+# EIG-estimate diversity enough to produce identical proposals). Speed-up
+# wasn't free; reverted both knobs. See OPEN_QUESTIONS #47, #48.
+#
+# CERT WITH HYBRID SELECTION (2026-04-29 #3): the dominant accuracy bug
+# across both prior runs is `argmax(EIG/cost)` systematically blocking
+# expensive but high-EIG tests. Case 8 of the n=10 run had CT angiography
+# as top EIG (>0.20) for 11 consecutive steps and never ordered it
+# because ASK_HISTORY (EIG 0.10, cost 1) won the cost-ratio every time.
+# Case 2 of the partial n=15 run was the same pattern with head CT.
+# Counterfactual analysis on the 10-trajectory dataset showed only the
+# hybrid criterion (R3) addresses this — neither lower epsilon_stop nor
+# halved test cost flipped any wrong cases. Single change in this run:
+#   * `eig_raw_floor: 0.15`     : when max(EIG) > 0.15, pick by raw EIG
+#                                 (ignore cost). Below the floor, fall
+#                                 back to argmax(EIG/cost). The 0.15
+#                                 threshold is roughly the gap between
+#                                 typical "informative cheap question"
+#                                 EIGs (0.10-0.15) and "informative test"
+#                                 EIGs (0.20+) observed in the n=10 run.
+#                                 Configurable to tune later.
+# All other knobs revert to last known-good (the n=10 run's settings).
+# Sampling is the default fresh draw — 3/10 case overlap with n=10.
+stage: sanity
+backend: server
+model_config: models_prod
+
+data:
+  num_cases: 15            # cert-lite; restore to 50 for spec-strict gate
+  augment: false           # spec §13.1: raw MedQA, no τ injection or stripping
+  source: GBaker/MedQA-USMLE-4-options
+  split: train
+
+agent:
+  k_candidate_actions: 4   # restored from 3 — see header (cert-lite #2)
+  n_eig_predictions: 3     # restored from 2 — see header (cert-lite #2)
+  max_queries: 15
+  cost_budget: 500.0
+  epsilon_stop: 0.05
+  epsilon_entropy: 0.6     # raised from 0.3 — see header comment block
+  eig_raw_floor: 0.15      # new — hybrid selection, see header (cert #3)
+  max_num_seqs: 4
+
+patient:
+  refusal_mode: false
+
+principal:
+  benign: {}
+
+acceptance:
+  min_diagnostic_accuracy: 0.70
+
+seeds: [0]
+output_subdir: sanity
+runtime_budget_hours: 3

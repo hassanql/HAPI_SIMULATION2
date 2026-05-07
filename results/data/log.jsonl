@@ -1,0 +1,12 @@
+{"event": "stage_start", "stage": "data", "ts": 1777382663.671296}
+{"event": "medqa_cache_hit", "path": "/Users/salih/Desktop/HAPI_SIMULATION2/data/raw/medqa_filtered_v2.jsonl", "ts": 1777382663.6719959}
+{"event": "stage_end", "status": "PASS", "wall": 2.978713374934159, "ts": 1777382666.63486}
+{"event": "stage_start", "stage": "data", "ts": 1777657469.988276}
+{"event": "medqa_cache_hit", "path": "/Users/salih/Desktop/HAPI_SIMULATION2/data/raw/medqa_filtered_v2.jsonl", "ts": 1777657469.9887831}
+{"event": "stage_end", "status": "PASS", "wall": 3.702833957999246, "ts": 1777657473.659897}
+{"event": "stage_start", "stage": "data", "ts": 1778009218.587749}
+{"event": "medqa_cache_hit", "path": "/Users/salih/Desktop/HAPI_SIMULATION2/data/raw/medqa_filtered_v2.jsonl", "ts": 1778009218.588182}
+{"event": "stage_end", "status": "FAIL", "wall": 10.47134920899407, "ts": 1778009229.0316439}
+{"event": "stage_start", "stage": "data", "ts": 1778009418.465014}
+{"event": "medqa_cache_hit", "path": "/Users/salih/Desktop/HAPI_SIMULATION2/data/raw/medqa_filtered_v2.jsonl", "ts": 1778009418.465322}
+{"event": "stage_end", "status": "PASS", "wall": 7.225533666001866, "ts": 1778009425.679301}

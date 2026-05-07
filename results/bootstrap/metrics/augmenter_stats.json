@@ -1,0 +1,58 @@
+{
+  "by_finding": {
+    "low cd4": {
+      "n_neg_with": 0,
+      "n_pos_with": 1,
+      "rate_when_tau_neg": 0.0,
+      "rate_when_tau_pos": 1.0
+    },
+    "lymphadenopathy": {
+      "n_neg_with": 0,
+      "n_pos_with": 0,
+      "rate_when_tau_neg": 0.0,
+      "rate_when_tau_pos": 0.0
+    },
+    "night sweats": {
+      "n_neg_with": 0,
+      "n_pos_with": 0,
+      "rate_when_tau_neg": 0.0,
+      "rate_when_tau_pos": 0.0
+    },
+    "oral thrush": {
+      "n_neg_with": 0,
+      "n_pos_with": 1,
+      "rate_when_tau_neg": 0.0,
+      "rate_when_tau_pos": 1.0
+    },
+    "weight loss": {
+      "n_neg_with": 0,
+      "n_pos_with": 1,
+      "rate_when_tau_neg": 0.0,
+      "rate_when_tau_pos": 1.0
+    }
+  },
+  "empirical_base_rate": 0.2,
+  "marker_count_distribution": {
+    "mean_markers_per_tau_neg": 0.0,
+    "mean_markers_per_tau_pos": 3.0,
+    "tau_neg": {
+      "0": 4,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0
+    },
+    "tau_pos": {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 1,
+      "4": 0,
+      "5": 0
+    }
+  },
+  "n": 5,
+  "n_neg": 4,
+  "n_pos": 1
+}

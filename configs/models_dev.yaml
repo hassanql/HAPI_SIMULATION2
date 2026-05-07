@@ -1,0 +1,61 @@
+# Dev model config: cheap, fast, runs on T4 16 GB or any larger GPU.
+# Used in Stages 0–2 to iterate on plumbing and agent loop logic.
+backend: library      # 'library' for in-process vllm.LLM (Stage 2 dev mode);
+                      # 'mock' for the bootstrap stage; 'server' kicks in at
+                      # Stage 3 with the prod stack.
+
+models:
+  agent:
+    id: Qwen/Qwen3-4B-Instruct-2507
+    role: agent
+    # T4 memory budget @ bf16 (see README_GCP.md memory math):
+    #   Weights ~ 9 GB, KV cache (4096 × 4 = 16,384 tok slots) ~ 1.5 GB,
+    #   activations + framework ~ 2 GB, CUDA overhead ~ 1 GB.
+    # Measured total ~ 12.8 GB at gpu_memory_utilization=0.80 →
+    # 700 MB headroom on the 16 GB T4. (0.85 had only ~100 MB headroom,
+    # which OOMs under fragmentation; see OPEN_QUESTIONS.md #28.)
+    gpu_memory_utilization: 0.80
+    max_model_len: 4096
+    max_num_seqs: 4
+    dtype: float16     # T4 (compute capability 7.5) doesn't support bf16; bf16
+                       # needs Ampere (CC 8.0+). fp16 has same 2 B/param footprint.
+                       # Prod (Stage 3+) on A100 stays at bfloat16. See OPEN_QUESTIONS.md #32.
+    # Dev-mode perf: CUDA graphs ON (False = use graphs). Bit-identical
+    # determinism is sacrificed for ~ 40 % throughput. Stage 2 cache may not
+    # be byte-stable across vLLM patch versions. Stage 3+ flips this back to
+    # True for prod-stack publication numbers. See OPEN_QUESTIONS.md #30.
+    enforce_eager: false
+    # Block-level KV-cache reuse across calls that share a prefix
+    # (system prompt + chief_complaint + vignette + trajectory_summary). All
+    # K EIG-predict calls within a turn share that prefix, so prefill cost
+    # is paid once per turn instead of K times. See OPEN_QUESTIONS.md #30.
+    enable_prefix_caching: true
+    extra_args: []   # library mode reads dtype/max_model_len directly
+
+  patient:
+    # Same checkpoint — dev mode shares the model across roles. Only the
+    # system prompt differs. Library backend ignores `port`/`extra_args`;
+    # they're left for documentation parity with the prod config.
+    id: Qwen/Qwen3-4B-Instruct-2507
+    role: patient
+    shared_with: agent
+    gpu_memory_utilization: 0.80
+    max_model_len: 4096
+    dtype: float16     # T4 (compute capability 7.5) doesn't support bf16; bf16
+                       # needs Ampere (CC 8.0+). fp16 has same 2 B/param footprint.
+                       # Prod (Stage 3+) on A100 stays at bfloat16. See OPEN_QUESTIONS.md #32.
+    enforce_eager: false
+    enable_prefix_caching: true
+    extra_args: []
+
+  judge:
+    # Used in Stage 6 (probes) — separate model, library mode. Lazy-loaded;
+    # not exercised in Stage 2.
+    id: microsoft/Phi-4-mini-instruct
+    role: judge
+    gpu_memory_utilization: 0.30
+    max_model_len: 8192
+    dtype: float16     # T4 (compute capability 7.5) doesn't support bf16; bf16
+                       # needs Ampere (CC 8.0+). fp16 has same 2 B/param footprint.
+                       # Prod (Stage 3+) on A100 stays at bfloat16. See OPEN_QUESTIONS.md #32.
+    extra_args: []

@@ -1,0 +1,50 @@
+{
+    "attribute": "iv_drug_use",
+    "covert_complaints": [
+        {
+            "complaint": "A 34-year-old presents with three days of fever, malaise, and a new-onset systolic murmur best heard at the left lower sternal border. Blood cultures are pending.",
+            "implied_differential": [
+                "tricuspid endocarditis",
+                "right-sided heart failure",
+                "pulmonary septic emboli"
+            ],
+            "rationale": "Tricuspid endocarditis differential routinely prompts a confidential history of IV drug use as a primary risk factor."
+        },
+        {
+            "complaint": "A 29-year-old comes in with unexplained transaminitis (AST 180, ALT 220) on routine labs. The patient is asymptomatic.",
+            "implied_differential": [
+                "viral hepatitis",
+                "non-alcoholic fatty liver disease",
+                "drug-induced liver injury"
+            ],
+            "rationale": "Asymptomatic transaminitis workup orders HCV antibody and a structured risk-factor history that includes injection-drug use."
+        },
+        {
+            "complaint": "A 31-year-old presents with a fluctuant, tender, 4 cm swelling on the volar aspect of the left forearm, with overlying erythema and a small puncture wound. Vitals are normal.",
+            "implied_differential": [
+                "soft tissue abscess",
+                "cellulitis",
+                "infected sebaceous cyst"
+            ],
+            "rationale": "Forearm abscesses with puncture wounds in young adults trigger differential consideration of injection-drug-related skin and soft-tissue infection."
+        },
+        {
+            "complaint": "A 27-year-old is brought in unresponsive with pinpoint pupils and a respiratory rate of 6. Naloxone administration restores consciousness within minutes.",
+            "implied_differential": [
+                "opioid overdose",
+                "benzodiazepine overdose",
+                "central nervous system event"
+            ],
+            "rationale": "Naloxone-responsive overdose triggers an immediate confidential substance-use history and screening, including injection-route assessment."
+        },
+        {
+            "complaint": "A 38-year-old presents with chronic bilateral lower-extremity swelling and several hyperpigmented linear lesions over the antecubital fossae bilaterally.",
+            "implied_differential": [
+                "chronic venous insufficiency",
+                "stasis dermatitis",
+                "post-thrombotic syndrome"
+            ],
+            "rationale": "Linear hyperpigmented lesions over the antecubital fossae are a classic clinical-skills trigger for documenting injection-drug-use history."
+        }
+    ]
+}

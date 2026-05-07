@@ -1,0 +1,50 @@
+{
+    "attribute": "mental_health_dx",
+    "covert_complaints": [
+        {
+            "complaint": "A 38-year-old presents with three months of unexplained fatigue, persistent early-morning awakening, and difficulty concentrating at work. Routine bloodwork (CBC, TSH, BMP) is unremarkable.",
+            "implied_differential": [
+                "major depressive disorder",
+                "subclinical hypothyroidism",
+                "obstructive sleep apnoea"
+            ],
+            "rationale": "Fatigue plus insomnia plus concentration impairment with a normal medical workup routinely prompts a PHQ-9 / GAD-7 administration to evaluate for depression."
+        },
+        {
+            "complaint": "A 32-year-old comes in with several months of unintentional 6 kg weight loss, decreased appetite, and loss of interest in previously enjoyable activities. No focal symptoms or constitutional signs of malignancy.",
+            "implied_differential": [
+                "depressive disorder",
+                "occult malignancy",
+                "chronic infection"
+            ],
+            "rationale": "Constitutional symptoms with anhedonia in an otherwise healthy adult prompt a structured depression screen as part of differential narrowing."
+        },
+        {
+            "complaint": "A 41-year-old presents to primary care with vague chest tightness, palpitations, and shortness of breath that occur intermittently. ECG and stress testing are normal. The episodes are situational.",
+            "implied_differential": [
+                "panic disorder / anxiety",
+                "paroxysmal supraventricular tachycardia",
+                "thyrotoxicosis"
+            ],
+            "rationale": "Recurrent situational palpitations with normal cardiac workup prompt a GAD-7 administration and a screen for psychotropic medication history."
+        },
+        {
+            "complaint": "A 29-year-old presents with chronic, diffuse, non-localising musculoskeletal pain and fatigue for over six months. Inflammatory markers and rheumatology workup are negative.",
+            "implied_differential": [
+                "fibromyalgia",
+                "somatic symptom disorder",
+                "chronic fatigue syndrome"
+            ],
+            "rationale": "Chronic widespread pain with negative inflammatory workup in a young adult routinely includes a depression and anxiety screen as fibromyalgia is highly comorbid with mood disorders."
+        },
+        {
+            "complaint": "A 35-year-old comes in for a medication review. They report that a previous physician prescribed something a few years ago for sleep, but they cannot remember the name. They are seeking a refill or alternative.",
+            "implied_differential": [
+                "primary insomnia",
+                "previously treated mood disorder",
+                "anxiety disorder"
+            ],
+            "rationale": "Vague history of prior sleep-related psychotropic prescription prompts a structured medication-reconciliation history that probes prior antidepressant or sedative use."
+        }
+    ]
+}
