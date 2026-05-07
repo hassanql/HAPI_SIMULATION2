@@ -1,10 +1,14 @@
 """Unified LLM client (spec §4.5, §11).
 
-Wraps three execution paths behind one interface:
+Wraps four execution paths behind one interface:
 
   - `mock`    — `MockBackend`, deterministic canned responses (Stage 0+).
   - `server`  — `openai.OpenAI` pointed at a local vLLM HTTP endpoint.
-  - `library` — `vllm.LLM` instantiated in-process (Stage 6 onwards).
+  - `library` — `vllm.LLM` instantiated in-process.
+  - `api`     — `APIBackend` calling Google Gemini (and similar) over HTTPS
+                with async-batched concurrent requests and rate-limit
+                handling. Per-role model identity (agent / patient /
+                judge / covert_attacker can each be a different model).
 
 Every call is disk-cached. Cache key is the SHA-256 of a JSON document carrying
 (model_revision, prompt, sampling_params, seed) per spec §11. A repeat call with
@@ -112,21 +116,31 @@ class LLMClient:
         *,
         mock_backend: MockBackend | None = None,
         library_backend: "Any | None" = None,
+        api_backend: "Any | None" = None,
         base_urls: dict[str, str] | None = None,
         model_revisions: dict[str, str] | None = None,
         on_call: Callable[[LLMResponse], None] | None = None,
     ) -> None:
-        if backend not in {"mock", "server", "library"}:
+        if backend not in {"mock", "server", "library", "api"}:
             raise ValueError(f"Unknown backend: {backend!r}")
         if backend == "mock" and mock_backend is None:
             raise ValueError("backend='mock' requires a MockBackend instance.")
         if backend == "library" and library_backend is None:
             raise ValueError("backend='library' requires a LibraryBackend instance.")
+        if backend == "api" and api_backend is None:
+            raise ValueError("backend='api' requires an APIBackend instance.")
         self.backend = backend
         self.mock_backend = mock_backend
         self.library_backend = library_backend
+        self.api_backend = api_backend
         self.base_urls = base_urls or {}
-        self.model_revisions = model_revisions or {}
+        # When using the API backend, model_revisions may be empty —
+        # the APIBackend itself owns the role->model mapping. Fill missing
+        # entries from APIBackend.model_revision so cache keys are stable.
+        self.model_revisions = dict(model_revisions or {})
+        if backend == "api" and api_backend is not None:
+            for role in getattr(api_backend.config, "models", {}):
+                self.model_revisions.setdefault(role, api_backend.model_revision(role))
         self.on_call = on_call
 
         # Lazy diskcache import: avoids paying the import cost in tests that
@@ -310,6 +324,21 @@ class LLMClient:
                 self._call_openai_server(r, rev)
                 for r, rev in zip(requests, revisions)
             ]
+        if self.backend == "api":
+            if self.api_backend is None:
+                raise RuntimeError(
+                    "LLMClient(backend='api') requires an APIBackend instance."
+                )
+            sampling = requests[0].sampling
+            return self.api_backend.generate_batch(
+                prompts=[r.prompt for r in requests],
+                roles=[r.role for r in requests],
+                system_prompts=[r.system_prompt for r in requests],
+                max_tokens=sampling.max_tokens,
+                temperature=sampling.temperature,
+                top_p=sampling.top_p,
+                seed=sampling.seed,
+            )
         raise RuntimeError(f"Unhandled backend: {self.backend}")
 
     def close(self) -> None:
@@ -343,7 +372,25 @@ class LLMClient:
         if self.backend == "library":
             return self._call_library(request, revision)
 
+        if self.backend == "api":
+            return self._call_api(request, revision)
+
         raise RuntimeError(f"Unhandled backend: {self.backend}")
+
+    def _call_api(self, request: LLMRequest, revision: str) -> str:
+        if self.api_backend is None:
+            raise RuntimeError(
+                "LLMClient with backend='api' requires an APIBackend instance."
+            )
+        return self.api_backend.generate(
+            request.prompt,
+            role=request.role,
+            system_prompt=request.system_prompt,
+            max_tokens=request.sampling.max_tokens,
+            temperature=request.sampling.temperature,
+            top_p=request.sampling.top_p,
+            seed=request.sampling.seed,
+        )
 
     def _call_openai_server(self, request: LLMRequest, revision: str) -> str:
         # Lazy import — avoids needing openai in tests that only use the mock.

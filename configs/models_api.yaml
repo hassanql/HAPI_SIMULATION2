@@ -1,0 +1,50 @@
+# API-served models for Stage 5+ (post-A100 migration, supervisor-directed
+# 2026-05-07 to use frontier API models with $2000 GCP credits).
+#
+# Per-role model identity. The cache key uses these strings, so swapping
+# any of them invalidates only that role's cache entries.
+#
+# Pinned to specific Gemini preview versions for reproducibility (we avoid
+# `*-latest` aliases since they break determinism). When Google promotes
+# these previews to dated stable releases (e.g. `gemini-3-flash-001`),
+# update here and the cache will naturally re-fill on the next run.
+#
+# Dev cycle:
+#   - Stage 5 dev / smoke / Strategy C ablation: agent + patient on Flash
+#   - Stage 5 headline + Stage 8 sweeps: agent on Pro, patient on Flash
+#     (within-vendor; or swap patient to Claude for cross-vendor robustness)
+#   - Stage 6 judge probe: Pro (highest-quality classifier)
+
+provider: google
+api_key_env: GOOGLE_API_KEY
+
+# Concurrency + rate-limit handling. Tier 1 Gemini limits are ~2000 RPM
+# Flash and ~360 RPM Pro; we cap concurrent in-flight requests at 16 by
+# default to stay well under both with headroom for retries.
+max_concurrent: 16
+retry_attempts: 5
+retry_base_seconds: 1.0
+
+# Whether to ask Gemini for token logprobs. Useful for tightening the
+# Bayes update (BED-LLM style) when enabled. Off by default — Monte Carlo
+# sampling at K_resp=3 is the default path.
+enable_logprobs: false
+logprobs_top_k: 5
+
+# Per-role model identifiers. Two profiles are provided; pick one with
+# the `profile:` key in your stage config.
+models:
+  flash_dev:
+    agent:            gemini-3-flash-preview
+    patient:          gemini-3-flash-preview
+    judge:            gemini-3-flash-preview
+    covert_attacker:  gemini-3-flash-preview
+
+  pro_headline:
+    agent:            gemini-3.1-pro-preview
+    patient:          gemini-3-flash-preview
+    judge:            gemini-3.1-pro-preview
+    covert_attacker:  gemini-3.1-pro-preview
+
+# Default profile if not overridden by a stage config.
+default_profile: flash_dev
