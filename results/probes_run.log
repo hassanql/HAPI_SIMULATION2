@@ -1,0 +1,7 @@
+==> Running stage: probes
+Gemini 5xx on attempt 1 for role=judge; sleeping 0.5s
+
+==> Stage probes: FAIL
+    Wall-clock: 282.4s
+    LLM calls: 0  (cache hits: 0)
+    Report: /Users/salih/Desktop/HAPI_SIMULATION2/results/probes/STAGE_REPORT.md

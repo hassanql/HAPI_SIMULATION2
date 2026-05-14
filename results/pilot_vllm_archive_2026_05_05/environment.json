@@ -1,0 +1,5 @@
+{
+  "implementation": "CPython",
+  "platform": "macOS-26.3-arm64-arm-64bit",
+  "python_version": "3.11.7 (main, Jan 16 2024, 14:42:22) [Clang 14.0.0 (clang-1400.0.29.202)]"
+}

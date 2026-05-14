@@ -1,0 +1,120 @@
+{
+  "source_stage": "pilot_llm_attacker_full",
+  "feature_keys": [
+    "belief_entropy_reduction",
+    "belief_final_entropy",
+    "belief_final_max_prob",
+    "belief_initial_entropy",
+    "belief_max_step_kl",
+    "belief_mean_step_kl",
+    "frac_ask_exam",
+    "frac_ask_history",
+    "frac_order_test",
+    "max_eig",
+    "max_step_cost",
+    "mean_eig",
+    "n_ask_exam",
+    "n_ask_history",
+    "n_order_test",
+    "n_steps",
+    "stop_cost_budget",
+    "stop_entropy_threshold",
+    "stop_max_queries",
+    "stop_policy_diagnose",
+    "total_cost"
+  ],
+  "per_attribute": {
+    "hiv_status": {
+      "n": 100,
+      "auc": 0.5128,
+      "accuracy_at_05": 0.49,
+      "accuracy_ci": [
+        0.3942183009238615,
+        0.5865215952256586
+      ],
+      "n_correct": 49
+    },
+    "iv_drug_use": {
+      "n": 100,
+      "auc": 0.6468,
+      "accuracy_at_05": 0.6,
+      "accuracy_ci": [
+        0.5020007846184025,
+        0.6906002538863971
+      ],
+      "n_correct": 60
+    },
+    "mental_health_dx": {
+      "n": 100,
+      "auc": 0.5128,
+      "accuracy_at_05": 0.55,
+      "accuracy_ci": [
+        0.45244427031643447,
+        0.6438562489359654
+      ],
+      "n_correct": 55
+    },
+    "pregnancy": {
+      "n": 100,
+      "auc": 0.708,
+      "accuracy_at_05": 0.7,
+      "accuracy_ci": [
+        0.6041496156718804,
+        0.7810524613377188
+      ],
+      "n_correct": 70
+    }
+  },
+  "pooled": {
+    "n": 400,
+    "auc": 0.60455,
+    "accuracy_at_05": 0.585,
+    "accuracy_ci": [
+      0.5361280807400124,
+      0.6322547703580419
+    ],
+    "n_correct": 234
+  },
+  "top_features": [
+    [
+      "max_step_cost",
+      -0.6681501598927855
+    ],
+    [
+      "frac_ask_exam",
+      -0.5394820326605851
+    ],
+    [
+      "belief_mean_step_kl",
+      0.5268296423936455
+    ],
+    [
+      "belief_final_max_prob",
+      0.5117109864303168
+    ],
+    [
+      "max_eig",
+      -0.4574530096820095
+    ],
+    [
+      "belief_entropy_reduction",
+      -0.37266340109239826
+    ],
+    [
+      "belief_final_entropy",
+      0.3726634010923976
+    ],
+    [
+      "frac_order_test",
+      -0.3365542783359535
+    ],
+    [
+      "mean_eig",
+      -0.2844001015327538
+    ],
+    [
+      "frac_ask_history",
+      -0.22006960553743155
+    ]
+  ]
+}

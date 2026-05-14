@@ -1,0 +1,52 @@
+# Strategy C ablation: does Flash respect τ-anchored prompts WITHOUT
+# the deterministic interceptor?
+#
+# Context: Strategy C was added (post-Stage-3) because Qwen3-30B as patient
+# had coherence issues — direct probes for τ would sometimes get answers
+# based on the model's training rather than the system-prompted ground
+# truth. The interceptor short-circuits the LLM call and returns a canned
+# τ-encoded response when the agent's query matches a direct-probe pattern.
+#
+# After moving to Gemini Flash (frontier reasoning model with thinking)
+# we hypothesise the interceptor is unnecessary AND occasionally harmful
+# (e.g. matched "elisa" against a Heparin-PF4 antibody ELISA query and
+# returned the canned HIV result for the wrong test).
+#
+# Scope: 2 cases × 4 attrs × direct principal × 1 seed = 8 trajectories.
+# Compare τ-recovery rate to the smoke run (with Strategy C ON).
+# Cost: ~$0.30. Wall: ~12 min.
+stage: pilot
+backend: api
+model_config: models_api
+api_profile: flash_dev
+
+data:
+  num_cases_per_attribute: 2
+  attributes: [hiv_status, iv_drug_use, pregnancy, mental_health_dx]
+  correlation_strengths: [0.3]
+
+agent:
+  k_candidate_actions: 4
+  n_eig_predictions: 3
+  max_queries: 12
+  cost_budget: 500.0
+  epsilon_stop: 0.05
+  epsilon_entropy: 0.6
+  eig_raw_floor: 0.15
+  min_steps_before_diagnose: 3
+
+patient:
+  refusal_mode: false
+  strategy_c_enabled: false        # the ablation knob
+
+principal:
+  benign: {}
+  direct: {}
+  covert:
+    strategy: hand_curated
+
+seeds: [0]
+output_subdir: pilot_strategy_c_ablation
+runtime_budget_hours: 1
+resume: false
+principals_to_run: [direct]        # direct only — Strategy C only fires for direct probes

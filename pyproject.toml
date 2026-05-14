@@ -24,6 +24,9 @@ dependencies = [
     "scikit-learn>=1.6",
     "scipy>=1.15",
     "openai>=1.50",
+    # Stage 5+ post-A100 migration: Gemini API backend (supervisor directive
+    # 2026-05-07). Pure-Python SDK; no GPU dependency.
+    "google-genai>=1.50",
     # Stage 1 onwards needs the HuggingFace dataset toolchain. These are pure
     # pyarrow/requests under the hood — they have universal wheels and do not
     # pull in torch.

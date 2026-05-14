@@ -127,10 +127,67 @@ def _apply_selection_rule(
     )
 
 
+def _strip_json_fence(text: str) -> str:
+    """Strip leading/trailing markdown JSON fences from a response.
+
+    Gemini 3 (and other reasoning models) sometimes wrap JSON output in
+    ```json ... ``` even when the prompt asks for "JSON only". Without
+    stripping, json.loads raises and the caller falls through to a
+    fallback path — for the action proposer, that means a single
+    hardcoded ASK_HISTORY question fires every turn (action-diversity
+    collapse). Strip the fence here so all JSON parsers in the policy
+    handle both raw-JSON and fenced-JSON responses identically.
+    """
+    s = text.strip()
+    # Most common: ```json\n{...}\n``` or ```\n{...}\n```
+    if s.startswith("```"):
+        # Drop the opening fence line (handles ```json, ```, ```javascript, etc.)
+        first_nl = s.find("\n")
+        if first_nl != -1:
+            s = s[first_nl + 1:]
+        else:
+            s = s[3:]
+        # Drop trailing ```
+        if s.rstrip().endswith("```"):
+            s = s.rstrip()[:-3]
+    return s.strip()
+
+
+def _extract_first_json(text: str) -> str | None:
+    """Locate and return the first valid JSON value in the response.
+
+    Robust to thinking-mode "spill": Gemini 3 reasoning models occasionally
+    emit chain-of-thought ahead of the structured output (e.g.
+    "*   Let me reconsider... [ {...} ]"), and our prompt's "output only
+    the JSON" instruction is sometimes ignored when the model's thinking
+    budget runs over. After fence-stripping, scan for the first `[` or
+    `{` and try `json.JSONDecoder().raw_decode` from there; this returns
+    the JSON span even when it is preceded by prose. Returns None if no
+    valid JSON is found.
+    """
+    s = _strip_json_fence(text)
+    decoder = json.JSONDecoder()
+    # Try positions of every `[` and `{` in turn — earliest valid wins.
+    candidates: list[int] = []
+    for i, ch in enumerate(s):
+        if ch in ("[", "{"):
+            candidates.append(i)
+    for start in candidates:
+        try:
+            _value, _end = decoder.raw_decode(s[start:])
+            return s[start: start + _end]
+        except json.JSONDecodeError:
+            continue
+    return None
+
+
 def _parse_action_candidates(text: str) -> list[Action]:
     """Parse the action_proposal output into Actions."""
+    extracted = _extract_first_json(text)
+    if extracted is None:
+        return []
     try:
-        raw = json.loads(text)
+        raw = json.loads(extracted)
     except json.JSONDecodeError:
         return []
     if not isinstance(raw, list):
@@ -339,10 +396,14 @@ class RandomPolicy:
                 schema_name="belief_update",
             )
         )
-        try:
-            raw = json.loads(resp.text)
-        except json.JSONDecodeError:
-            raw = {}
+        extracted = _extract_first_json(resp.text)
+        if extracted is None:
+            raw: dict = {}
+        else:
+            try:
+                raw = json.loads(extracted)
+            except json.JSONDecodeError:
+                raw = {}
         if not isinstance(raw, dict):
             raw = {}
         return _scores_to_likelihoods(raw, options)
@@ -484,9 +545,15 @@ class EIGPolicy(RandomPolicy):
 
     @staticmethod
     def _parse_predictions(text: str, options: list[str]) -> list[_Prediction]:
-        try:
-            raw = json.loads(text)
-        except json.JSONDecodeError:
+        extracted = _extract_first_json(text)
+        if extracted is not None:
+            try:
+                raw = json.loads(extracted)
+            except json.JSONDecodeError:
+                raw = None
+        else:
+            raw = None
+        if raw is None:
             return [
                 _Prediction(
                     response="(unparseable)",

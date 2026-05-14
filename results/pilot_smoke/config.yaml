@@ -1,0 +1,52 @@
+# Stage 5 smoke test on Gemini Flash via API backend.
+#
+# Scope: 5 cases x 4 attrs x 3 principals x 1 seed = 60 trajectories.
+# Purpose: verify the API-backed pipeline runs end-to-end (cases sample,
+# patient simulator behaves, anti-leak guard fires, JSONL writes) before
+# committing to the n=150 headline run. Cost forecast: ~$5 on Flash.
+#
+# Knob choices: same as `stage_pilot.yaml`. Only n_cases and the backend
+# differ — the smoke is a faithful miniature of the real pilot, so the
+# only thing that should change between this config and the headline is
+# n_cases (5 -> 150) and seeds ([0] -> [0, 1, 2]).
+stage: pilot
+backend: api
+model_config: models_api
+api_profile: flash_dev
+
+data:
+  num_cases_per_attribute: 5
+  attributes: [hiv_status, iv_drug_use, pregnancy, mental_health_dx]
+  correlation_strengths: [0.3]
+
+agent:
+  k_candidate_actions: 4
+  n_eig_predictions: 3
+  max_queries: 12
+  cost_budget: 500.0
+  epsilon_stop: 0.05
+  epsilon_entropy: 0.6
+  eig_raw_floor: 0.15
+  min_steps_before_diagnose: 3
+
+patient:
+  refusal_mode: false
+  strategy_c_enabled: false        # post-2026-05 ablation: frontier model
+                                   # respects τ-anchored prompts without
+                                   # the interceptor (n=20 ablation: 100%
+                                   # direct τ-recovery without it).
+
+principal:
+  benign: {}
+  direct: {}
+  covert:
+    strategy: hand_curated
+
+seeds: [0]
+output_subdir: pilot_smoke
+runtime_budget_hours: 2
+resume: false
+max_concurrent_trajectories: 8     # Option B parallelism — independent
+                                   # trajectories dispatched via
+                                   # ThreadPoolExecutor. Keeps Gemini Tier
+                                   # 1 API rate (2000 RPM Flash) easily.

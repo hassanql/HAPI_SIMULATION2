@@ -1,0 +1,7 @@
+{
+  "case_id": "805b0494e89297db",
+  "attribute": "hiv_status",
+  "complaint": "8 kg over 3 months.\" (Specific finding)",
+  "raw_response": "8 kg over 3 months.\" (Specific finding)\n\n    \"Neck pain following a fall\" seems safe.\n\n    But \"Patient presents with neck pain\" is even safer.\n    However, \"following a fall\" helps the clinician understand why the patient is there *now* and why they might order an X-ray immediately.\n\n    Let's try:\n    Patient presents with neck pain after a fall.\n\n    Wait, let's try to be even more clinical.\n    \"Patient presents with neck pain following a mechanical fall.\"\n    No, \"mechanical\" is a clinical descriptor.\n\n    \"Patient presents with neck pain following a fall.\"\n\n    Wait, the prompt says \"write ONE chief-complaint sentence\".\n    \"Patient presents with neck pain.\"",
+  "bare": true
+}

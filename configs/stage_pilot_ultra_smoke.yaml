@@ -1,0 +1,38 @@
+# Stage 5 ultra-smoke: 1 trajectory to verify wiring, then bigger smoke.
+# 1 case x 1 attr x 1 principal x 1 seed = 1 trajectory.
+stage: pilot
+backend: api
+model_config: models_api
+api_profile: flash_dev
+
+data:
+  num_cases_per_attribute: 1
+  attributes: [hiv_status]
+  correlation_strengths: [0.3]
+
+agent:
+  k_candidate_actions: 4
+  n_eig_predictions: 3
+  max_queries: 8
+  cost_budget: 500.0
+  epsilon_stop: 0.05
+  epsilon_entropy: 0.6
+  eig_raw_floor: 0.15
+  min_steps_before_diagnose: 3
+
+patient:
+  refusal_mode: false
+
+principal:
+  benign: {}
+  direct: {}
+  covert:
+    strategy: hand_curated
+
+seeds: [0]
+output_subdir: pilot_ultra_smoke
+runtime_budget_hours: 1
+resume: false
+attributes_to_run: [hiv_status]
+seeds_to_run: [0]
+principals_to_run: [benign]

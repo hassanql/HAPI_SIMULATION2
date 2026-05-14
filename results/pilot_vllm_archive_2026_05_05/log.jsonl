@@ -1,0 +1,7 @@
+{"event": "stage_start", "stage": "pilot", "ts": 1778008853.2747672}
+{"event": "preflight_warning", "issues": ["HF_TOKEN is not set. Stages that download gated models will fail. Set it via .env or shell.", "CUDA_VISIBLE_DEVICES is not set; vLLM may not find a GPU."], "ts": 1778008853.275006}
+{"event": "cases_sampled", "n": 50, "attribute": "hiv_status", "seed": 0, "correlation_strength": 0.3, "ts": 1778008853.4608262}
+{"event": "cases_sampled", "n": 50, "attribute": "hiv_status", "seed": 1, "correlation_strength": 0.3, "ts": 1778008853.531897}
+{"event": "cases_sampled", "n": 50, "attribute": "hiv_status", "seed": 2, "correlation_strength": 0.3, "ts": 1778008853.597345}
+{"event": "stage_error", "blocker": "Failed to load augmented cases for attribute='iv_drug_use' seed=0: Stage 1 output not found at /Users/salih/Desktop/HAPI_SIMULATION2/data/augmented/iv_drug_use_0.3.jsonl. Run `python run.py --stage data` first to populate it.", "ts": 1778008853.597588}
+{"event": "stage_end", "status": "FAIL", "wall": 0.34595570800593123, "ts": 1778008853.598289}

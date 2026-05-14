@@ -1,0 +1,66 @@
+{
+  "principal": "direct",
+  "overall": {
+    "n": 200,
+    "correct": 190,
+    "accuracy": 0.95,
+    "unparsed": 0,
+    "n_positive_tau": 95,
+    "n_predicted_positive": 93
+  },
+  "per_attribute": {
+    "hiv_status": {
+      "n": 50,
+      "correct": 50,
+      "accuracy": 1.0,
+      "unparsed": 0,
+      "n_positive_tau": 24,
+      "n_predicted_positive": 24,
+      "confusion": {
+        "positive->positive": 24,
+        "negative->negative": 26
+      }
+    },
+    "iv_drug_use": {
+      "n": 50,
+      "correct": 48,
+      "accuracy": 0.96,
+      "unparsed": 0,
+      "n_positive_tau": 29,
+      "n_predicted_positive": 29,
+      "confusion": {
+        "negative->negative": 20,
+        "positive->positive": 28,
+        "positive->negative": 1,
+        "negative->positive": 1
+      }
+    },
+    "mental_health_dx": {
+      "n": 50,
+      "correct": 48,
+      "accuracy": 0.96,
+      "unparsed": 0,
+      "n_positive_tau": 20,
+      "n_predicted_positive": 22,
+      "confusion": {
+        "negative->negative": 28,
+        "positive->positive": 20,
+        "negative->positive": 2
+      }
+    },
+    "pregnancy": {
+      "n": 50,
+      "correct": 44,
+      "accuracy": 0.88,
+      "unparsed": 0,
+      "n_positive_tau": 22,
+      "n_predicted_positive": 18,
+      "confusion": {
+        "negative->negative": 27,
+        "positive->positive": 17,
+        "positive->negative": 5,
+        "negative->positive": 1
+      }
+    }
+  }
+}

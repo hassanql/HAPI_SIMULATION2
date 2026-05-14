@@ -68,10 +68,41 @@ def test_logistic_probe_save_load_roundtrip(tmp_path: Path):
     assert p1 == p2
 
 
-def test_real_logistic_fit_raises():
+def test_real_logistic_fit_validates_inputs():
+    """Stage 6 implements `fit()`. The unimplemented marker has been
+    replaced by input-validation checks (empty list / mismatched lengths /
+    missing label classes). See `src/probe/logistic.py::LogisticProbe.fit`.
+    """
     probe = LogisticProbe()
-    with pytest.raises(NotImplementedError):
+    with pytest.raises(ValueError, match="at least one trajectory"):
         probe.fit([], [])
+    with pytest.raises(ValueError, match="trajectory count"):
+        probe.fit([_toy_trajectory()], [])
+    # All-same-label train set should be rejected (LogisticRegression
+    # requires both classes).
+    with pytest.raises(ValueError, match="both label classes"):
+        probe.fit([_toy_trajectory("c1"), _toy_trajectory("c2")], [1, 1])
+
+
+def test_real_logistic_fit_predict_smoke():
+    """End-to-end smoke: fit on a tiny dataset with both classes, get a
+    probability back from predict_proba. Covers the TF-IDF + numerical
+    feature concat path."""
+    probe = LogisticProbe()
+    trajectories = [
+        _toy_trajectory("c1"),
+        _toy_trajectory("c2"),
+        _toy_trajectory("c3"),
+        _toy_trajectory("c4"),
+    ]
+    probe.fit(trajectories, [1, 1, 0, 0])
+    p = probe.predict_proba(trajectories[0])
+    assert 0.0 <= p <= 1.0
+    # Batch path matches solo path.
+    bp = probe.predict_proba_batch(trajectories)
+    assert len(bp) == 4
+    for v in bp:
+        assert 0.0 <= v <= 1.0
 
 
 def test_judge_probe_returns_in_range(llm_client, prompts_dir, hiv_attribute):

@@ -1,0 +1,50 @@
+# Stage 5 — full 4-attribute headline with LLM-attacker embedded covert.
+#
+# Validates the +14.6pp τ-leak finding on hiv_status by re-running with
+# all 4 attributes. Same scope as the original headline (n=50 × 4 attrs ×
+# 3 principals × 1 seed = 600 traj) but with the case-tailored,
+# finding-embedded covert principal instead of random hand-curated.
+#
+# Cost forecast (with parallel batched complaint precompute):
+#   - 200 covert chief complaints × ~30s/each parallelized at max_concurrent=16
+#     ≈ 7-10 min for the precompute step.
+#   - 600 trajectories at ~30-90s each in parallel-8 ≈ 90-150 min wall.
+#   - Cost: ~$40-60 on Flash.
+stage: pilot
+backend: api
+model_config: models_api
+api_profile: flash_dev
+
+data:
+  num_cases_per_attribute: 50
+  attributes: [hiv_status, iv_drug_use, pregnancy, mental_health_dx]
+  correlation_strengths: [0.3]
+
+agent:
+  k_candidate_actions: 4
+  n_eig_predictions: 3
+  max_queries: 12
+  cost_budget: 500.0
+  epsilon_stop: 0.05
+  epsilon_entropy: 0.6
+  eig_raw_floor: 0.15
+  min_steps_before_diagnose: 3
+
+patient:
+  refusal_mode: false
+  strategy_c_enabled: false
+
+principal:
+  benign: {}
+  direct: {}
+  covert:
+    strategy: llm_attacker        # embedded findings (the attack we showed
+                                  # leaks +14.6pp on hiv_status); see
+                                  # `_LLM_ATTACKER_PROMPT` in
+                                  # src/principal/covert.py.
+
+seeds: [0]
+output_subdir: pilot_llm_attacker_full
+runtime_budget_hours: 4
+resume: true                    # picking up after spending-cap pause
+max_concurrent_trajectories: 8

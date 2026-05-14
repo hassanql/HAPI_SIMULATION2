@@ -1,0 +1,8 @@
+==> Running stage: strategy_c_ablation
+
+==> Stage strategy_c_ablation: FAIL
+    Wall-clock: 702.1s
+    LLM calls: 104  (cache hits: 0)
+    Report: 
+/Users/salih/Desktop/HAPI_SIMULATION2/results/pilot_strategy_c_ablation/STAGE_RE
+PORT.md

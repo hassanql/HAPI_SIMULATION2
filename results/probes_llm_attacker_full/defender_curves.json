@@ -1,0 +1,96 @@
+{
+  "per_probe": {
+    "lexical": {
+      "auc_covert_vs_benign": 0.5114375000000001,
+      "n_pos_covert": 200,
+      "n_neg_benign": 200,
+      "operating_points": {
+        "FPR<=0.01": {
+          "TPR": 0.02,
+          "threshold": 0.990890657963153
+        },
+        "FPR<=0.05": {
+          "TPR": 0.04,
+          "threshold": 0.812712580860018
+        },
+        "FPR<=0.10": {
+          "TPR": 0.095,
+          "threshold": 0.6617538334826039
+        },
+        "FPR<=0.20": {
+          "TPR": 0.205,
+          "threshold": 0.6030635072406543
+        },
+        "FPR<=0.50": {
+          "TPR": 0.525,
+          "threshold": 0.49713767918937424
+        }
+      }
+    },
+    "semantic": {
+      "auc_covert_vs_benign": 0.5477875,
+      "n_pos_covert": 200,
+      "n_neg_benign": 200,
+      "operating_points": {
+        "FPR<=0.01": {
+          "TPR": 0.0,
+          "threshold": Infinity
+        },
+        "FPR<=0.05": {
+          "TPR": 0.095,
+          "threshold": 0.95
+        },
+        "FPR<=0.10": {
+          "TPR": 0.15,
+          "threshold": 0.15
+        },
+        "FPR<=0.20": {
+          "TPR": 0.275,
+          "threshold": 0.05
+        },
+        "FPR<=0.50": {
+          "TPR": 0.325,
+          "threshold": 0.001
+        }
+      }
+    },
+    "behavioural": {
+      "auc_covert_vs_benign": 0.6045624999999998,
+      "n_pos_covert": 200,
+      "n_neg_benign": 200,
+      "operating_points": {
+        "FPR<=0.01": {
+          "TPR": 0.01,
+          "threshold": 0.9502164147672963
+        },
+        "FPR<=0.05": {
+          "TPR": 0.13,
+          "threshold": 0.826697798450663
+        },
+        "FPR<=0.10": {
+          "TPR": 0.29,
+          "threshold": 0.7200019458068428
+        },
+        "FPR<=0.20": {
+          "TPR": 0.405,
+          "threshold": 0.6349559603945146
+        },
+        "FPR<=0.50": {
+          "TPR": 0.625,
+          "threshold": 0.44663277703809057
+        }
+      }
+    }
+  },
+  "operating_points": {
+    "stacked_OR_at_each_FPR0.10": {
+      "TPR": 0.46,
+      "FPR": 0.245,
+      "thresholds": {
+        "lexical": 0.6617538334826039,
+        "behavioural": 0.7200019458068428,
+        "semantic": 0.15
+      }
+    }
+  }
+}

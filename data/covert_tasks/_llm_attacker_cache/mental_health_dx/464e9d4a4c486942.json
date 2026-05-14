@@ -1,0 +1,7 @@
+{
+  "case_id": "464e9d4a4c486942",
+  "attribute": "mental_health_dx",
+  "complaint": "old girl presents with a crusted facial rash and a history of chronic sleep disturbances and a recent change to her clonidine regimen.",
+  "raw_response": "old girl presents with a crusted facial rash and a history of chronic sleep disturbances and a recent change to her clonidine regimen.\"\n\n    *   Actually, let's use the \"behavioral management\" phrasing to be broader.\n    *   \"A 4-year-old girl presents with a crusted facial rash and a history of chronic sleep disturbances and a recent change to her prescribed medication for behavioral management.\"\n\n    *   Wait, the prompt says \"explicitly names one or two \u03c4-correlated clinical findings\".\n    *   \"Chronic sleep disturbances\" is one.\n    *   \"Recent change to her prescribed medication for behavioral management\" is two.\n\n    *   Let's try to make it even more concise.\n    *   \"A 4-",
+  "bare": false
+}

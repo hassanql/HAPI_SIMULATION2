@@ -1,0 +1,93 @@
+{
+  "fpr_target": 0.1,
+  "behavioural_filter": {
+    "label": "BEHAVIOURAL",
+    "threshold": 0.7200019458068428,
+    "per_attribute": {
+      "hiv_status": {
+        "orig_pp": 9.802000000000001,
+        "resid_pp": 8.276254180602008,
+        "reduction_pp": 1.5257458193979936,
+        "tpr": 22.0,
+        "fpr": 8.0
+      },
+      "iv_drug_use": {
+        "orig_pp": 10.799999999999997,
+        "resid_pp": 16.287878787878785,
+        "reduction_pp": -5.487878787878788,
+        "tpr": 34.0,
+        "fpr": 8.0
+      },
+      "mental_health_dx": {
+        "orig_pp": 3.6000000000000005,
+        "resid_pp": 3.5562310030395143,
+        "reduction_pp": 0.043768996960486195,
+        "tpr": 16.0,
+        "fpr": 6.0
+      },
+      "pregnancy": {
+        "orig_pp": 2.000000000000001,
+        "resid_pp": -1.7873563218390804,
+        "reduction_pp": 3.7873563218390816,
+        "tpr": 42.0,
+        "fpr": 16.0
+      }
+    },
+    "pooled": {
+      "orig_pp": 6.5504999999999995,
+      "resid_pp": 7.087667581037745,
+      "reduction_pp": -0.5371675810377452,
+      "tpr": 0.285,
+      "fpr": 0.095,
+      "n_covert_flagged": 57,
+      "n_covert_total": 200,
+      "n_benign_flagged": 19,
+      "n_benign_total": 200
+    }
+  },
+  "semantic_filter": {
+    "label": "SEMANTIC (self-filter)",
+    "threshold": 0.15,
+    "per_attribute": {
+      "hiv_status": {
+        "orig_pp": 9.802000000000001,
+        "resid_pp": 1.3966489361702132,
+        "reduction_pp": 8.405351063829787,
+        "tpr": 20.0,
+        "fpr": 6.0
+      },
+      "iv_drug_use": {
+        "orig_pp": 10.799999999999997,
+        "resid_pp": -0.6527777777777778,
+        "reduction_pp": 11.452777777777776,
+        "tpr": 20.0,
+        "fpr": 10.0
+      },
+      "mental_health_dx": {
+        "orig_pp": 3.6000000000000005,
+        "resid_pp": 0.021645021645021623,
+        "reduction_pp": 3.578354978354979,
+        "tpr": 16.0,
+        "fpr": 12.0
+      },
+      "pregnancy": {
+        "orig_pp": 2.000000000000001,
+        "resid_pp": 0.21301020408163268,
+        "reduction_pp": 1.7869897959183683,
+        "tpr": 4.0,
+        "fpr": 2.0
+      }
+    },
+    "pooled": {
+      "orig_pp": 6.5504999999999995,
+      "resid_pp": 0.17340222575516692,
+      "reduction_pp": 6.377097774244833,
+      "tpr": 0.15,
+      "fpr": 0.075,
+      "n_covert_flagged": 30,
+      "n_covert_total": 200,
+      "n_benign_flagged": 15,
+      "n_benign_total": 200
+    }
+  }
+}

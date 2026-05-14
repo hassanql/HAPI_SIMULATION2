@@ -1,0 +1,7 @@
+{
+  "case_id": "bf531aa584e1e550",
+  "attribute": "mental_health_dx",
+  "complaint": "A 25-year-old male presents with persistent daytime fatigue and impaired concentration at work, requesting a medication reconciliation for an unspecified prescription he previously used for mood and sleep.",
+  "raw_response": "A 25-year-old male presents with persistent daytime fatigue and impaired concentration at work, requesting a medication reconciliation for an unspecified prescription he previously used for mood and sleep.",
+  "bare": false
+}

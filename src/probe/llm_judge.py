@@ -120,3 +120,28 @@ class LLMJudgeProbe:
             LLMRequest(role="judge", prompt=prompt, schema_name="judge_probe"),
         )
         return _parse_probability(resp.text)
+
+    def predict_proba_batch(
+        self,
+        trajectories: list[Trajectory],
+        attribute: SensitiveAttribute,
+    ) -> list[float]:
+        """Batched judge calls — issues all N requests through
+        `LLMClient.generate_batch`. With the API backend this fans out
+        through asyncio + the per-thread genai.Client, so 600 trajectories
+        finish in ~10 minutes wall instead of ~3 hours sequential.
+        Maintains input order — the i-th returned probability corresponds
+        to the i-th trajectory.
+        """
+        if not trajectories:
+            return []
+        requests = [
+            LLMRequest(
+                role="judge",
+                prompt=self._build_prompt(t, attribute),
+                schema_name="judge_probe",
+            )
+            for t in trajectories
+        ]
+        responses = self.client.generate_batch(requests)
+        return [_parse_probability(r.text) for r in responses]

@@ -39,6 +39,7 @@ class PatientSimulator:
         refusal_mode: bool = False,
         refusal_template: str = "",
         attribute_description: str | None = None,
+        strategy_c_enabled: bool = True,
     ) -> None:
         self.client = client
         self.case = case
@@ -50,10 +51,18 @@ class PatientSimulator:
         # Resolve the attribute schema once for direct-probe interception.
         # `case.attribute_name` is set by the augmenter; if it's missing or
         # unknown we silently disable interception (legacy behaviour).
-        try:
-            self._attribute = get_attribute(case.attribute_name)
-        except Exception:
+        # Strategy C can also be force-disabled (post-2026-05 ablation:
+        # frontier reasoning models follow τ-anchored prompts well enough
+        # that the interceptor is unnecessary and occasionally pattern-
+        # matches generic immunoassay terms like "elisa" against unrelated
+        # tests, returning canned τ-encoded responses for the wrong query).
+        if not strategy_c_enabled:
             self._attribute = None
+        else:
+            try:
+                self._attribute = get_attribute(case.attribute_name)
+            except Exception:
+                self._attribute = None
 
     # -- prompt assembly -------------------------------------------------
 

@@ -24,6 +24,48 @@ def test_action_proposal_parser_handles_garbage():
     assert actions == []
 
 
+def test_action_proposal_parser_strips_markdown_fence():
+    """Gemini 3 sometimes wraps JSON in ```json ... ``` despite the
+    'output only the JSON' instruction. The parser must strip the fence
+    or every direct trajectory degenerates to the runner's fallback
+    action (action-diversity collapse — see post-2026-05 ablation
+    notes).
+    """
+    txt = (
+        '```json\n'
+        '[{"type": "ASK_HISTORY", "query": "Q1", "rationale": "r"},'
+        ' {"type": "ORDER_TEST", "query": "T1", "rationale": "r"}]\n'
+        '```'
+    )
+    actions = _parse_action_candidates(txt)
+    assert len(actions) == 2
+    assert actions[0].query == "Q1"
+
+    # Bare ``` (no language tag) should also strip.
+    txt2 = '```\n[{"type": "ASK_EXAM", "query": "Q2", "rationale": "r"}]\n```'
+    actions2 = _parse_action_candidates(txt2)
+    assert len(actions2) == 1
+    assert actions2[0].query == "Q2"
+
+
+def test_action_proposal_parser_handles_thinking_spill():
+    """Gemini 3 reasoning models can leak chain-of-thought ahead of the
+    structured output when their thinking budget runs over. The parser
+    must locate the JSON inside the response, not just at position 0.
+    """
+    txt = (
+        "*   Wait, let me reconsider the differential.\n"
+        "    R1: pos 1, neg 8\n"
+        "    R2: pos 0, neg 9\n"
+        "    Let's go.\n"
+        '[{"type": "ASK_HISTORY", "query": "Q3", "rationale": "r"},'
+        ' {"type": "ASK_EXAM", "query": "E1", "rationale": "r"}]'
+    )
+    actions = _parse_action_candidates(txt)
+    assert len(actions) == 2
+    assert actions[0].query == "Q3"
+
+
 def test_cost_of_action_uses_overrides():
     assert cost_of_action(ActionType.ORDER_TEST, "Chest CT") == 300.0
     assert cost_of_action(ActionType.ORDER_TEST, "MRI brain") == 800.0

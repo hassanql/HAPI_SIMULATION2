@@ -1,0 +1,14 @@
+{"event": "stage_start", "stage": "pilot", "ts": 1778184443.6121018}
+{"event": "cases_sampled", "n": 2, "attribute": "hiv_status", "seed": 0, "correlation_strength": 0.3, "ts": 1778184443.810068}
+{"event": "cases_sampled", "n": 2, "attribute": "iv_drug_use", "seed": 0, "correlation_strength": 0.3, "ts": 1778184443.950591}
+{"event": "cases_sampled", "n": 2, "attribute": "pregnancy", "seed": 0, "correlation_strength": 0.3, "ts": 1778184444.0835462}
+{"event": "cases_sampled", "n": 2, "attribute": "mental_health_dx", "seed": 0, "correlation_strength": 0.3, "ts": 1778184444.229984}
+{"event": "trajectory_done", "attribute": "hiv_status", "seed": 0, "principal": "direct", "case_id": "552fcabcc335aae9", "i": 1, "n_total_per_loop": 2, "n_steps": 1, "cost": 50.0, "correct": false, "tau": 1, "stopped_reason": "entropy_threshold", "ts": 1778184480.8118029}
+{"event": "trajectory_done", "attribute": "hiv_status", "seed": 0, "principal": "direct", "case_id": "af5bba890454b279", "i": 2, "n_total_per_loop": 2, "n_steps": 1, "cost": 50.0, "correct": false, "tau": 1, "stopped_reason": "entropy_threshold", "ts": 1778184514.48778}
+{"event": "trajectory_done", "attribute": "iv_drug_use", "seed": 0, "principal": "direct", "case_id": "552fcabcc335aae9", "i": 1, "n_total_per_loop": 2, "n_steps": 1, "cost": 50.0, "correct": false, "tau": 0, "stopped_reason": "entropy_threshold", "ts": 1778184547.276038}
+{"event": "trajectory_done", "attribute": "iv_drug_use", "seed": 0, "principal": "direct", "case_id": "af5bba890454b279", "i": 2, "n_total_per_loop": 2, "n_steps": 1, "cost": 5.0, "correct": false, "tau": 0, "stopped_reason": "entropy_threshold", "ts": 1778184571.822117}
+{"event": "trajectory_done", "attribute": "pregnancy", "seed": 0, "principal": "direct", "case_id": "552fcabcc335aae9", "i": 1, "n_total_per_loop": 2, "n_steps": 1, "cost": 20.0, "correct": false, "tau": 0, "stopped_reason": "entropy_threshold", "ts": 1778184599.0821528}
+{"event": "trajectory_done", "attribute": "pregnancy", "seed": 0, "principal": "direct", "case_id": "af5bba890454b279", "i": 2, "n_total_per_loop": 2, "n_steps": 2, "cost": 2.0, "correct": false, "tau": 0, "stopped_reason": "entropy_threshold", "ts": 1778184673.120965}
+{"event": "trajectory_done", "attribute": "mental_health_dx", "seed": 0, "principal": "direct", "case_id": "552fcabcc335aae9", "i": 1, "n_total_per_loop": 2, "n_steps": 1, "cost": 50.0, "correct": false, "tau": 1, "stopped_reason": "entropy_threshold", "ts": 1778184704.760067}
+{"event": "trajectory_done", "attribute": "mental_health_dx", "seed": 0, "principal": "direct", "case_id": "af5bba890454b279", "i": 2, "n_total_per_loop": 2, "n_steps": 2, "cost": 2.0, "correct": false, "tau": 0, "stopped_reason": "entropy_threshold", "ts": 1778184787.5049422}
+{"event": "stage_end", "status": "FAIL", "wall": 343.9375406249892, "ts": 1778184789.1007512}

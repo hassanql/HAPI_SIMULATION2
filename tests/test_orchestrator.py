@@ -19,15 +19,21 @@ from src.orchestrator.stages import (
 
 
 def test_all_nine_stages_registered():
+    # Nine canonical numbered stages plus ten post-migration variants.
     assert set(STAGES.keys()) == {
         "bootstrap", "data", "agent_dev", "sanity",
         "tiny_pilot", "pilot", "probes", "defences", "full",
+        "pilot_smoke", "pilot_ultra_smoke",
+        "strategy_c_ablation", "strategy_c_ablation_n20",
+        "pilot_llm_attacker_hiv", "probes_llm_attacker",
+        "pilot_llm_attacker_bare_hiv", "probes_llm_attacker_bare",
+        "pilot_llm_attacker_full", "probes_llm_attacker_full",
     }
 
 
 def test_list_stages_returns_status_for_each(tmp_path: Path):
     rows = list_stages(tmp_path)
-    assert len(rows) == 9
+    assert len(rows) == 19
     for r in rows:
         assert r["status"] == StageStatus.NOT_RUN.value
 
@@ -37,12 +43,13 @@ def test_unknown_stage_raises(tmp_path):
         run_stage("nonexistent", results_root=tmp_path)
 
 
-@pytest.mark.parametrize("name", ["probes", "defences", "full"])
+@pytest.mark.parametrize("name", ["defences", "full"])
 def test_unimplemented_stages_raise_not_implemented(name, tmp_path):
-    """Stages 6–8 still raise. Stages 1 (`data`), 2 (`agent_dev`),
-    3 (`sanity`), 4 (`tiny_pilot`), and 5 (`pilot`) are implemented — see
-    test_data_stage.py / test_agent_dev_stage.py / test_sanity_stage.py /
-    test_tiny_pilot_stage.py / test_pilot_stage.py."""
+    """Stages 7-8 still raise. Stages 1 (`data`), 2 (`agent_dev`),
+    3 (`sanity`), 4 (`tiny_pilot`), 5 (`pilot`), and 6 (`probes`) are
+    implemented — see test_data_stage.py / test_agent_dev_stage.py /
+    test_sanity_stage.py / test_tiny_pilot_stage.py / test_pilot_stage.py /
+    test_probes_stage.py."""
     with pytest.raises(NotImplementedError):
         run_stage(name, results_root=tmp_path)
 

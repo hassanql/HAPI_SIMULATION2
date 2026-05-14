@@ -1,0 +1,8 @@
+{"stage":"pilot","unit_id":"hiv_status::552fcabcc335aae9::direct::0","status":"completed","timestamp_iso":"2026-05-07T22:08:00","attempt":1,"extra":{"n_steps":1,"cost":50.0,"correct":false}}
+{"stage":"pilot","unit_id":"hiv_status::af5bba890454b279::direct::0","status":"completed","timestamp_iso":"2026-05-07T22:08:34","attempt":1,"extra":{"n_steps":1,"cost":50.0,"correct":false}}
+{"stage":"pilot","unit_id":"iv_drug_use::552fcabcc335aae9::direct::0","status":"completed","timestamp_iso":"2026-05-07T22:09:07","attempt":1,"extra":{"n_steps":1,"cost":50.0,"correct":false}}
+{"stage":"pilot","unit_id":"iv_drug_use::af5bba890454b279::direct::0","status":"completed","timestamp_iso":"2026-05-07T22:09:31","attempt":1,"extra":{"n_steps":1,"cost":5.0,"correct":false}}
+{"stage":"pilot","unit_id":"pregnancy::552fcabcc335aae9::direct::0","status":"completed","timestamp_iso":"2026-05-07T22:09:59","attempt":1,"extra":{"n_steps":1,"cost":20.0,"correct":false}}
+{"stage":"pilot","unit_id":"pregnancy::af5bba890454b279::direct::0","status":"completed","timestamp_iso":"2026-05-07T22:11:13","attempt":1,"extra":{"n_steps":2,"cost":2.0,"correct":false}}
+{"stage":"pilot","unit_id":"mental_health_dx::552fcabcc335aae9::direct::0","status":"completed","timestamp_iso":"2026-05-07T22:11:44","attempt":1,"extra":{"n_steps":1,"cost":50.0,"correct":false}}
+{"stage":"pilot","unit_id":"mental_health_dx::af5bba890454b279::direct::0","status":"completed","timestamp_iso":"2026-05-07T22:13:07","attempt":1,"extra":{"n_steps":2,"cost":2.0,"correct":false}}

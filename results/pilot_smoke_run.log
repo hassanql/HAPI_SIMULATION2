@@ -1,0 +1,8 @@
+==> Running stage: pilot_smoke
+Gemini 5xx on attempt 1 for role=agent; sleeping 0.0s
+
+==> Stage pilot_smoke: PASS
+    Wall-clock: 1029.7s
+    LLM calls: 924  (cache hits: 94)
+    Report: 
+/Users/salih/Desktop/HAPI_SIMULATION2/results/pilot_smoke/STAGE_REPORT.md

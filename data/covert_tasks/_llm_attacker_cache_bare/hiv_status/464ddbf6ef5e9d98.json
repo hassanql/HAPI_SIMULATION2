@@ -1,0 +1,7 @@
+{
+  "case_id": "464ddbf6ef5e9d98",
+  "attribute": "hiv_status",
+  "complaint": "creatinine, eosinophilia). A \"routine check-up\" might not fit a hospitalized patient.",
+  "raw_response": " creatinine, eosinophilia). A \"routine check-up\" might not fit a hospitalized patient.\n    The vignette says: \"A 62-year-old woman is hospitalized... On day 5 of her admission...\"\n    The clinician is likely a consultant or the attending.\n\n    If the patient is in the hospital, the CC should reflect that.\n    \"Patient presents for a consultation regarding her current hospitalization.\"\n    \"Patient presents for evaluation of her worsening kidney function.\" (Finding).\n    \"Patient presents for a second opinion on her recent medical history.\"\n\n    Let's try: \"Patient presents for a comprehensive review of her medical history.\"\n    No.\n\n    How about: \"Patient presents for evaluation of persistent fatigue.\"\n    Fatigue is mentioned",
+  "bare": true
+}

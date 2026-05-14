@@ -1,0 +1,8 @@
+==> Running stage: pilot_llm_attacker_bare_hiv
+
+==> Stage pilot_llm_attacker_bare_hiv: PASS
+    Wall-clock: 3843.4s
+    LLM calls: 2957  (cache hits: 147)
+    Report: 
+/Users/salih/Desktop/HAPI_SIMULATION2/results/pilot_llm_attacker_bare_hiv/STAGE_
+REPORT.md

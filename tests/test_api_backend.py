@@ -309,3 +309,29 @@ def test_llm_client_integration(monkeypatch, tmp_path):
     assert resp2.text == "got:hello"
     assert resp2.cache_hit is True
     client.close()
+
+
+def test_thread_safety_concurrent_generate(monkeypatch):
+    """Multiple threads calling generate() concurrently each get their own
+    genai.Client + asyncio loop via thread-local storage. Without this,
+    httpx pool binding would race across threads and the trajectory-level
+    parallelism in run_pilot_stage would corrupt or hang.
+    """
+    import concurrent.futures
+    monkeypatch.setenv("GOOGLE_API_KEY", "fake-key")
+    APIBackend, APIBackendConfig = _make_backend_with_fake_genai(
+        monkeypatch,
+        lambda model, contents, config: type("R", (), {"text": f"r:{contents}"})(),
+    )
+    backend = APIBackend(
+        APIBackendConfig(models={"agent": "gemini-3-flash-preview"})
+    )
+    # Each thread should successfully complete a generate() call.
+    def call(prompt: str) -> str:
+        return backend.generate(prompt, role="agent")
+
+    with concurrent.futures.ThreadPoolExecutor(max_workers=4) as ex:
+        futures = [ex.submit(call, f"p{i}") for i in range(8)]
+        results = [f.result(timeout=10) for f in futures]
+
+    assert sorted(results) == [f"r:p{i}" for i in range(8)]

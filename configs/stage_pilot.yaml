@@ -1,33 +1,35 @@
-# Stage 5: WORKSHOP-READY pilot.
+# Stage 5 — HEADLINE pilot on Gemini Flash via API backend.
 #
-# Scope: 30 cases x 4 attrs x 3 principals x 1 seed = 360 trajectories.
-# Calibrated for a $1500 GCP budget on H100 80GB. Single seed at n=30
-# per cell gives Wilson 95% CI of approximately +/-18pp -- wider than
-# n=50 but still defensible as a 4-way replication argument across
-# attributes for a workshop / thesis-chapter submission. Top-conference
-# upgrade path: scale to n=80 and 3 seeds when the supervisor has
-# additional credits to allocate.
+# Scope: 50 cases × 4 attrs × 3 principals × 1 seed = 600 trajectories.
+# Wilson 95% CI ±13pp per cell — defensible for a workshop / thesis chapter.
+# Path to extension: bump `seeds: [0, 1, 2]` and `--resume` to tighten
+# the CIs to ±8pp once probes/defenses confirm headline numbers.
 #
-# Compute target: H100 80GB with native FP8 (Qwen3-30B-A3B-FP8 runs
-# 3-4x faster than on A100 due to Hopper Transformer Engine). Estimated
-# wall: ~18 hours. Estimated cost: ~$200 at H100 on-demand ($11/hr).
+# Stack: Gemini 3 Flash for all roles (frontier reasoning model with
+# thinking enabled). Strategy C interceptor disabled — n=20 ablation
+# showed Flash respects τ-anchored prompts on its own (100% direct
+# τ-recovery without the interceptor vs 90% with it).
 #
-# Knob choices:
-#   - k_candidate_actions: 4   (matches Stage 4 calibrated config)
-#   - n_eig_predictions: 3     (BED-LLM paper default; cuts per-turn LLM
-#                               calls 40% vs n=5 with negligible quality
-#                               loss; accelerates throughput)
-#   - epsilon_entropy: 0.6     (matches Stage 4 calibrated config; lower
-#                               values inflate trajectory length without
-#                               new information)
-#   - max_queries: 12          (caps worst-case trajectory at 12 turns;
-#                               typical benign trajectories settle in 7-8)
+# Wall-time + cost forecast (after 100 traj already done at 8192 budget):
+#   - Remaining: ~500 trajectories at 4096 max_output_tokens floor.
+#   - Wall: ~3 hours on Mac with max_concurrent_trajectories=8.
+#   - Cost: ~$25 remaining (sunk: $20). Total: ~$45.
+# The 8192 budget was 2× more expensive with negligible quality gain
+# (n=20 ablation: 100% at 8192, 95% at 4096 — within ±13pp CI noise).
+#
+# Knob choices (validated on n=20 ablation + n=60 paired smoke):
+#   - k_candidate_actions: 4    (BED-LLM default, Stage 3-calibrated)
+#   - n_eig_predictions: 3      (BED-LLM paper default)
+#   - max_queries: 12           (covert can run long; one outlier hit 12)
+#   - epsilon_entropy: 0.6      (matches Stage 4 calibrated config)
+#   - min_steps_before_diagnose: 3
 stage: pilot
-backend: server
-model_config: models_prod
+backend: api
+model_config: models_api
+api_profile: flash_dev
 
 data:
-  num_cases_per_attribute: 30
+  num_cases_per_attribute: 50
   attributes: [hiv_status, iv_drug_use, pregnancy, mental_health_dx]
   correlation_strengths: [0.3]   # See OPEN_QUESTIONS.md #27
 
@@ -43,6 +45,12 @@ agent:
 
 patient:
   refusal_mode: false
+  strategy_c_enabled: false        # post-2026-05-08 ablation: frontier
+                                   # model respects τ-anchored prompts
+                                   # without the interceptor (n=20: 100%
+                                   # direct τ-recovery either way; the
+                                   # interceptor's pattern list misfired
+                                   # on generic terms like "elisa").
 
 principal:
   benign: {}
@@ -52,5 +60,13 @@ principal:
 
 seeds: [0]
 output_subdir: pilot
-runtime_budget_hours: 24
-resume: false
+runtime_budget_hours: 12
+resume: true                       # pick up the 100 trajectories already
+                                   # done before we trimmed scope
+                                   # (8192→4096 budget + 3→1 seed); the
+                                   # cache + on-disk JSONLs are preserved.
+max_concurrent_trajectories: 8     # Option B parallelism — independent
+                                   # trajectories dispatched via
+                                   # ThreadPoolExecutor. Per-thread genai
+                                   # client + asyncio loop in api_backend
+                                   # makes this safe.

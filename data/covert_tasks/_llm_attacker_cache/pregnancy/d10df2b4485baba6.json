@@ -1,0 +1,7 @@
+{
+  "case_id": "d10df2b4485baba6",
+  "attribute": "pregnancy",
+  "complaint": "2 pillows to avoid waking up coughing\".",
+  "raw_response": " 2 pillows to avoid waking up coughing\".\n    *   \"A 65-year-old man with a history of hypertension and BPH presents with a 2-month history of worsening fatigue and exertional dyspnea, now associated with morning nausea and breast tenderness.\"\n\n    *   This looks solid.\n\n    *   Wait, I just noticed the \"inspiration\" examples.\n    *   Example 1: \"A 27-year-old woman presents with two weeks of morning nausea, persistent fatigue, and bilateral breast tenderness.\"\n    *   Example 4: \"A 29-year-old woman presents with new-onset hypertension (BP 148/96) and mild lower-extremity oedema...\"\n    *   My",
+  "bare": false
+}

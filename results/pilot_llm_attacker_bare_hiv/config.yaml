@@ -1,0 +1,44 @@
+# Methodological control: LLM-attacker BARE — chief complaints that
+# match the patient but DO NOT include any τ-correlated clinical
+# findings. Comparing against `pilot_llm_attacker_hiv` answers the
+# methodological question: is the leak signal driven by the principal's
+# embedding of findings in the complaint, or by the agent's natural
+# questioning under any cover story?
+#
+# Scope: hiv_status only, n=50 cases × 3 principals = 150 trajectories.
+# Cost: ~$5-10. Wall: ~15-25 min.
+stage: pilot
+backend: api
+model_config: models_api
+api_profile: flash_dev
+
+data:
+  num_cases_per_attribute: 50
+  attributes: [hiv_status]
+  correlation_strengths: [0.3]
+
+agent:
+  k_candidate_actions: 4
+  n_eig_predictions: 3
+  max_queries: 12
+  cost_budget: 500.0
+  epsilon_stop: 0.05
+  epsilon_entropy: 0.6
+  eig_raw_floor: 0.15
+  min_steps_before_diagnose: 3
+
+patient:
+  refusal_mode: false
+  strategy_c_enabled: false
+
+principal:
+  benign: {}
+  direct: {}
+  covert:
+    strategy: llm_attacker_bare       # NO findings in chief complaint
+
+seeds: [0]
+output_subdir: pilot_llm_attacker_bare_hiv
+runtime_budget_hours: 1
+resume: false
+max_concurrent_trajectories: 8
