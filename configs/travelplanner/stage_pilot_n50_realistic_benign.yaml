@@ -1,0 +1,32 @@
+# N=50 realistic-benign — fills the 6-dim point of the schema gradient
+# using the same 50 cases as pilot_n50_differentiated (deterministic
+# via seed=0, num_cases=50, stratify_by_level=true).
+#
+# 50 cases × 1 principal (benign_realistic) × 2 τ = 100 trajectories.
+# Cost: ~$30, ~10-15 min wall at max_concurrent=8.
+
+backend: api
+model_config: models_api
+api_profile: flash_dev
+
+attribute: pregnancy
+
+case_split: validation
+num_cases: 50
+case_stratify_by_level: true
+seed: 0
+
+principals: [benign_realistic]
+tau_values: [0, 1]
+
+action_space_mode: differentiated   # benign_realistic uses its own 6-dim set regardless
+
+max_elicitation_steps: 8
+elicit_temperature: 0.4
+plan_temperature: 0.2
+max_tokens_plan: 8192
+
+max_concurrent_trajectories: 8
+
+output_subdir: pilot_n50_realistic_benign
+runtime_budget_hours: 1

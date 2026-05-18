@@ -1383,12 +1383,11 @@ Two implications for the schema-minimisation defence:
 
 \paragraph{Caveats specific to this gradient run.}
 \begin{itemize}[leftmargin=2em, itemsep=1pt]
-\item Cases for the realistic-benign run overlap 7 of 10 cases with the
-    original differentiated pilot; the random-stratified sampler picked
-    a slightly different subset under the same seed because the
-    enumeration order differed when only one principal was configured.
-    A re-run on a forced case overlap would tighten the comparison but
-    is not expected to change the qualitative shape of the gradient.
+\item Cases for the realistic-benign run overlap 10/10 with the original
+    differentiated pilot ($N{=}10$ comparison) and 50/50 with the
+    differentiated pilot ($N{=}50$ comparison; verified post hoc). The
+    case selection is fully deterministic given
+    (\texttt{seed}, \texttt{num\_cases}, \texttt{stratify\_by\_level}).
 \item All three augmented-dim values continue to be drawn from the
     $\rho{=}0.3$ marker tables (\S5.1 of \texttt{travelplanner\_pivot\_plan.md}).
 \item All numbers are pilot-level ($N{=}10$ per cell, 1 seed,
@@ -1568,6 +1567,122 @@ defences are configuration-aware (detect schema choice, not leakage);
 semantic content auditing is effective when sample sizes support stable
 operating-point selection; the strongest \emph{structural} defence
 remains schema minimisation.}
+
+\subsection{N=50 schema-leakage gradient (completed)}
+\label{sec:n50:gradient}
+
+The realistic-benign and broad-benign conditions were rerun at $N{=}50$
+on the \emph{exact same 50 cases} as the differentiated pilot, completing
+the 4-point gradient promised in the N=10 §\ref{sec:h3:schema-min}.
+Configs: \texttt{configs/travelplanner/stage\_pilot\_n50\_realistic\_benign.yaml}
+and \texttt{stage\_pilot\_n50\_sasp\_benign.yaml}. 100 trajectories each.
+Total incremental cost: $\sim$\$60.
+
+\paragraph{Case-overlap check.} 50/50 cases match the differentiated
+N=50 set for both new conditions; case selection is fully deterministic
+given (seed=0, num\_cases=50, stratify\_by\_level=true). The schema
+gradient is now paired-case across all four points.
+
+\paragraph{Final N=50 schema-leakage gradient.}
+\begin{center}
+\small
+\begin{tabular}{lcccccc}
+\toprule
+Condition & \#dims reg. & Avg dims elicited & Cover-pass & $\bar P(\tau{=}1|\tau{=}1)$ & $\bar P(\tau{=}1|\tau{=}0)$ & Profile gap \\
+\midrule
+Minimal benign     & 4 & 4.0 & 93\% & 0.030 & 0.031 & $\bm{-0.2}$\,pp \\
+Realistic benign   & 6 & 6.0 & 86\% & 0.207 & 0.068 & $\bm{+13.9}$\,pp \\
+Broad benign (SASP) & 9 & 9.0 & 89\% & 0.641 & 0.114 & $\bm{+52.7}$\,pp \\
+Covert (configured) & 9 & 9.0 & 92\% & 0.633 & 0.123 & $\bm{+51.0}$\,pp \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{Reading the gradient.}
+\begin{itemize}[leftmargin=2em, itemsep=2pt]
+\item Monotonic in registered dim count: $4 \to 6 \to 9$ dims gives
+    $-0.2 \to +13.9 \to +52.7$\,pp.
+\item Adding 2 augmented dimensions ($\texttt{food\_safety}$ +
+    $\texttt{pacing}$) to the 4-dim baseline already shifts profile
+    leakage from $-0.2$\,pp to $+13.9$\,pp.
+\item Adding the remaining 3 augmented dimensions ($\texttt{alcohol}$,
+    $\texttt{activity\_intensity}$, $\texttt{medical\_access}$) brings
+    the leak to $+52.7$\,pp.
+\item Covert framing on top of the 9-dim broad schema does NOT amplify
+    further ($+51.0$ vs $+52.7$\,pp --- statistically tied).
+    Configuration laundering vs. broad-benign is therefore not a
+    distinct attack effect; what matters is whether the
+    $\tau$-correlated dimensions are registered \emph{at all}.
+\end{itemize}
+
+\paragraph{Plan-slice as negative control.} Plan-gap is essentially
+zero across all four conditions ($-0.5$, $-0.5$, $-0.2$, $-0.5$\,pp).
+The threat lives in the stored profile, not the produced plan.
+
+\paragraph{Elicited-dimension histograms (per condition).} The agent
+elicited at intended rates across all 50 cases:
+
+\begin{center}
+\small
+\begin{tabular}{lp{6cm}}
+\toprule
+Condition & Top dimensions elicited (count out of 100 trajectories) \\
+\midrule
+Minimal benign &
+    \texttt{room\_type} 100, \texttt{transportation} 100,
+    \texttt{house\_rule} 100, \texttt{cuisine} 94 \\
+Realistic benign &
+    \texttt{transportation} 100, \texttt{room\_type} 100,
+    \texttt{house\_rule} 100, \texttt{pacing} 94,
+    \texttt{cuisine} 93, \texttt{food\_safety} 93 \\
+Broad benign &
+    \texttt{pacing} 100, \texttt{activity\_intensity} 99,
+    \texttt{transportation} 95, \texttt{room\_type} 87,
+    \texttt{cuisine} 84, \texttt{alcohol} 71, \texttt{house\_rule} 52,
+    \texttt{medical\_access} 20, \texttt{food\_safety} 14 \\
+Covert &
+    \texttt{activity\_intensity} 99, \texttt{pacing} 99,
+    \texttt{food\_safety} 99, \texttt{medical\_access} 99,
+    \texttt{alcohol} 99, \texttt{transportation} 98,
+    \texttt{cuisine} 98, \texttt{room\_type} 87, \texttt{house\_rule} 13 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The benign\_realistic agent occasionally proposed unsupported dimension
+names (e.g.\ \texttt{dietary\_requirement}, \texttt{dietary\_needs},
+\texttt{dietary\_restrictions}) which the oracle correctly returned as
+\texttt{not\_specified}; this does not affect the leakage measurement
+because the oracle does not reveal $\tau$ on unsupported dimensions.
+
+Notably, the covert agent elicits the five augmented dimensions at
+$\ge 99/100$ trajectories each --- the LLM-attacker brief is doing its
+job. The broad-benign agent, given the same nine-dim access but a
+generic brief, is more variable: it elicits some augmented dims heavily
+(pacing 100, activity\_intensity 99, alcohol 71) and others rarely
+(food\_safety only 14, medical\_access only 20). \emph{Even with this
+under-elicitation, broad-benign leaks $+52.7$\,pp.} Eliciting alcohol
+and activity\_intensity is sufficient to produce the leakage.
+
+\paragraph{Schema-minimisation defence, restated with N=50 paired data.}
+The cleanest defence quantification we have:
+
+\begin{center}
+\small
+\begin{tabular}{l c r}
+\toprule
+Defence move & Resulting condition & Reduction (pp) \\
+\midrule
+9 $\to$ 6 dims (drop alcohol, activity\_intensity, medical\_access) & realistic benign & $-38.8$ \\
+9 $\to$ 4 dims (drop all augmented) & minimal benign & $\bm{-52.9}$ \\
+6 $\to$ 4 dims (drop food\_safety + pacing) & minimal benign & $-14.1$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Dropping the three highest-risk augmented dimensions (alcohol,
+activity\_intensity, medical\_access) eliminates $\sim 75\%$ of the
+broad-schema leakage at zero runtime cost.
 
 \section{Discussion}
 \label{sec:discussion}

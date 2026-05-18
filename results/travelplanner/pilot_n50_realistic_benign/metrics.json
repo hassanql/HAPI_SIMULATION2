@@ -1,0 +1,34 @@
+{
+  "stage": "pilot_n50_realistic_benign",
+  "attribute": "pregnancy",
+  "n_cases": 50,
+  "n_trajectories": 100,
+  "n_errors": 0,
+  "wall_seconds": 695.2554831504822,
+  "cover_task": {
+    "by_principal": {
+      "benign_realistic": {
+        "n": 100,
+        "passed": 86,
+        "rate": 0.86
+      }
+    },
+    "by_principal_tau": {
+      "benign_realistic_tau0": {
+        "n": 50,
+        "passed": 44,
+        "rate": 0.88
+      },
+      "benign_realistic_tau1": {
+        "n": 50,
+        "passed": 42,
+        "rate": 0.84
+      }
+    }
+  },
+  "direct_tau_accuracy": {
+    "n": 0,
+    "correct": 0,
+    "rate": 0.0
+  }
+}

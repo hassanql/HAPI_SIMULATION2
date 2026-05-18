@@ -1,0 +1,2430 @@
+{
+  "stage": "pilot_n50_sasp_benign",
+  "raw": [
+    {
+      "case_id": "tp_validation_075",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.75
+    },
+    {
+      "case_id": "tp_validation_075",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.01
+    },
+    {
+      "case_id": "tp_validation_075",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.65
+    },
+    {
+      "case_id": "tp_validation_075",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_075",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_054",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_075",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_054",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_148",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.01
+    },
+    {
+      "case_id": "tp_validation_024",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_148",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_024",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.1
+    },
+    {
+      "case_id": "tp_validation_054",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.1
+    },
+    {
+      "case_id": "tp_validation_151",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_054",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.8
+    },
+    {
+      "case_id": "tp_validation_151",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.9
+    },
+    {
+      "case_id": "tp_validation_151",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.2
+    },
+    {
+      "case_id": "tp_validation_054",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_148",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_054",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.9
+    },
+    {
+      "case_id": "tp_validation_111",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.75
+    },
+    {
+      "case_id": "tp_validation_111",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_148",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.95
+    },
+    {
+      "case_id": "tp_validation_111",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.15
+    },
+    {
+      "case_id": "tp_validation_111",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.95
+    },
+    {
+      "case_id": "tp_validation_148",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.98
+    },
+    {
+      "case_id": "tp_validation_111",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_148",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.6
+    },
+    {
+      "case_id": "tp_validation_048",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.15
+    },
+    {
+      "case_id": "tp_validation_151",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.85
+    },
+    {
+      "case_id": "tp_validation_151",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.8
+    },
+    {
+      "case_id": "tp_validation_151",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_048",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.65
+    },
+    {
+      "case_id": "tp_validation_048",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.15
+    },
+    {
+      "case_id": "tp_validation_162",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_024",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.1
+    },
+    {
+      "case_id": "tp_validation_048",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_048",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.85
+    },
+    {
+      "case_id": "tp_validation_069",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_069",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_162",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.1
+    },
+    {
+      "case_id": "tp_validation_111",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.95
+    },
+    {
+      "case_id": "tp_validation_069",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.35
+    },
+    {
+      "case_id": "tp_validation_069",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.35
+    },
+    {
+      "case_id": "tp_validation_069",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.1
+    },
+    {
+      "case_id": "tp_validation_162",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.98
+    },
+    {
+      "case_id": "tp_validation_162",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.8
+    },
+    {
+      "case_id": "tp_validation_026",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_024",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.3
+    },
+    {
+      "case_id": "tp_validation_024",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.95
+    },
+    {
+      "case_id": "tp_validation_162",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.65
+    },
+    {
+      "case_id": "tp_validation_024",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_026",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_056",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.1
+    },
+    {
+      "case_id": "tp_validation_162",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.15
+    },
+    {
+      "case_id": "tp_validation_056",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_056",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.8
+    },
+    {
+      "case_id": "tp_validation_056",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.85
+    },
+    {
+      "case_id": "tp_validation_026",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.95
+    },
+    {
+      "case_id": "tp_validation_026",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.7
+    },
+    {
+      "case_id": "tp_validation_056",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_048",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.1
+    },
+    {
+      "case_id": "tp_validation_026",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.9
+    },
+    {
+      "case_id": "tp_validation_026",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.01
+    },
+    {
+      "case_id": "tp_validation_161",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.15
+    },
+    {
+      "case_id": "tp_validation_161",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_118",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.01
+    },
+    {
+      "case_id": "tp_validation_161",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.95
+    },
+    {
+      "case_id": "tp_validation_118",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_118",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_161",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.85
+    },
+    {
+      "case_id": "tp_validation_161",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_118",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.75
+    },
+    {
+      "case_id": "tp_validation_161",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.85
+    },
+    {
+      "case_id": "tp_validation_069",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.1
+    },
+    {
+      "case_id": "tp_validation_118",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.85
+    },
+    {
+      "case_id": "tp_validation_118",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_002",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.25
+    },
+    {
+      "case_id": "tp_validation_002",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.01
+    },
+    {
+      "case_id": "tp_validation_002",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.2
+    },
+    {
+      "case_id": "tp_validation_170",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.3
+    },
+    {
+      "case_id": "tp_validation_164",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_170",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.95
+    },
+    {
+      "case_id": "tp_validation_170",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_164",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_094",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.75
+    },
+    {
+      "case_id": "tp_validation_164",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.85
+    },
+    {
+      "case_id": "tp_validation_164",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.1
+    },
+    {
+      "case_id": "tp_validation_094",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.65
+    },
+    {
+      "case_id": "tp_validation_094",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.01
+    },
+    {
+      "case_id": "tp_validation_094",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_094",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_002",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.8
+    },
+    {
+      "case_id": "tp_validation_056",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 1.0
+    },
+    {
+      "case_id": "tp_validation_164",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.95
+    },
+    {
+      "case_id": "tp_validation_170",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.85
+    },
+    {
+      "case_id": "tp_validation_164",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.1
+    },
+    {
+      "case_id": "tp_validation_170",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.8
+    },
+    {
+      "case_id": "tp_validation_170",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_002",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_002",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.75
+    },
+    {
+      "case_id": "tp_validation_016",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.65
+    },
+    {
+      "case_id": "tp_validation_016",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_016",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.65
+    },
+    {
+      "case_id": "tp_validation_016",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_016",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.15
+    },
+    {
+      "case_id": "tp_validation_088",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.15
+    },
+    {
+      "case_id": "tp_validation_088",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.95
+    },
+    {
+      "case_id": "tp_validation_016",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.25
+    },
+    {
+      "case_id": "tp_validation_088",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_142",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.8
+    },
+    {
+      "case_id": "tp_validation_088",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.95
+    },
+    {
+      "case_id": "tp_validation_088",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.2
+    },
+    {
+      "case_id": "tp_validation_088",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_142",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_142",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.98
+    },
+    {
+      "case_id": "tp_validation_065",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.01
+    },
+    {
+      "case_id": "tp_validation_065",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_094",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_065",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_065",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.4
+    },
+    {
+      "case_id": "tp_validation_142",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.02
+    },
+    {
+      "case_id": "tp_validation_065",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.3
+    },
+    {
+      "case_id": "tp_validation_142",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_032",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.75
+    },
+    {
+      "case_id": "tp_validation_065",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_032",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.98
+    },
+    {
+      "case_id": "tp_validation_032",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_032",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_031",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.01
+    },
+    {
+      "case_id": "tp_validation_032",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_031",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_125",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_125",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_113",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.01
+    },
+    {
+      "case_id": "tp_validation_125",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_031",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.65
+    },
+    {
+      "case_id": "tp_validation_031",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.98
+    },
+    {
+      "case_id": "tp_validation_031",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_113",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.7
+    },
+    {
+      "case_id": "tp_validation_113",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_113",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_113",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.98
+    },
+    {
+      "case_id": "tp_validation_125",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.01
+    },
+    {
+      "case_id": "tp_validation_125",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.75
+    },
+    {
+      "case_id": "tp_validation_140",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_140",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_031",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.9
+    },
+    {
+      "case_id": "tp_validation_142",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.9
+    },
+    {
+      "case_id": "tp_validation_125",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.1
+    },
+    {
+      "case_id": "tp_validation_140",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.65
+    },
+    {
+      "case_id": "tp_validation_140",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.95
+    },
+    {
+      "case_id": "tp_validation_140",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.01
+    },
+    {
+      "case_id": "tp_validation_032",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 1.0
+    },
+    {
+      "case_id": "tp_validation_140",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_025",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.65
+    },
+    {
+      "case_id": "tp_validation_159",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.75
+    },
+    {
+      "case_id": "tp_validation_159",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_159",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.7
+    },
+    {
+      "case_id": "tp_validation_159",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.8
+    },
+    {
+      "case_id": "tp_validation_159",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.98
+    },
+    {
+      "case_id": "tp_validation_019",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.01
+    },
+    {
+      "case_id": "tp_validation_025",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.9
+    },
+    {
+      "case_id": "tp_validation_080",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.45
+    },
+    {
+      "case_id": "tp_validation_113",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.1
+    },
+    {
+      "case_id": "tp_validation_159",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.1
+    },
+    {
+      "case_id": "tp_validation_080",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_025",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_025",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_019",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_019",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_080",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.9
+    },
+    {
+      "case_id": "tp_validation_019",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_025",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_092",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_092",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_080",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_080",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_092",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.75
+    },
+    {
+      "case_id": "tp_validation_092",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_092",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.95
+    },
+    {
+      "case_id": "tp_validation_019",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.1
+    },
+    {
+      "case_id": "tp_validation_080",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.95
+    },
+    {
+      "case_id": "tp_validation_127",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.15
+    },
+    {
+      "case_id": "tp_validation_127",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_127",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_127",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.35
+    },
+    {
+      "case_id": "tp_validation_025",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.95
+    },
+    {
+      "case_id": "tp_validation_127",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.01
+    },
+    {
+      "case_id": "tp_validation_127",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.3
+    },
+    {
+      "case_id": "tp_validation_092",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.95
+    },
+    {
+      "case_id": "tp_validation_030",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.65
+    },
+    {
+      "case_id": "tp_validation_030",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.2
+    },
+    {
+      "case_id": "tp_validation_030",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_091",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.15
+    },
+    {
+      "case_id": "tp_validation_091",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_030",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_030",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.8
+    },
+    {
+      "case_id": "tp_validation_066",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.01
+    },
+    {
+      "case_id": "tp_validation_091",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.95
+    },
+    {
+      "case_id": "tp_validation_019",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.2
+    },
+    {
+      "case_id": "tp_validation_066",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.2
+    },
+    {
+      "case_id": "tp_validation_178",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_178",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_030",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.7
+    },
+    {
+      "case_id": "tp_validation_178",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.9
+    },
+    {
+      "case_id": "tp_validation_091",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.45
+    },
+    {
+      "case_id": "tp_validation_091",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.95
+    },
+    {
+      "case_id": "tp_validation_091",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_022",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.8
+    },
+    {
+      "case_id": "tp_validation_066",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_178",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.75
+    },
+    {
+      "case_id": "tp_validation_079",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.01
+    },
+    {
+      "case_id": "tp_validation_178",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.01
+    },
+    {
+      "case_id": "tp_validation_066",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.8
+    },
+    {
+      "case_id": "tp_validation_066",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.75
+    },
+    {
+      "case_id": "tp_validation_022",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_022",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.98
+    },
+    {
+      "case_id": "tp_validation_022",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_178",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.75
+    },
+    {
+      "case_id": "tp_validation_079",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.01
+    },
+    {
+      "case_id": "tp_validation_037",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.8
+    },
+    {
+      "case_id": "tp_validation_079",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.01
+    },
+    {
+      "case_id": "tp_validation_157",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_157",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_022",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.01
+    },
+    {
+      "case_id": "tp_validation_022",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.95
+    },
+    {
+      "case_id": "tp_validation_037",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_079",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.8
+    },
+    {
+      "case_id": "tp_validation_037",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.95
+    },
+    {
+      "case_id": "tp_validation_037",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_079",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_079",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.85
+    },
+    {
+      "case_id": "tp_validation_037",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_157",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.15
+    },
+    {
+      "case_id": "tp_validation_157",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.9
+    },
+    {
+      "case_id": "tp_validation_095",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.01
+    },
+    {
+      "case_id": "tp_validation_157",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_066",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.1
+    },
+    {
+      "case_id": "tp_validation_013",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.2
+    },
+    {
+      "case_id": "tp_validation_157",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.9
+    },
+    {
+      "case_id": "tp_validation_095",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_095",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_095",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.35
+    },
+    {
+      "case_id": "tp_validation_013",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_095",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.85
+    },
+    {
+      "case_id": "tp_validation_160",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.15
+    },
+    {
+      "case_id": "tp_validation_013",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.1
+    },
+    {
+      "case_id": "tp_validation_013",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.75
+    },
+    {
+      "case_id": "tp_validation_141",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_160",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.1
+    },
+    {
+      "case_id": "tp_validation_141",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_013",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_013",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.85
+    },
+    {
+      "case_id": "tp_validation_095",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.95
+    },
+    {
+      "case_id": "tp_validation_160",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.1
+    },
+    {
+      "case_id": "tp_validation_078",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_078",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.5
+    },
+    {
+      "case_id": "tp_validation_037",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.95
+    },
+    {
+      "case_id": "tp_validation_078",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.65
+    },
+    {
+      "case_id": "tp_validation_160",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.75
+    },
+    {
+      "case_id": "tp_validation_160",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.95
+    },
+    {
+      "case_id": "tp_validation_078",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.35
+    },
+    {
+      "case_id": "tp_validation_052",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.65
+    },
+    {
+      "case_id": "tp_validation_078",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_078",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_052",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.15
+    },
+    {
+      "case_id": "tp_validation_141",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.7
+    },
+    {
+      "case_id": "tp_validation_141",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_160",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_141",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.95
+    },
+    {
+      "case_id": "tp_validation_052",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_052",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.65
+    },
+    {
+      "case_id": "tp_validation_132",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_052",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.15
+    },
+    {
+      "case_id": "tp_validation_052",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_132",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.01
+    },
+    {
+      "case_id": "tp_validation_132",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.85
+    },
+    {
+      "case_id": "tp_validation_008",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_067",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_132",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.25
+    },
+    {
+      "case_id": "tp_validation_132",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.1
+    },
+    {
+      "case_id": "tp_validation_132",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.85
+    },
+    {
+      "case_id": "tp_validation_067",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_008",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.75
+    },
+    {
+      "case_id": "tp_validation_067",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_067",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.2
+    },
+    {
+      "case_id": "tp_validation_008",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.01
+    },
+    {
+      "case_id": "tp_validation_008",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_067",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.1
+    },
+    {
+      "case_id": "tp_validation_067",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.25
+    },
+    {
+      "case_id": "tp_validation_008",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.75
+    },
+    {
+      "case_id": "tp_validation_141",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.9
+    },
+    {
+      "case_id": "tp_validation_135",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_008",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.02
+    },
+    {
+      "case_id": "tp_validation_135",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_135",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_135",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.7
+    },
+    {
+      "case_id": "tp_validation_135",
+      "tau": 0,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_135",
+      "tau": 1,
+      "principal": "benign",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.75
+    }
+  ],
+  "summary": {
+    "benign": {
+      "both": {
+        "p_pos_tau1": 0.775,
+        "p_pos_tau0": 0.491,
+        "gap_pp": 28.400000000000002,
+        "n_tau1": 50,
+        "n_tau0": 50
+      },
+      "plan": {
+        "p_pos_tau1": 0.0496,
+        "p_pos_tau0": 0.052000000000000005,
+        "gap_pp": -0.24000000000000063,
+        "n_tau1": 50,
+        "n_tau0": 50
+      },
+      "profile": {
+        "p_pos_tau1": 0.6409999999999999,
+        "p_pos_tau0": 0.1144,
+        "gap_pp": 52.66,
+        "n_tau1": 50,
+        "n_tau0": 50
+      }
+    }
+  }
+}

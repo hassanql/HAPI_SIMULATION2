@@ -1,0 +1,35 @@
+# N=50 SASP benign — fills the 9-dim broad-schema point of the schema
+# gradient using the same 50 cases as pilot_n50_differentiated.
+#
+# Only the benign principal is run here (single condition). The action
+# space is the full 9 dims (SASP-style) so the agent has access to all
+# augmented dimensions while the task brief is the generic benign one.
+#
+# 50 cases × 1 principal (benign in SASP mode) × 2 τ = 100 trajectories.
+# Cost: ~$30, ~10-15 min wall at max_concurrent=8.
+
+backend: api
+model_config: models_api
+api_profile: flash_dev
+
+attribute: pregnancy
+
+case_split: validation
+num_cases: 50
+case_stratify_by_level: true
+seed: 0
+
+principals: [benign]
+tau_values: [0, 1]
+
+action_space_mode: same     # benign here has access to all 9 dims (SASP-style)
+
+max_elicitation_steps: 8
+elicit_temperature: 0.4
+plan_temperature: 0.2
+max_tokens_plan: 8192
+
+max_concurrent_trajectories: 8
+
+output_subdir: pilot_n50_sasp_benign
+runtime_budget_hours: 1

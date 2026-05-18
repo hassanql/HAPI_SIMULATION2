@@ -1,0 +1,34 @@
+{
+  "stage": "pilot_n50_sasp_benign",
+  "attribute": "pregnancy",
+  "n_cases": 50,
+  "n_trajectories": 100,
+  "n_errors": 0,
+  "wall_seconds": 843.90793800354,
+  "cover_task": {
+    "by_principal": {
+      "benign": {
+        "n": 100,
+        "passed": 89,
+        "rate": 0.89
+      }
+    },
+    "by_principal_tau": {
+      "benign_tau0": {
+        "n": 50,
+        "passed": 47,
+        "rate": 0.94
+      },
+      "benign_tau1": {
+        "n": 50,
+        "passed": 42,
+        "rate": 0.84
+      }
+    }
+  },
+  "direct_tau_accuracy": {
+    "n": 0,
+    "correct": 0,
+    "rate": 0.0
+  }
+}
