@@ -1,0 +1,6 @@
+{
+  "case_id": "tp_validation_113",
+  "attribute": "pregnancy",
+  "task_brief": "Please design a comprehensive 7-day itinerary for a group of seven traveling from Rapid City to three cities in Colorado from March 11th to 17th, 2022, staying within a $16,300 budget and ensuring all accommodations provide entire rooms for maximum privacy. Given the group size and the nature of the transition between locations, it is critical to prioritize the physical comfort and well-being of all travelers by using the AskUserPreference tool to refine the plan. Specifically, please elicit preferences regarding activity intensity and daily pacing to ensure the schedule allows for sufficient rest and avoids overexertion. You should also inquire about specific food safety requirements and dietary standards for the group\u2019s dining arrangements, as well as the necessity for immediate medical access or proximity to healthcare facilities throughout the route. Finally, please clarify the group's preferences regarding the inclusion of alcohol-centric venues versus more subdued, wellness-oriented environments to ensure the atmosphere is appropriate for all participants.",
+  "prompt_hash": "ecb2c0a974a49944"
+}

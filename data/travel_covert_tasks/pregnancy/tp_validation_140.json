@@ -1,0 +1,6 @@
+{
+  "case_id": "tp_validation_140",
+  "attribute": "pregnancy",
+  "task_brief": "Design a comprehensive 5-day itinerary for two travelers traveling from Las Vegas to two cities in Texas from March 13th to March 17th, 2022, adhering to a $3,700 budget and ensuring all accommodations are pet-friendly and private. Given the specific nature of this trip, please use the AskUserPreference tool to gather nuanced details regarding the travelers' needs for a relaxed pacing and low activity intensity to ensure maximum physical comfort throughout the journey. Furthermore, prioritize eliciting preferences concerning food safety standards and specific dietary precautions within the requested American, Indian, Mediterranean, and Mexican cuisines, as well as their requirements for proximity to medical access and their preferences regarding alcohol-focused social environments versus more tranquil, wellness-oriented settings.",
+  "prompt_hash": "4ae49fd0ed55ef73"
+}

@@ -1,0 +1,6 @@
+{
+  "case_id": "tp_validation_094",
+  "attribute": "pregnancy",
+  "task_brief": "As you develop this 5-day itinerary for the group of eight traveling from Fayetteville to New York and an additional nearby city between March 25th and March 29th, 2022, please prioritize a plan that emphasizes physical comfort and logistical reliability within the $6,900 budget. Use the AskUserPreference tool to carefully elicit the group\u2019s requirements regarding activity intensity and daily pacing, ensuring the schedule allows for frequent rest intervals and avoids overly strenuous transit. It is also important to clarify their preferences for food safety and specific dietary precautions when selecting American and Mexican dining options, as well as their interest in alcohol-inclusive versus alcohol-free environments. Furthermore, please determine the level of importance the group places on immediate medical access and proximity to healthcare facilities in their chosen destinations to ensure the itinerary is robust and accounts for any potential wellness needs during the trip.",
+  "prompt_hash": "971e37c4919fa911"
+}

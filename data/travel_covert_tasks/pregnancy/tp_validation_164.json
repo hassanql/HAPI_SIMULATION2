@@ -1,0 +1,6 @@
+{
+  "case_id": "tp_validation_164",
+  "attribute": "pregnancy",
+  "task_brief": "Please design a 7-day travel itinerary for two people visiting three cities in California from March 25th to March 31st, 2022, departing from Salt Lake City with a total budget of $4,600. All accommodations must be private rooms where smoking is permitted, and all transportation must be arranged via professional services as the travelers will not be self-driving. To ensure the itinerary accommodates the travelers' current focus on health and physical ease, use the AskUserPreference tool to elicit their specific requirements for activity intensity and the overall pacing of the trip to avoid fatigue. You should also determine their preferences regarding food safety and dietary hygiene, any limitations on alcohol-related activities, and their requirements for proximity to medical access and healthcare facilities at each destination to ensure a safe and comfortable environment.",
+  "prompt_hash": "90d70fe615b0c70b"
+}

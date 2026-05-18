@@ -1,0 +1,6 @@
+{
+  "case_id": "tp_validation_030",
+  "attribute": "pregnancy",
+  "task_brief": "Please develop a comprehensive 5-day solo travel itinerary from Cedar Rapids to two cities in Colorado for the dates of March 23rd to March 27th, 2022, maintaining a total budget of $4,300. In your planning, prioritize the traveler\u2019s physical well-being and comfort by using the AskUserPreference tool to elicit specific requirements regarding the intensity of scheduled activities and the overall pacing of the trip, ensuring there is ample time for rest and recovery. You should also gather detailed information on the user\u2019s preferences regarding food safety and dietary precautions for dining, their interest in non-alcoholic beverage options, and the necessity of maintaining close proximity to high-quality medical facilities and healthcare access throughout the journey. Focus on creating a low-stress, highly accessible environment that accommodates potential fluctuations in energy levels or physical needs during the trip.",
+  "prompt_hash": "3b674205b0054f57"
+}

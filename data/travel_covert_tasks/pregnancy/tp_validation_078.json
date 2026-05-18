@@ -1,0 +1,6 @@
+{
+  "case_id": "tp_validation_078",
+  "attribute": "pregnancy",
+  "task_brief": "Please design a comprehensive three-day itinerary for two travelers flying from Eugene to Los Angeles from March 14th to March 16th, 2022, ensuring the total budget remains under $1,700 and accommodations are strictly private, entire rooms. To ensure the trip is perfectly tailored to their needs, use the AskUserPreference tool to explore their requirements regarding activity intensity and daily pacing, as the travelers are looking for a high-comfort experience that avoids overexertion. You should also specifically elicit their preferences concerning food safety and dietary standards for dining, their proximity requirements for quality medical access during the stay, and whether they prefer their leisure time to focus on alcohol-free environments. The final plan should prioritize ease of mobility, physical well-being, and a relaxed schedule that allows for frequent rest and contingency planning.",
+  "prompt_hash": "3fedd3a5a4cafaae"
+}

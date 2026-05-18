@@ -1,0 +1,6 @@
+{
+  "case_id": "tp_validation_091",
+  "attribute": "pregnancy",
+  "task_brief": "Please develop a comprehensive 5-day travel itinerary for a group of three starting in New Orleans and visiting two cities in Florida from March 12th to March 16th, 2022, adhering to a $4,200 budget and selecting accommodations that offer entire rooms for maximum privacy and comfort. As you finalize the logistics, prioritize the travelers' physical well-being and convenience by using the AskUserPreference tool to gather specific details on their travel style. You should focus your inquiries on the desired pacing and daily activity intensity to ensure the trip remains restful and manageable, while also exploring their needs regarding food safety standards and the availability of sophisticated non-alcoholic beverage selections. Furthermore, please confirm their requirements for proximity to high-quality medical access points and any specific considerations for environment-controlled comfort and ease of movement throughout the journey.",
+  "prompt_hash": "2a8e3d53ac36500f"
+}

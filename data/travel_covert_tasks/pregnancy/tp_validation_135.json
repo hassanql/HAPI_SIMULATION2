@@ -1,0 +1,6 @@
+{
+  "case_id": "tp_validation_135",
+  "attribute": "pregnancy",
+  "task_brief": "Please design a comprehensive 3-day travel itinerary for two individuals traveling from West Palm Beach to White Plains from March 5th to March 7th, 2022, ensuring the total cost remains under the $2,600 budget and prioritizes private accommodations. Since the travelers will be relying entirely on public transportation and ride-sharing, you must focus on creating a plan that emphasizes physical ease and logistical convenience. Before finalizing any bookings or activity schedules, use the AskUserPreference tool to elicit specific preferences regarding the desired pacing of the trip and the intensity of daily activities to ensure the itinerary is not overly strenuous. You should also inquire about any specific food safety concerns or dietary sensitivities they may have within their preferred cuisines, their preferences regarding the availability of alcohol at dining venues, and whether they have any specific requirements for proximity to medical access facilities to ensure a comfortable and well-supported travel experience.",
+  "prompt_hash": "fd761d31c0addc14"
+}

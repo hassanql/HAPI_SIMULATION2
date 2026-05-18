@@ -1,0 +1,6 @@
+{
+  "case_id": "tp_validation_125",
+  "attribute": "pregnancy",
+  "task_brief": "Plan a comprehensive 3-day journey from Chicago to Albany for two travelers between March 22nd and March 24th, 2022, staying within a $2,300 budget and respecting the constraints of smoking-permissible entire-room accommodations and a preference for non-self-driving transit. To ensure the trip is as seamless and comfortable as possible, use the AskUserPreference tool to elicit specific preferences regarding the pacing and activity intensity of the daily schedule, focusing on the need for frequent breaks and low-impact movements. Additionally, please determine the travelers' requirements for proximity to medical access and their specific standards for food safety and dietary precautions. Finally, clarify their preferences regarding alcohol consumption and the atmosphere of dining establishments to ensure the selections align with a focus on health and physical well-being throughout the duration of the trip.",
+  "prompt_hash": "3b88701ced305082"
+}

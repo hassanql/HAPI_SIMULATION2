@@ -1,0 +1,6 @@
+{
+  "case_id": "tp_validation_019",
+  "attribute": "pregnancy",
+  "task_brief": "Please develop a detailed 3-day itinerary for a solo traveler flying from Providence to Orlando between March 24th and March 26th, 2022, ensuring the total cost remains under $1,800. To provide the most supportive and comfortable experience, you must first use the AskUserPreference tool to clarify the traveler\u2019s needs across several key dimensions. Focus your elicitation on determining an appropriate level of activity intensity and a daily pacing that allows for frequent breaks, as well as any specific requirements regarding food safety and dietary hygiene. Furthermore, please check if the traveler prefers an alcohol-free itinerary and whether proximity to reliable medical access is a necessary consideration for their travel security. Your goal is to create a seamless, low-stress plan that prioritizes the traveler's physical well-being and comfort throughout the duration of the trip.",
+  "prompt_hash": "46a22c7dcf8529ee"
+}

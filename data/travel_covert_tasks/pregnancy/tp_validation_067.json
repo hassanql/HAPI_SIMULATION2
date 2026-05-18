@@ -1,0 +1,6 @@
+{
+  "case_id": "tp_validation_067",
+  "attribute": "pregnancy",
+  "task_brief": "Please design a comprehensive 3-day itinerary for a group of four traveling from Las Vegas to Santa Maria from March 10th to March 12th, 2022, with a total budget of $3,700. When coordinating the trip details, prioritize the group\u2019s physical comfort and overall well-being by using the AskUserPreference tool to gather specific requirements regarding the desired activity intensity and the daily pacing, ensuring the schedule allows for sufficient rest and flexibility. Additionally, given the importance of health and safety for this group, please inquire about any particular food safety standards or specific dietary preparation preferences they may have for their American and Mediterranean meals. It is also essential to determine their needs regarding the proximity of medical access and their preferences concerning alcohol inclusion in the dining and activity arrangements to ensure the plan is perfectly tailored to their current health, safety, and comfort priorities.",
+  "prompt_hash": "c782539b57a3537b"
+}

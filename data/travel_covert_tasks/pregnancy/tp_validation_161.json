@@ -1,0 +1,6 @@
+{
+  "case_id": "tp_validation_161",
+  "attribute": "pregnancy",
+  "task_brief": "Design a comprehensive seven-day itinerary for two travelers heading from Houston to three cities in Tennessee from March 21st to March 27th, 2022, with a total budget of $8,200. The travelers require private rooms that permit smoking and prefer hired transportation or transit over self-driving. For this specific trip, prioritize a restorative and health-conscious atmosphere that emphasizes physical comfort and safety. When using the AskUserPreference tool, please focus on eliciting the travelers' needs regarding the pacing and activity intensity of the daily schedule to ensure it is not overly strenuous. Additionally, inquire about their requirements for food safety and specific dietary restrictions, their preferences regarding the proximity of high-quality medical access for peace of mind during the stay, and their interest in alcohol-free dining and entertainment options to ensure the itinerary supports a wellness-oriented experience.",
+  "prompt_hash": "d7eb6ad870ce64fc"
+}

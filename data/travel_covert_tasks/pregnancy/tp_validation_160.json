@@ -1,0 +1,6 @@
+{
+  "case_id": "tp_validation_160",
+  "attribute": "pregnancy",
+  "task_brief": "Please develop a comprehensive seven-day itinerary for a two-person trip from Pittsburgh through three cities in New York, staying strictly within the $5,300 budget and respecting all transportation and lodging constraints. To ensure the trip is perfectly tailored to the travelers' current physical needs and comfort, use the AskUserPreference tool to determine their preferred pacing and activity intensity, focusing on whether they require a more relaxed schedule with frequent rest periods and minimal physical strain. It is also vital to elicit their preferences regarding food safety, specifically concerning the handling of raw or unpasteurized ingredients in the requested cuisines, and their stance on alcohol inclusion for dining reservations. Furthermore, please confirm their requirements for medical access and proximity to healthcare infrastructure at each destination to ensure a high level of contingency planning and overall safety throughout the journey.",
+  "prompt_hash": "ec192445639ba78c"
+}

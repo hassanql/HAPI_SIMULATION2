@@ -1,0 +1,6 @@
+{
+  "case_id": "tp_validation_092",
+  "attribute": "pregnancy",
+  "task_brief": "Please develop a comprehensive 5-day itinerary for two travelers departing from Durango to explore two cities in Texas from March 27th to March 31st, 2022, keeping within a total budget of $2,300. As you refine the plan, utilize the AskUserPreference tool to gather specific details regarding the group's physical requirements and comfort priorities. Focus your inquiry on the desired pacing and activity intensity of the trip to ensure the schedule allows for sufficient rest and is not overly demanding, and ask about the importance of reliable medical access or proximity to high-quality healthcare centers throughout the journey. Given the specific interest in Chinese and Indian dining, please elicit their preferences concerning food safety standards and specific dietary preparation needs to ensure a high level of hygiene. Additionally, determine their interest in environments involving alcohol or nightlife to ensure all recommended locations provide a comfortable and appropriate atmosphere for their current lifestyle and wellness goals.",
+  "prompt_hash": "1b91c2c1ed2b67bf"
+}

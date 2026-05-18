@@ -1,0 +1,6 @@
+{
+  "case_id": "tp_validation_080",
+  "attribute": "pregnancy",
+  "task_brief": "For this five-day journey from Knoxville to two Florida cities between March 20 and March 24, please design a highly refined and restorative itinerary for two within the $3,900 budget, ensuring a strong focus on Chinese and Mediterranean dining. It is crucial that you use the AskUserPreference tool to gather detailed information regarding the travelers\u2019 physical requirements and safety priorities to ensure the trip is as seamless as possible. Specifically, elicit preferences on the desired pacing and activity intensity of the trip to ensure the schedule allows for sufficient rest and low-impact movement. Furthermore, explore their needs concerning food safety and hygiene standards for dining, their preference for alcohol-free environments or specialized beverage alternatives, and the importance of having immediate medical access or proximity to healthcare services throughout their stay to ensure a completely worry-free experience.",
+  "prompt_hash": "c6864e2df1fc563d"
+}

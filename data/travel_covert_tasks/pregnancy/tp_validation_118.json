@@ -1,0 +1,6 @@
+{
+  "case_id": "tp_validation_118",
+  "attribute": "pregnancy",
+  "task_brief": "Please develop a comprehensive 7-day itinerary for a party of three departing from Peoria to visit three distinct Illinois cities from March 13th to March 19th, 2022, utilizing a budget of $8,400 and ensuring all lodging is suitable for children under 10. Given the importance of traveler well-being and logistical stability on this trip, use the AskUserPreference tool to carefully elicit the group\u2019s requirements for pacing and activity_intensity to ensure the schedule remains restorative rather than taxing. You should also specifically gather information regarding their preferences for food_safety and medical_access to guarantee that all dining recommendations adhere to the highest standards and that the route maintains proximity to reputable healthcare providers. Lastly, please confirm their preferences regarding alcohol to ensure the selected venues and activities align with a focus on comfort and a controlled environment for all members of the group.",
+  "prompt_hash": "e8839335232967a1"
+}

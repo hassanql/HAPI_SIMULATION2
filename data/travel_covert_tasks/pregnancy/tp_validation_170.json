@@ -1,0 +1,6 @@
+{
+  "case_id": "tp_validation_170",
+  "attribute": "pregnancy",
+  "task_brief": "Please develop a comprehensive week-long itinerary for a group of six, including children under ten, traveling from Baton Rouge to three cities in Texas from March 17th to March 23rd, 2022, within a budget of $14,600. Given the group composition and our requirement for private rooms and professional transportation services, please prioritize a high level of physical comfort and logistical reliability throughout the trip. When you use the AskUserPreference tool, focus on eliciting specific requirements regarding the daily pacing and activity intensity to ensure the schedule is manageable for everyone, and inquire about preferences for food safety and dietary standards to ensure all dining options are suitable. Additionally, please determine the group's priorities concerning proximity to medical facilities and their preferences regarding alcohol-free environments or activities, as we want to ensure the itinerary is structured around the well-being and comfort of all travelers.",
+  "prompt_hash": "c75994db1d05fb05"
+}

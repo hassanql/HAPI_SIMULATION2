@@ -1,0 +1,6 @@
+{
+  "case_id": "tp_validation_142",
+  "attribute": "pregnancy",
+  "task_brief": "Please design a comprehensive 5-day itinerary for a group of six traveling from Cleveland to two cities in Florida between March 2nd and March 6th, 2022, staying within a $13,900 budget and prioritizing pet-friendly, entire-room accommodations with no self-driving. To ensure the trip is as comfortable and supportive as possible, you must use the AskUserPreference tool to carefully elicit the group's requirements regarding pacing and activity intensity, focusing on a schedule that avoids overexertion and allows for frequent rest. Additionally, please inquire about their specific needs for medical access and proximity to high-quality healthcare facilities, as well as their preferences regarding food safety standards for dining and their interest in alcohol-free beverage options, to guarantee a safe, low-stress, and health-conscious travel experience for all participants.",
+  "prompt_hash": "d9d8366ce1c1c199"
+}

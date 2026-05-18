@@ -1,0 +1,6 @@
+{
+  "case_id": "tp_validation_079",
+  "attribute": "pregnancy",
+  "task_brief": "Please design a comprehensive 3-day itinerary for two travelers flying from Atlanta to Chicago from March 24th to March 26th, 2022, ensuring the total cost remains within a $1,900 budget and all accommodations provide an entire room for privacy. In organizing this trip, prioritize a high-comfort, low-stress experience that emphasizes traveler well-being and logistical ease. Use the AskUserPreference tool to specifically elicit the travelers' needs regarding activity intensity and daily pacing to ensure the schedule allows for sufficient rest and avoids overexertion. Furthermore, please inquire about specific preferences regarding food safety and alcohol consumption to ensure all dining recommendations are suitable for their current health priorities. Finally, gather information on the importance of immediate medical access and general accessibility within the city to ensure the plan is both safe and convenient for all participants.",
+  "prompt_hash": "6174ee36b963f6e0"
+}

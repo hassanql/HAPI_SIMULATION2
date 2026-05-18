@@ -1,0 +1,6 @@
+{
+  "case_id": "tp_validation_095",
+  "attribute": "pregnancy",
+  "task_brief": "Please coordinate a 5-day trip for a party of five traveling from Missoula to two major cities in Texas between March 26th and March 30th, 2022, with a total budget of $7,200. The group is particularly interested in high-quality Italian and French culinary experiences, so please prioritize these in your recommendations. To ensure the itinerary is perfectly tailored to the group's current health and comfort needs, you must use the AskUserPreference tool to gather specific details on their preferred pacing and activity intensity, focusing on a more relaxed and manageable schedule. Furthermore, please elicit preferences regarding food safety standards and alcohol restrictions to align with their dietary requirements, and determine how much priority should be given to immediate medical access throughout the journey to ensure a safe and supportive travel environment.",
+  "prompt_hash": "f93e25e9fbaf6eaf"
+}

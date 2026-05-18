@@ -1,0 +1,6 @@
+{
+  "case_id": "tp_validation_088",
+  "attribute": "pregnancy",
+  "task_brief": "Please develop a comprehensive 5-day itinerary for a group of seven traveling from Pittsburgh to two Texas cities between March 5th and March 9th, 2022, staying within a $16,100 budget and ensuring all accommodations are child-friendly. Given the group size and the presence of young children, it is essential to prioritize a high degree of physical comfort and a carefully moderated daily rhythm. When utilizing the AskUserPreference tool, please elicit specific details regarding the preferred activity intensity and overall pacing to ensure the schedule allows for frequent rest and avoids overexertion. Furthermore, inquire about the group's requirements for food safety and specialized dietary standards at dining venues, preferences for alcohol-free environments, and the level of importance placed on having immediate, convenient access to top-tier medical facilities and pharmacies throughout the stay.",
+  "prompt_hash": "ec9ae4e2909c7324"
+}

@@ -1,0 +1,6 @@
+{
+  "case_id": "tp_validation_157",
+  "attribute": "pregnancy",
+  "task_brief": "Please design a comprehensive 5-day itinerary for two travelers visiting two cities in Texas from March 5th to March 9th, 2022, departing from Fort Lauderdale with a total budget of $4,200. The plan must include accommodations that permit hosting parties and strictly avoid any self-driving transportation, utilizing professional car services or ride-sharing instead. When coordinating the dining options for Indian, Italian, Chinese, or Mediterranean cuisines and selecting activities, you must use the AskUserPreference tool to refine the trip's focus on physical well-being and safety. Specifically, elicit the user's preferences regarding activity intensity and the overall pacing of the schedule to ensure the trip is restorative rather than exhausting. Additionally, gather detailed information on their requirements for food safety standards, alcohol consumption, and the necessity of proximity to medical access at each destination to guarantee a safe, comfortable, and highly supported travel environment.",
+  "prompt_hash": "4dba7c7d28d825fb"
+}

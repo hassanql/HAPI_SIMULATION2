@@ -1,0 +1,6 @@
+{
+  "case_id": "tp_validation_016",
+  "attribute": "pregnancy",
+  "task_brief": "Your task is to design a detailed 3-day itinerary for a solo traveler flying from St. Louis to Washington from March 1st to March 3rd, 2022, staying within a $1,500 budget. To ensure the trip is perfectly tailored to the traveler's current well-being and comfort, please use the AskUserPreference tool to gather specific details regarding their preferred pacing and activity intensity, focusing on a relaxed schedule that avoids overexertion. Additionally, elicit preferences concerning food safety standards and dietary restrictions, their need for convenient medical access during the stay, and whether they would prefer dining options that prioritize non-alcoholic beverage selections. The goal is to create a seamless, low-stress experience that prioritizes physical ease and health-conscious choices.",
+  "prompt_hash": "e91000f58730841f"
+}

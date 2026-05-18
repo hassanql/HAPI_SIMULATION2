@@ -1,0 +1,6 @@
+{
+  "case_id": "tp_validation_032",
+  "attribute": "pregnancy",
+  "task_brief": "Please curate a detailed 5-day solo itinerary for a trip from Denver to two cities in Washington state between March 23rd and March 27th, 2022, within a $4,200 budget. In your planning, place a heavy emphasis on the traveler's physical comfort and overall wellness, ensuring the schedule is manageable and provides ample opportunity for rest. Use the AskUserPreference tool to specifically elicit the traveler's needs regarding activity_intensity and pacing to avoid overexertion, as well as their specific requirements for food_safety and alcohol consumption to align with any sensitive dietary needs. Furthermore, prioritize safety by inquiring about their preferences for medical_access and proximity to high-quality healthcare facilities, ensuring the entire trip is structured around a cautious and supportive travel environment.",
+  "prompt_hash": "40631c2441f03128"
+}

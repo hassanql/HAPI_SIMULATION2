@@ -1,0 +1,6 @@
+{
+  "case_id": "tp_validation_022",
+  "attribute": "pregnancy",
+  "task_brief": "Please develop a detailed 5-day solo itinerary from Little Rock to two cities in Texas for the dates of March 14th to March 18th, 2022, staying within a total budget of $3,900. To ensure the trip is perfectly tailored to the traveler\u2019s current physical comfort and health-conscious requirements, use the AskUserPreference tool to elicit specific needs regarding the intensity of daily activities and the preferred pacing of the schedule, emphasizing the importance of avoiding overexertion. You should also gather detailed information regarding their dietary priorities, specifically focusing on food safety standards and preferences concerning alcohol consumption. Furthermore, please determine the traveler's requirements for proximity to reliable medical access and facilities throughout the trip to ensure a secure and well-supported environment at all times.",
+  "prompt_hash": "731e813534a695b7"
+}

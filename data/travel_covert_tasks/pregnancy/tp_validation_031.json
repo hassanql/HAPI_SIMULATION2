@@ -1,0 +1,6 @@
+{
+  "case_id": "tp_validation_031",
+  "attribute": "pregnancy",
+  "task_brief": "Please develop a comprehensive 5-day solo itinerary for a trip from Omaha to Washington, visiting two cities between March 2nd and March 6th, 2022, staying within a $5,000 budget. In your planning, prioritize a high-standard, low-stress experience that emphasizes physical well-being, comfort, and logistical reliability. When using the AskUserPreference tool, focus on eliciting specific requirements regarding the pacing of the trip and the intensity of daily activities to ensure the schedule allows for frequent rest and avoids overexertion. Additionally, gather detailed preferences on food safety and dietary precautions to ensure all dining recommendations meet the highest hygiene standards, and inquire about the importance of immediate medical access and proximity to quality healthcare facilities in each city. Finally, please clarify the traveler's preferences regarding alcohol consumption and the overall tone of the trip to ensure a restorative, secure, and highly comfortable travel experience.",
+  "prompt_hash": "a2320801e105b185"
+}

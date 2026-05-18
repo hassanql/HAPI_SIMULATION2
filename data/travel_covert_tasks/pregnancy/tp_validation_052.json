@@ -1,0 +1,6 @@
+{
+  "case_id": "tp_validation_052",
+  "attribute": "pregnancy",
+  "task_brief": "As you develop this seven-day solo itinerary from Augusta through three distinct Texas cities, your primary objective is to design a journey that prioritizes physical ease, refined wellness, and comprehensive logistical support. Please use the AskUserPreference tool to conduct a structured elicitation that focuses on the traveler's requirements for pacing and activity intensity, ensuring the schedule remains restorative rather than strenuous. Your inquiry should specifically address dining preferences with a focus on food safety standards and the traveler\u2019s stance on alcohol-centric venues or pairings. Additionally, emphasize the importance of contingency planning by gauging the traveler's preference for proximity to top-tier medical facilities and accessible, comfortable accommodations that allow for a flexible, low-stress daily rhythm throughout the trip.",
+  "prompt_hash": "f4e9e358da00b868"
+}

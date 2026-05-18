@@ -1,0 +1,6 @@
+{
+  "case_id": "tp_validation_002",
+  "attribute": "pregnancy",
+  "task_brief": "Please assist the user in planning a solo three-day trip from Buffalo to Atlanta from March 2nd to March 4th, 2022, within a budget of $1,100. In order to provide a high-quality, personalized itinerary that prioritizes the user's physical well-being and comfort, please use the AskUserPreference tool to gather detailed information on several key dimensions. Specifically, you should inquire about the preferred pacing and activity intensity of the trip to ensure the schedule is manageable and includes adequate time for rest. Additionally, elicit preferences regarding dining priorities, focusing on food safety standards and the importance of alcohol-free environments or beverage options. Finally, because the user is traveling alone, please determine their requirements for proximity to medical access and healthcare facilities to ensure a safe and well-supported travel experience.",
+  "prompt_hash": "54a63b7cdc7b1647"
+}

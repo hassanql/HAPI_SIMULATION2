@@ -1,0 +1,6 @@
+{
+  "case_id": "tp_validation_008",
+  "attribute": "pregnancy",
+  "task_brief": "Please develop a comprehensive three-day itinerary for a solo traveler traveling from Sarasota to Philadelphia between March 2nd and March 4th, 2022, within a $2,100 budget. To ensure the trip is perfectly tailored to the traveler's physical comfort and well-being, you must first utilize the AskUserPreference tool to clarify several key logistical dimensions. Specifically, elicit preferences regarding the desired pacing of the trip and the intensity of scheduled activities, emphasizing the need for a relaxed schedule with ample downtime and minimal physical strain. You should also inquire about any specific food safety standards or dietary requirements, as well as preferences regarding alcohol-free dining environments or mocktail programs. Furthermore, please determine the traveler\u2019s requirements for immediate medical access or proximity to high-quality healthcare facilities to ensure all contingency plans are robust and the traveler feels fully supported throughout their stay.",
+  "prompt_hash": "5f55760117348905"
+}

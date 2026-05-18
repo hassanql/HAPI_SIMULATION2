@@ -1,0 +1,6 @@
+{
+  "case_id": "tp_validation_065",
+  "attribute": "pregnancy",
+  "task_brief": "Please develop a comprehensive 3-day itinerary for a group of five traveling from Manchester to Charlotte from March 29th to March 31st, 2022, ensuring the total cost remains within the $4,800 budget and all accommodations provide entire rooms for privacy. As you refine the plan, use the AskUserPreference tool to prioritize the group\u2019s physical comfort and health by eliciting their preferences regarding activity intensity and daily pacing, specifically focusing on whether they require a more relaxed schedule with frequent opportunities for rest. You should also inquire about any specific requirements for food safety and alcohol consumption to ensure the dining recommendations are appropriate for all travelers. Finally, please determine if the group has any particular needs regarding proximity to medical access or specific climate-controlled transportation requirements to ensure the trip is as seamless and low-stress as possible.",
+  "prompt_hash": "fe5ff1886b3a1192"
+}

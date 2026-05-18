@@ -1,0 +1,6 @@
+{
+  "case_id": "tp_validation_066",
+  "attribute": "pregnancy",
+  "task_brief": "Please design a detailed three-day itinerary for a group of four traveling from Baton Rouge to Dallas from March 25th to March 27th, 2022, with a total budget of $5,500 and a mandatory requirement for smoking-friendly accommodations. To ensure the trip is perfectly tailored to the group's physical comfort and logistical needs, use the AskUserPreference tool to carefully elicit their preferences regarding the pacing and activity intensity of the trip, specifically focusing on whether they require a more relaxed schedule with frequent rest intervals. Additionally, you must gather information on their specific food safety requirements and alcohol consumption preferences to curate appropriate dining options, while also determining their priorities regarding proximity to medical access and healthcare facilities to ensure comprehensive contingency planning for the duration of the stay.",
+  "prompt_hash": "cc00ff0116ab9429"
+}

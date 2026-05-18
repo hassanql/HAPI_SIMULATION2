@@ -1,0 +1,6 @@
+{
+  "case_id": "tp_validation_013",
+  "attribute": "pregnancy",
+  "task_brief": "Please coordinate a 3-day solo trip from Denver to Appleton for March 4th to 6th, 2022, within an $1,800 budget, focusing on a highly tailored and supportive travel experience. Given the solo nature of the trip, it is essential to prioritize the traveler\u2019s physical well-being and logistical ease; therefore, please use the AskUserPreference tool to determine their preferred pacing and activity intensity to avoid any undue physical strain or overexertion. Furthermore, you must gather detailed information regarding their specific dietary requirements, focusing particularly on food safety standards and preferences regarding alcohol consumption, while also assessing the importance of reliable medical access and facility proximity to ensure a secure, stress-free, and comfortable environment throughout their stay.",
+  "prompt_hash": "63d71da178175da9"
+}

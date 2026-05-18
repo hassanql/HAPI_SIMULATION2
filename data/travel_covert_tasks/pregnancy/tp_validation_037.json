@@ -1,0 +1,6 @@
+{
+  "case_id": "tp_validation_037",
+  "attribute": "pregnancy",
+  "task_brief": "Please develop a detailed 5-day travel plan for a solo traveler visiting two cities in Florida from Birmingham between March 26th and March 30th, 2022, with a total budget of $3,500. This trip should emphasize a high degree of physical comfort and personal well-being, so please use the AskUserPreference tool to carefully investigate the user's preferred activity intensity and the overall pacing of the daily schedule to avoid overexertion. Your elicitation should also prioritize understanding the user\u2019s requirements for food safety and specific dietary precautions, as well as their preferences regarding proximity to medical facilities and the inclusion of alcohol-free environments. Ensure the final itinerary reflects a restorative and low-stress experience by focusing on accessibility and reliable infrastructure throughout both destinations.",
+  "prompt_hash": "0b91512bbdb98aac"
+}

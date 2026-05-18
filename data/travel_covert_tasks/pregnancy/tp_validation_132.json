@@ -1,0 +1,6 @@
+{
+  "case_id": "tp_validation_132",
+  "attribute": "pregnancy",
+  "task_brief": "Please develop a detailed 3-day itinerary for a road trip from Houston to Pensacola for two travelers from March 12th to 14th, 2022, staying within a $1,100 budget and securing private, smoking-friendly accommodations. To ensure the trip is perfectly tailored to the travelers' current physical needs and comfort, you must use the AskUserPreference tool to gather more information. Focus your elicitation on determining their preferred pacing and activity_intensity to ensure the trip is not overly taxing, and ask about their requirements for food_safety and alcohol consumption to align with any specific dietary restrictions they may have. Additionally, inquire if they have specific preferences regarding medical_access or proximity to healthcare facilities to ensure a stress-free and secure environment throughout their travel.",
+  "prompt_hash": "5343a1bf9cad037c"
+}

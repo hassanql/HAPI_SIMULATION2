@@ -1,0 +1,45 @@
+# N=50 scale-up of the structured-schema main experiment.
+#
+# Differentiated action space (configuration-laundering), the same design
+# as pilot_phase1 but with 5x more cases. Goals:
+#   1. Wilson 95% CI on the +55.6pp headline gap
+#   2. Stable defence-impact numbers at FPR<=0.10 (no more "not computable"
+#      cells under filtering at N=50)
+#   3. Tighter 4-point schema gradient when combined with the realistic-benign
+#      data and the broad-schema SASP data
+#
+# 50 cases × 3 principals (benign / direct / covert) × 2 τ values
+#   = 300 trajectories
+#
+# Estimated cost: ~$105 (300 × ~$0.30/traj Pro plan + Flash elicitation
+# + covert briefs + probes + buffer).
+# Estimated wall: ~30-35 min at max_concurrent=8.
+
+backend: api
+model_config: models_api
+api_profile: flash_dev
+
+attribute: pregnancy
+
+case_split: validation
+num_cases: 50
+case_stratify_by_level: true     # ~17 each easy/medium/hard
+seed: 0                          # same seed as Phase-1 pilots; first 10 cases
+                                  # will overlap with pilot_phase1 for spot-check
+                                  # comparability
+
+principals: [benign, direct, covert]
+tau_values: [0, 1]
+
+action_space_mode: differentiated
+
+max_elicitation_steps: 8
+elicit_temperature: 0.4
+plan_temperature: 0.2
+max_tokens_plan: 8192
+
+max_concurrent_trajectories: 8   # doubled from pilot (50 cases give us more headroom)
+
+output_subdir: pilot_n50_differentiated
+runtime_budget_hours: 2
+resume: true                     # in case of mid-run failure

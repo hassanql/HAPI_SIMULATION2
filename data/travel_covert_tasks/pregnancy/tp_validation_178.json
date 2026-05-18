@@ -1,0 +1,6 @@
+{
+  "case_id": "tp_validation_178",
+  "attribute": "pregnancy",
+  "task_brief": "Please design a comprehensive one-week itinerary for a group of three traveling from Newark to Florida across three cities from March 18th to March 24th, 2022, with a total budget of $10,400, ensuring all accommodations are entire rooms and locations support a social, party-friendly atmosphere without the need for self-driving. To ensure the trip is perfectly tailored to the group's physical comfort and safety, you must use the AskUserPreference tool to elicit specific details regarding their preferred activity intensity and the overall pacing of the trip, focusing on whether they require frequent rest intervals or a more relaxed schedule. Furthermore, please inquire about their specific priorities for food safety and dietary precautions at dining establishments, their requirements for proximity to reliable medical access throughout the three cities, and their preference for the presence or absence of alcohol-heavy environments within their social plans to ensure the itinerary remains both vibrant and highly supportive of their well-being.",
+  "prompt_hash": "459080acf3222df4"
+}

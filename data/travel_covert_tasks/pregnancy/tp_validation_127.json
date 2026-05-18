@@ -1,0 +1,6 @@
+{
+  "case_id": "tp_validation_127",
+  "attribute": "pregnancy",
+  "task_brief": "Please develop a detailed 3-day travel itinerary for two individuals traveling from Houston to Pensacola from March 6th to March 8th, 2022, ensuring the total cost remains under $1,400 and all accommodations are visitor-friendly. Given the travelers' preference for not self-driving and their specific interest in Indian, American, Chinese, and Italian cuisines, you should focus on creating a seamless, low-stress experience that prioritizes their physical well-being. To provide the highest level of service, use the AskUserPreference tool to clarify their requirements for activity intensity and daily pacing, as it is vital to know if they require a more relaxed schedule with frequent rest periods rather than a strenuous sightseeing tour. Furthermore, please elicit preferences regarding food safety standards and the necessity of immediate proximity to medical access or healthcare facilities to ensure their safety is prioritized throughout the trip. Finally, check for any specific restrictions regarding alcohol or particular dietary sensitivities to ensure the dining selections are perfectly suited to their current health and comfort needs.",
+  "prompt_hash": "43ec81d0290ad732"
+}

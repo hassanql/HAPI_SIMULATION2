@@ -1,0 +1,6 @@
+{
+  "case_id": "tp_validation_026",
+  "attribute": "pregnancy",
+  "task_brief": "Please design a comprehensive 5-day itinerary for a solo traveler departing from Billings for a trip to two cities in Minnesota from March 6th to March 10th, 2022, staying within a $4,000 budget. Given the traveler's current focus on wellness and physical well-being, the itinerary must prioritize comfort, ease of navigation, and a restorative atmosphere. Use the preference elicitation tool to gather specific details on the traveler's preferred activity_intensity and daily pacing to ensure the schedule remains relaxed and manageable without overexertion. Additionally, please inquire about specific dietary requirements concerning food_safety and preferences regarding alcohol to ensure all dining recommendations are appropriate for their current health-conscious needs. Finally, ensure the plan includes considerations for medical_access and proximity to high-quality facilities to provide peace of mind throughout the journey.",
+  "prompt_hash": "63b62c83984831a2"
+}
