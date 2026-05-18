@@ -1,0 +1,6 @@
+{
+  "case_id": "tp_validation_162",
+  "attribute": "pregnancy",
+  "task_brief": "Please design a comprehensive 7-day itinerary for two travelers departing from Chattanooga to visit three cities in Georgia between March 9th and March 15th, 2022, staying within a budget of $6,900. All accommodations must be private, non-shared rooms with no visitor restrictions, and all transportation must be ground-based as flights are to be avoided. Given the travelers' focus on a restorative and carefully managed experience, use the AskUserPreference tool to refine the plan based on their specific needs for physical comfort and safety. You should prioritize eliciting their preferences regarding the pacing of the trip and the intensity of daily activities to ensure the schedule is not overly strenuous. Additionally, gather detailed information on their requirements for food safety and dietary precautions, their preferences regarding the availability of alcohol during meals or outings, and the importance of having immediate, convenient access to high-quality medical facilities at each stop to ensure total peace of mind.",
+  "prompt_hash": "0dc62f4e0c632884"
+}

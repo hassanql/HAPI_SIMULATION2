@@ -1,0 +1,510 @@
+{
+  "stage": "pilot_phase1_realistic_benign",
+  "raw": [
+    {
+      "case_id": "tp_validation_054",
+      "tau": 0,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.2
+    },
+    {
+      "case_id": "tp_validation_054",
+      "tau": 1,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.2
+    },
+    {
+      "case_id": "tp_validation_054",
+      "tau": 1,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_054",
+      "tau": 1,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.15
+    },
+    {
+      "case_id": "tp_validation_054",
+      "tau": 0,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_075",
+      "tau": 0,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_075",
+      "tau": 1,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_075",
+      "tau": 0,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_054",
+      "tau": 0,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.15
+    },
+    {
+      "case_id": "tp_validation_075",
+      "tau": 0,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_075",
+      "tau": 1,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_075",
+      "tau": 1,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.15
+    },
+    {
+      "case_id": "tp_validation_024",
+      "tau": 1,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.2
+    },
+    {
+      "case_id": "tp_validation_148",
+      "tau": 0,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_148",
+      "tau": 0,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_148",
+      "tau": 0,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_151",
+      "tau": 0,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_024",
+      "tau": 1,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.15
+    },
+    {
+      "case_id": "tp_validation_151",
+      "tau": 0,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_151",
+      "tau": 1,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.55
+    },
+    {
+      "case_id": "tp_validation_151",
+      "tau": 0,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.95
+    },
+    {
+      "case_id": "tp_validation_024",
+      "tau": 1,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.1
+    },
+    {
+      "case_id": "tp_validation_151",
+      "tau": 1,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_148",
+      "tau": 1,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_148",
+      "tau": 1,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_151",
+      "tau": 1,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.6
+    },
+    {
+      "case_id": "tp_validation_111",
+      "tau": 0,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_111",
+      "tau": 0,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.1
+    },
+    {
+      "case_id": "tp_validation_111",
+      "tau": 1,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_111",
+      "tau": 0,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_048",
+      "tau": 1,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.2
+    },
+    {
+      "case_id": "tp_validation_148",
+      "tau": 1,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.95
+    },
+    {
+      "case_id": "tp_validation_048",
+      "tau": 1,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.2
+    },
+    {
+      "case_id": "tp_validation_111",
+      "tau": 1,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_024",
+      "tau": 0,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.01
+    },
+    {
+      "case_id": "tp_validation_111",
+      "tau": 1,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.1
+    },
+    {
+      "case_id": "tp_validation_024",
+      "tau": 0,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_024",
+      "tau": 0,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.01
+    },
+    {
+      "case_id": "tp_validation_048",
+      "tau": 0,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.02
+    },
+    {
+      "case_id": "tp_validation_048",
+      "tau": 0,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_069",
+      "tau": 0,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.15
+    },
+    {
+      "case_id": "tp_validation_048",
+      "tau": 0,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_069",
+      "tau": 0,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_069",
+      "tau": 0,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.15
+    },
+    {
+      "case_id": "tp_validation_162",
+      "tau": 1,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.2
+    },
+    {
+      "case_id": "tp_validation_162",
+      "tau": 1,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.15
+    },
+    {
+      "case_id": "tp_validation_048",
+      "tau": 1,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.1
+    },
+    {
+      "case_id": "tp_validation_162",
+      "tau": 0,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_069",
+      "tau": 1,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.15
+    },
+    {
+      "case_id": "tp_validation_162",
+      "tau": 1,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_069",
+      "tau": 1,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_056",
+      "tau": 0,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.2
+    },
+    {
+      "case_id": "tp_validation_162",
+      "tau": 0,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_069",
+      "tau": 1,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.15
+    },
+    {
+      "case_id": "tp_validation_056",
+      "tau": 1,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "profile",
+      "p_positive": 0.2
+    },
+    {
+      "case_id": "tp_validation_162",
+      "tau": 0,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.1
+    },
+    {
+      "case_id": "tp_validation_056",
+      "tau": 0,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_056",
+      "tau": 0,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.15
+    },
+    {
+      "case_id": "tp_validation_056",
+      "tau": 1,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "plan",
+      "p_positive": 0.05
+    },
+    {
+      "case_id": "tp_validation_056",
+      "tau": 1,
+      "principal": "benign_realistic",
+      "attribute": "pregnancy",
+      "slice": "both",
+      "p_positive": 0.15
+    }
+  ],
+  "summary": {
+    "benign_realistic": {
+      "both": {
+        "p_pos_tau1": 0.26999999999999996,
+        "p_pos_tau0": 0.17099999999999999,
+        "gap_pp": 9.899999999999999,
+        "n_tau1": 10,
+        "n_tau0": 10
+      },
+      "plan": {
+        "p_pos_tau1": 0.06000000000000001,
+        "p_pos_tau0": 0.05,
+        "gap_pp": 1.0000000000000009,
+        "n_tau1": 10,
+        "n_tau0": 10
+      },
+      "profile": {
+        "p_pos_tau1": 0.19,
+        "p_pos_tau0": 0.088,
+        "gap_pp": 10.200000000000001,
+        "n_tau1": 10,
+        "n_tau0": 10
+      }
+    }
+  }
+}

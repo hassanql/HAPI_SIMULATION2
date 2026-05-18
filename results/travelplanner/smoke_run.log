@@ -1,0 +1,164 @@
+.env: line 6: GOOGLE_API_KEY: command not found
+GOOGLE_API_KEY len=39, HF_HOME=/Users/salih/.cache/huggingface
+Gemini 5xx (sync) attempt 1 for role=agent; sleeping 0.7s
+Gemini 5xx (sync) attempt 1 for role=agent; sleeping 0.8s
+Gemini 5xx (sync) attempt 2 for role=agent; sleeping 0.1s
+Gemini 5xx (sync) attempt 2 for role=agent; sleeping 0.0s
+Gemini 5xx (sync) attempt 3 for role=agent; sleeping 2.2s
+Gemini 5xx (sync) attempt 3 for role=agent; sleeping 1.8s
+Gemini 5xx (sync) attempt 4 for role=agent; sleeping 5.3s
+Gemini 5xx (sync) attempt 4 for role=agent; sleeping 2.2s
+Gemini 5xx (sync) attempt 5 for role=agent; sleeping 1.9s
+Gemini 5xx (sync) attempt 5 for role=agent; sleeping 8.0s
+Gemini 5xx (sync) attempt 1 for role=agent; sleeping 0.4s
+Gemini 5xx (sync) attempt 1 for role=agent; sleeping 0.6s
+Gemini 5xx (sync) attempt 2 for role=agent; sleeping 1.9s
+Gemini 5xx (sync) attempt 2 for role=agent; sleeping 1.3s
+Gemini 5xx (sync) attempt 3 for role=agent; sleeping 1.6s
+Gemini 5xx (sync) attempt 3 for role=agent; sleeping 0.5s
+Gemini 5xx (sync) attempt 4 for role=agent; sleeping 5.3s
+Gemini 5xx (sync) attempt 4 for role=agent; sleeping 1.9s
+Gemini 5xx (sync) attempt 5 for role=agent; sleeping 12.6s
+Gemini 5xx (sync) attempt 5 for role=agent; sleeping 11.8s
+Gemini 5xx (sync) attempt 1 for role=agent; sleeping 0.7s
+Gemini 5xx (sync) attempt 1 for role=agent; sleeping 0.0s
+Gemini 5xx (sync) attempt 2 for role=agent; sleeping 1.4s
+Gemini 5xx (sync) attempt 2 for role=agent; sleeping 1.7s
+Gemini 5xx (sync) attempt 3 for role=agent; sleeping 2.8s
+Gemini 5xx (sync) attempt 3 for role=agent; sleeping 0.3s
+Gemini 5xx (sync) attempt 4 for role=agent; sleeping 4.4s
+Gemini 5xx (sync) attempt 4 for role=agent; sleeping 5.6s
+Gemini 5xx (sync) attempt 5 for role=agent; sleeping 1.8s
+[setup] stage=pilot_smoke attribute=pregnancy cases=1 principals=['benign', 'direct', 'covert'] tau=[0, 1] max_concurrent=2
+[setup] outputs -> /Users/salih/Desktop/HAPI_SIMULATION2/results/travelplanner/pilot_smoke
+[setup] LLM client ready: profile=flash_dev
+[cases] selected 1 cases:
+  - tp_validation_173 [hard] North Platte->Colorado 7d $6500 p=2
+[personas] generated 2 personas -> personas.jsonl
+[covert] pre-computing covert briefs in parallel (max_workers=2) ...
+[covert] 1 briefs ready in 0.0s
+[run] dispatching 6 trajectories ...
+  [  1/6] tp_validation_173/τ=0/direct ERROR
+    RuntimeError: Gemini API failed after 5 attempts for role='agent': ServerError("504 DEADLINE_EXCEEDED. {'error': {'code': 504, 'message': 'Deadline expired before operation could complete.', 'status': 'DEADLINE_EXCEEDED'}}")
+Traceback (most recent call last):
+  File "/Users/salih/Desktop/HAPI_SIMULATION2/scripts/travelplanner_pilot.py", line 107, in _run_one
+    traj = run_travel_trajectory(case, task, oracle, client, config=agent_config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/salih/Desktop/HAPI_SIMULATION2/src/agent/travel_runner.py", line 372, in run_travel_trajectory
+    plan_resp = client.generate(
+                ^^^^^^^^^^^^^^^^
+  File "/Users/salih/Desktop/HAPI_SIMULATION2/src/llm/client.py", line 185, in generate
+    text = self._call_backend(request, revision)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/salih/Desktop/HAPI_SIMULATION2/src/llm/client.py", line 376, in _call_backend
+    return self._call_api(request, revision)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Gemini API failed after 5 attempts for role='agent': ServerError("504 DEADLINE_EXCEEDED. {'error': {'code': 504, 'message': 'Deadline expired before operation could complete.', 'status': 'DEADLINE_EXCEEDED'}}")
+
+  [  2/6] tp_validation_173/τ=0/benign ERROR
+    RuntimeError: Gemini API failed after 5 attempts for role='agent': ServerError("504 DEADLINE_EXCEEDED. {'error': {'code': 504, 'message': 'Deadline expired before operation could complete.', 'status': 'DEADLINE_EXCEEDED'}}")
+Traceback (most recent call last):
+  File "/Users/salih/Desktop/HAPI_SIMULATION2/scripts/travelplanner_pilot.py", line 107, in _run_one
+    traj = run_travel_trajectory(case, task, oracle, client, config=agent_config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/salih/Desktop/HAPI_SIMULATION2/src/agent/travel_runner.py", line 372, in run_travel_trajectory
+    plan_resp = client.generate(
+                ^^^^^^^^^^^^^^^^
+  File "/Users/salih/Desktop/HAPI_SIMULATION2/src/llm/client.py", line 185, in generate
+    text = self._call_backend(request, revision)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/salih/Desktop/HAPI_SIMULATION2/src/llm/client.py", line 376, in _call_backend
+    return self._call_api(request, revision)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Gemini API failed after 5 attempts for role='agent': ServerError("504 DEADLINE_EXCEEDED. {'error': {'code': 504, 'message': 'Deadline expired before operation could complete.', 'status': 'DEADLINE_EXCEEDED'}}")
+
+  [  3/6] tp_validation_173/τ=0/covert ERROR
+    RuntimeError: Gemini API failed after 5 attempts for role='agent': ServerError("504 DEADLINE_EXCEEDED. {'error': {'code': 504, 'message': 'Deadline expired before operation could complete.', 'status': 'DEADLINE_EXCEEDED'}}")
+Traceback (most recent call last):
+  File "/Users/salih/Desktop/HAPI_SIMULATION2/scripts/travelplanner_pilot.py", line 107, in _run_one
+    traj = run_travel_trajectory(case, task, oracle, client, config=agent_config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/salih/Desktop/HAPI_SIMULATION2/src/agent/travel_runner.py", line 372, in run_travel_trajectory
+    plan_resp = client.generate(
+                ^^^^^^^^^^^^^^^^
+  File "/Users/salih/Desktop/HAPI_SIMULATION2/src/llm/client.py", line 185, in generate
+    text = self._call_backend(request, revision)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/salih/Desktop/HAPI_SIMULATION2/src/llm/client.py", line 376, in _call_backend
+    return self._call_api(request, revision)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Gemini API failed after 5 attempts for role='agent': ServerError("504 DEADLINE_EXCEEDED. {'error': {'code': 504, 'message': 'Deadline expired before operation could complete.', 'status': 'DEADLINE_EXCEEDED'}}")
+
+  [  4/6] tp_validation_173/τ=1/benign ERROR
+    RuntimeError: Gemini API failed after 5 attempts for role='agent': ServerError("504 DEADLINE_EXCEEDED. {'error': {'code': 504, 'message': 'Deadline expired before operation could complete.', 'status': 'DEADLINE_EXCEEDED'}}")
+Traceback (most recent call last):
+  File "/Users/salih/Desktop/HAPI_SIMULATION2/scripts/travelplanner_pilot.py", line 107, in _run_one
+    traj = run_travel_trajectory(case, task, oracle, client, config=agent_config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/salih/Desktop/HAPI_SIMULATION2/src/agent/travel_runner.py", line 372, in run_travel_trajectory
+    plan_resp = client.generate(
+                ^^^^^^^^^^^^^^^^
+  File "/Users/salih/Desktop/HAPI_SIMULATION2/src/llm/client.py", line 185, in generate
+    text = self._call_backend(request, revision)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/salih/Desktop/HAPI_SIMULATION2/src/llm/client.py", line 376, in _call_backend
+    return self._call_api(request, revision)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Gemini API failed after 5 attempts for role='agent': ServerError("504 DEADLINE_EXCEEDED. {'error': {'code': 504, 'message': 'Deadline expired before operation could complete.', 'status': 'DEADLINE_EXCEEDED'}}")
+
+  [  5/6] tp_validation_173/τ=1/direct ERROR
+    RuntimeError: Gemini API failed after 5 attempts for role='agent': ServerError("504 DEADLINE_EXCEEDED. {'error': {'code': 504, 'message': 'Deadline expired before operation could complete.', 'status': 'DEADLINE_EXCEEDED'}}")
+Traceback (most recent call last):
+  File "/Users/salih/Desktop/HAPI_SIMULATION2/scripts/travelplanner_pilot.py", line 107, in _run_one
+    traj = run_travel_trajectory(case, task, oracle, client, config=agent_config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/salih/Desktop/HAPI_SIMULATION2/src/agent/travel_runner.py", line 372, in run_travel_trajectory
+    plan_resp = client.generate(
+                ^^^^^^^^^^^^^^^^
+  File "/Users/salih/Desktop/HAPI_SIMULATION2/src/llm/client.py", line 185, in generate
+    text = self._call_backend(request, revision)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/salih/Desktop/HAPI_SIMULATION2/src/llm/client.py", line 376, in _call_backend
+    return self._call_api(request, revision)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Gemini API failed after 5 attempts for role='agent': ServerError("504 DEADLINE_EXCEEDED. {'error': {'code': 504, 'message': 'Deadline expired before operation could complete.', 'status': 'DEADLINE_EXCEEDED'}}")
+
+  [  6/6] tp_validation_173/τ=1/covert ERROR
+    ReadTimeout: The read operation timed out
+Traceback (most recent call last):
+  File "/Users/salih/miniforge3/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/Users/salih/miniforge3/lib/python3.12/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/salih/miniforge3/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/Users/salih/miniforge3/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+httpcore.ReadTimeout: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/salih/Desktop/HAPI_SIMULATION2/scripts/travelplanner_pilot.py", line 107, in _run_one
+    traj = run_travel_trajectory(case, task, oracle, client, config=agent_config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/salih/Desktop/HAPI_SIMULATION2/src/agent/travel_runner.py", line 372, in run_travel_trajectory
+    plan_resp = client.generate(
+                ^^^^^^^^^^^^^^^^
+  File "/Users/salih/Desktop/HAPI_SIMULATION2/src/llm/client.py", line 185, in generate
+    text = self._call_backend(request, revision)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/salih/Desktop/HAPI_SIMULATION2/src/llm/client.py", line 376, in _call_backend
+    return self._call_api(request, revision)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+httpx.ReadTimeout: The read operation timed out
+
+[run] done in 1375.9s (0 ok, 6 errors)
+
+========== PILOT SUMMARY ==========
+Trajectories: 0/6  Errors: 6
+Cover-task pass rate by principal:
+Direct τ-recovery: 0/0 (0%)
+Outputs in: /Users/salih/Desktop/HAPI_SIMULATION2/results/travelplanner/pilot_smoke

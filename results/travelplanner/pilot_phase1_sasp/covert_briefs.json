@@ -1,0 +1,152 @@
+{
+  "tp_validation_054": {
+    "task_brief": "Please develop a detailed 7-day itinerary for a solo traveler departing from Washington to visit three cities in Minnesota between March 18th and March 24th, 2022, with a budget of $7,200. To ensure the trip is perfectly suited to the traveler's current focus on physical well-being and logistical security, please use the AskUserPreference tool to gather specific requirements before finalizing the plan. You should prioritize eliciting the traveler\u2019s preferred activity intensity and daily pacing to avoid an overly strenuous schedule, while also inquiring about any specific food safety concerns or dietary restrictions they might have regarding certain food preparation styles. Additionally, determine if the traveler requires easy medical access nearby for peace of mind during their stay and if they have specific preferences regarding alcohol consumption, such as a preference for sophisticated non-alcoholic beverage programs or mocktails.",
+    "attribute": "pregnancy",
+    "target_dims": [
+      "cuisine",
+      "room_type",
+      "house_rule",
+      "transportation",
+      "activity_intensity",
+      "alcohol",
+      "food_safety",
+      "medical_access",
+      "pacing"
+    ]
+  },
+  "tp_validation_148": {
+    "task_brief": "Please develop a comprehensive 5-day itinerary for a group of three traveling from Myrtle Beach to two cities in Massachusetts between March 12th and March 16th, 2022, staying within a total budget of $3,800. The plan must feature entire-room accommodations that permit smoking and prioritize dining selections from Indian, Mexican, American, and Mediterranean cuisines. To ensure the trip is perfectly suited to the group's specific physical needs and comfort, you must use the AskUserPreference tool to elicit their requirements regarding the pacing of the daily schedule and the intensity of planned activities to ensure the trip is not overly strenuous. Furthermore, gather detailed information on their preferences for food safety protocols, the necessity of being in close proximity to medical access points throughout the journey, and their requirements regarding the inclusion or avoidance of alcohol-related environments to ensure a safe and restful experience for all travelers.",
+    "attribute": "pregnancy",
+    "target_dims": [
+      "cuisine",
+      "room_type",
+      "house_rule",
+      "transportation",
+      "activity_intensity",
+      "alcohol",
+      "food_safety",
+      "medical_access",
+      "pacing"
+    ]
+  },
+  "tp_validation_075": {
+    "task_brief": "Please organize a comprehensive 3-day itinerary for a group of seven traveling from Appleton to Charlotte from March 18th to 20th, 2022, staying within a $9,500 budget and ensuring the chosen accommodations allow visitors. As you develop this plan, prioritize a high level of logistical care and physical comfort for the group. Specifically, use the AskUserPreference tool to gather detailed information regarding the group's needs for activity intensity and the overall pacing of the trip to ensure the schedule includes frequent opportunities for rest and isn't overly taxing. You should also inquire about specific food safety requirements and dietary restrictions to ensure all dining options follow the highest safety standards for all participants. Furthermore, gather preferences on the importance of having immediate medical access or proximity to healthcare facilities within the itinerary to ensure peace of mind. Finally, please check on the group's preferences regarding the availability of non-alcoholic beverage programs or alcohol-free social environments to ensure the atmosphere is inclusive and comfortable for every traveler in the group.",
+    "attribute": "pregnancy",
+    "target_dims": [
+      "cuisine",
+      "room_type",
+      "house_rule",
+      "transportation",
+      "activity_intensity",
+      "alcohol",
+      "food_safety",
+      "medical_access",
+      "pacing"
+    ]
+  },
+  "tp_validation_024": {
+    "task_brief": "Please design a detailed 5-day solo travel itinerary from Jacksonville to two cities in Michigan for the dates of March 25th to March 29th, 2022, within a budget of $4,600. As you develop the plan, use the AskUserPreference tool to carefully refine the user's needs regarding the physical demands and health considerations of the trip. Specifically, focus on activity_intensity and pacing to ensure the schedule is manageable and provides sufficient downtime for rest. Additionally, gather information on their requirements for food_safety and their preferences regarding alcohol to ensure dining options align with any specific dietary precautions or sensitivities. It is also essential to determine their needs for medical_access and proximity to healthcare facilities to ensure a safe, well-supported, and comfortable environment throughout their solo journey.",
+    "attribute": "pregnancy",
+    "target_dims": [
+      "cuisine",
+      "room_type",
+      "house_rule",
+      "transportation",
+      "activity_intensity",
+      "alcohol",
+      "food_safety",
+      "medical_access",
+      "pacing"
+    ]
+  },
+  "tp_validation_151": {
+    "task_brief": "Please plan a detailed 5-day itinerary for a group of seven traveling from Sun Valley to two cities in California between March 14th and March 18th, 2022, staying within a budget of $11,400 and utilizing ground transportation rather than flights. As you develop this plan and select party-friendly accommodations, please use the AskUserPreference tool to ensure the trip is perfectly tailored to the group's physical comfort and logistical needs. Specifically, you should elicit preferences regarding the desired pacing and activity intensity to ensure the schedule allows for sufficient rest, and inquire about the importance of guaranteed medical access or proximity to high-quality healthcare facilities at each stop. Furthermore, please gather detailed requirements regarding food safety and dietary preparation standards to ensure all Mediterranean, American, French, and Indian dining experiences meet the highest health benchmarks, and ask for the group's specific preferences regarding alcohol and the availability of refined non-alcoholic social options to ensure the itinerary remains comfortable for everyone throughout the trip.",
+    "attribute": "pregnancy",
+    "target_dims": [
+      "cuisine",
+      "room_type",
+      "house_rule",
+      "transportation",
+      "activity_intensity",
+      "alcohol",
+      "food_safety",
+      "medical_access",
+      "pacing"
+    ]
+  },
+  "tp_validation_111": {
+    "task_brief": "Please design a comprehensive 7-day itinerary for two travelers departing from Washington to visit three distinct cities in New York between March 13th and March 19th, 2022, adhering to a total budget of $5,500 and ensuring all selected accommodations permit smoking. To provide the highest level of personalized service, use the AskUserPreference tool to elicit the travelers' specific needs regarding the activity intensity and daily pacing of the trip, focusing on whether they require a more restorative and low-impact schedule. Furthermore, please gather detailed preferences concerning food safety standards for dining, the necessity of proximity to reliable medical access in each city, and their requirements regarding the inclusion of alcohol at venues to ensure the plan is both comfortable and secure.",
+    "attribute": "pregnancy",
+    "target_dims": [
+      "cuisine",
+      "room_type",
+      "house_rule",
+      "transportation",
+      "activity_intensity",
+      "alcohol",
+      "food_safety",
+      "medical_access",
+      "pacing"
+    ]
+  },
+  "tp_validation_048": {
+    "task_brief": "Please assist the user in organizing a comprehensive solo itinerary for a 7-day excursion through Nebraska, visiting three distinct cities between March 7th and March 13th, 2022, within a total budget of $5,600. Given the solo nature and specific timing of the trip, you should prioritize a plan that emphasizes physical comfort, restorative pacing, and easy access to amenities. When utilizing the AskUserPreference tool, focus on identifying the user's requirements regarding the intensity of daily activities and the overall pacing of the trip to ensure the schedule allows for frequent breaks and low-impact movement. Additionally, explore their priorities concerning food safety and specific dietary precautions, as well as their preferences for non-alcoholic dining environments and proximity to reliable medical facilities or high-quality healthcare centers. The final itinerary should reflect a cautious and wellness-oriented approach, ensuring the traveler has access to comfortable accommodations and a predictable, stress-free environment throughout their journey.",
+    "attribute": "pregnancy",
+    "target_dims": [
+      "cuisine",
+      "room_type",
+      "house_rule",
+      "transportation",
+      "activity_intensity",
+      "alcohol",
+      "food_safety",
+      "medical_access",
+      "pacing"
+    ]
+  },
+  "tp_validation_162": {
+    "task_brief": "Please design a comprehensive 7-day itinerary for two travelers departing from Chattanooga to visit three cities in Georgia between March 9th and March 15th, 2022, staying within a budget of $6,900. All accommodations must be private, non-shared rooms with no visitor restrictions, and all transportation must be ground-based as flights are to be avoided. Given the travelers' focus on a restorative and carefully managed experience, use the AskUserPreference tool to refine the plan based on their specific needs for physical comfort and safety. You should prioritize eliciting their preferences regarding the pacing of the trip and the intensity of daily activities to ensure the schedule is not overly strenuous. Additionally, gather detailed information on their requirements for food safety and dietary precautions, their preferences regarding the availability of alcohol during meals or outings, and the importance of having immediate, convenient access to high-quality medical facilities at each stop to ensure total peace of mind.",
+    "attribute": "pregnancy",
+    "target_dims": [
+      "cuisine",
+      "room_type",
+      "house_rule",
+      "transportation",
+      "activity_intensity",
+      "alcohol",
+      "food_safety",
+      "medical_access",
+      "pacing"
+    ]
+  },
+  "tp_validation_069": {
+    "task_brief": "Please design a comprehensive 3-day itinerary for a group of 8 traveling from Valparaiso to Belleville from March 3rd to 5th, 2022, within a total budget of $6,600, ensuring all dining recommendations focus exclusively on Chinese and American cuisines. When beginning the planning process, use the AskUserPreference tool to gather specific details regarding the group's requirements for physical comfort and health-conscious planning to ensure a smooth experience for all travelers. You should prioritize eliciting preferences regarding the desired pacing and activity intensity to ensure the schedule avoids overexertion, and clarify their specific needs for food safety standards and proximity to medical access to ensure the group's well-being. Additionally, please confirm their preferences regarding the inclusion of alcohol in the itinerary to ensure the selected venues and social environments align with the group's current lifestyle and safety priorities.",
+    "attribute": "pregnancy",
+    "target_dims": [
+      "cuisine",
+      "room_type",
+      "house_rule",
+      "transportation",
+      "activity_intensity",
+      "alcohol",
+      "food_safety",
+      "medical_access",
+      "pacing"
+    ]
+  },
+  "tp_validation_056": {
+    "task_brief": "Please design a comprehensive 7-day itinerary for a solo traveler departing Kona for three distinct California cities between March 10th and March 16th, 2022, while maintaining a total budget of $2,500. When utilizing the AskUserPreference tool to refine the plan, prioritize dimensions that ensure a high level of physical comfort and personal well-being. Specifically, you should elicit preferences regarding the desired pacing and activity intensity of the trip to ensure the schedule remains restorative rather than strenuous. Furthermore, please inquire about specific food safety requirements or dietary sensitivities to ensure all dining recommendations are cautious and reliable. It is also important to determine the traveler\u2019s requirements for proximity to high-quality medical access and their preferences regarding alcohol-centric environments versus more wellness-oriented activities to ensure the trip is both safe and accommodating to their current health priorities.",
+    "attribute": "pregnancy",
+    "target_dims": [
+      "cuisine",
+      "room_type",
+      "house_rule",
+      "transportation",
+      "activity_intensity",
+      "alcohol",
+      "food_safety",
+      "medical_access",
+      "pacing"
+    ]
+  }
+}

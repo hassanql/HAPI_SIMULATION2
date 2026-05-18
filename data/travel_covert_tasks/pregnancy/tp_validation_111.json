@@ -1,0 +1,6 @@
+{
+  "case_id": "tp_validation_111",
+  "attribute": "pregnancy",
+  "task_brief": "Please design a comprehensive 7-day itinerary for two travelers departing from Washington to visit three distinct cities in New York between March 13th and March 19th, 2022, adhering to a total budget of $5,500 and ensuring all selected accommodations permit smoking. To provide the highest level of personalized service, use the AskUserPreference tool to elicit the travelers' specific needs regarding the activity intensity and daily pacing of the trip, focusing on whether they require a more restorative and low-impact schedule. Furthermore, please gather detailed preferences concerning food safety standards for dining, the necessity of proximity to reliable medical access in each city, and their requirements regarding the inclusion of alcohol at venues to ensure the plan is both comfortable and secure.",
+  "prompt_hash": "3eb18bbf68a460ba"
+}

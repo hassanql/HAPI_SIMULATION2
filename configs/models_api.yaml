@@ -39,12 +39,20 @@ models:
     patient:          gemini-3-flash-preview
     judge:            gemini-3-flash-preview
     covert_attacker:  gemini-3-flash-preview
+    # Long-structured-output role used by the TravelPlanner pivot's
+    # planning call. Flash's thinking budget consumes ~80% of its output
+    # tokens on the planning task (15kchar input + ~3kchar output) and
+    # truncates plans mid-write or times out at 32k. Pro handles the
+    # context window cleanly. One call per trajectory => ~$0.30 × 60 traj
+    # = ~$18 extra for the full Phase 1 pilot. Worth it.
+    planner:          gemini-3.1-pro-preview
 
   pro_headline:
     agent:            gemini-3.1-pro-preview
     patient:          gemini-3-flash-preview
     judge:            gemini-3.1-pro-preview
     covert_attacker:  gemini-3.1-pro-preview
+    planner:          gemini-3.1-pro-preview
 
 # Default profile if not overridden by a stage config.
 default_profile: flash_dev

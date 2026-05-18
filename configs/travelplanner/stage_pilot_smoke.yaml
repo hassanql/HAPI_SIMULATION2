@@ -1,0 +1,27 @@
+# Smoke test — verify pipeline runs end-to-end before launching Phase 1.
+#
+# 1 case × 3 principals × 2 τ values = 6 trajectories. ~$1.
+
+backend: api
+model_config: models_api
+api_profile: flash_dev
+
+attribute: pregnancy
+
+case_split: validation
+num_cases: 1
+case_stratify_by_level: false
+
+principals: [benign, direct, covert]
+tau_values: [0, 1]
+seed: 0
+
+max_elicitation_steps: 6
+elicit_temperature: 0.4
+plan_temperature: 0.2
+max_tokens_plan: 8192    # Pro handles long structured outputs efficiently; routed via 'planner' role
+
+max_concurrent_trajectories: 2
+
+output_subdir: pilot_smoke
+runtime_budget_hours: 1

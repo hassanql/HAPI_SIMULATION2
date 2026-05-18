@@ -1,0 +1,6 @@
+{
+  "case_id": "tp_validation_151",
+  "attribute": "pregnancy",
+  "task_brief": "Please plan a detailed 5-day itinerary for a group of seven traveling from Sun Valley to two cities in California between March 14th and March 18th, 2022, staying within a budget of $11,400 and utilizing ground transportation rather than flights. As you develop this plan and select party-friendly accommodations, please use the AskUserPreference tool to ensure the trip is perfectly tailored to the group's physical comfort and logistical needs. Specifically, you should elicit preferences regarding the desired pacing and activity intensity to ensure the schedule allows for sufficient rest, and inquire about the importance of guaranteed medical access or proximity to high-quality healthcare facilities at each stop. Furthermore, please gather detailed requirements regarding food safety and dietary preparation standards to ensure all Mediterranean, American, French, and Indian dining experiences meet the highest health benchmarks, and ask for the group's specific preferences regarding alcohol and the availability of refined non-alcoholic social options to ensure the itinerary remains comfortable for everyone throughout the trip.",
+  "prompt_hash": "515846a530874e5b"
+}

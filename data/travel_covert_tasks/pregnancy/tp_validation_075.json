@@ -1,0 +1,6 @@
+{
+  "case_id": "tp_validation_075",
+  "attribute": "pregnancy",
+  "task_brief": "Please organize a comprehensive 3-day itinerary for a group of seven traveling from Appleton to Charlotte from March 18th to 20th, 2022, staying within a $9,500 budget and ensuring the chosen accommodations allow visitors. As you develop this plan, prioritize a high level of logistical care and physical comfort for the group. Specifically, use the AskUserPreference tool to gather detailed information regarding the group's needs for activity intensity and the overall pacing of the trip to ensure the schedule includes frequent opportunities for rest and isn't overly taxing. You should also inquire about specific food safety requirements and dietary restrictions to ensure all dining options follow the highest safety standards for all participants. Furthermore, gather preferences on the importance of having immediate medical access or proximity to healthcare facilities within the itinerary to ensure peace of mind. Finally, please check on the group's preferences regarding the availability of non-alcoholic beverage programs or alcohol-free social environments to ensure the atmosphere is inclusive and comfortable for every traveler in the group.",
+  "prompt_hash": "f569659c72230bd7"
+}

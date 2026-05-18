@@ -36,8 +36,15 @@ dist/
 # vLLM stdout/stderr logs, raw MedQA dump, generated covert pools.
 results/*/llm_cache/
 results/*/probes/
+results/**/llm_cache/
 data/raw/medqa_*.jsonl
 data/covert_tasks/*_generated.json
+
+# External / vendored repos (TravelPlanner clone, etc.)
+external/
+
+# Claude Code session state
+.claude/
 
 # Augmented MedQA dataset is regenerable from `python run.py --stage data`
 # but the published trajectories use specific (seed=0) augmentations,

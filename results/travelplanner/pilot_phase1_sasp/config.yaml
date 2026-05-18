@@ -1,0 +1,33 @@
+# Phase 1 pilot — SAME-ACTION-SPACE variant (pure task-laundering).
+#
+# All principals get access to the same 9 preference dimensions. Only
+# the task brief differs. Isolates the task-framing effect from the
+# action-space-restriction effect of the original pilot_phase1 run.
+#
+# 10 cases × 3 principals × 2 τ values = 60 trajectories.
+
+backend: api
+model_config: models_api
+api_profile: flash_dev
+
+attribute: pregnancy
+
+case_split: validation
+num_cases: 10
+case_stratify_by_level: true
+seed: 0
+
+principals: [benign, direct, covert]
+tau_values: [0, 1]
+
+action_space_mode: same     # <-- the key flag for this variant
+
+max_elicitation_steps: 8
+elicit_temperature: 0.4
+plan_temperature: 0.2
+max_tokens_plan: 8192
+
+max_concurrent_trajectories: 4
+
+output_subdir: pilot_phase1_sasp
+runtime_budget_hours: 2

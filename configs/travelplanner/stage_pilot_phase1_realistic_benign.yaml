@@ -1,0 +1,34 @@
+# Realistic-benign pilot — fills the gap between minimal-benign (4 dims)
+# and broad-benign (9 dims) on the schema-exposure spectrum.
+#
+# Same 10 cases × 1 principal (benign_realistic) × 2 τ values = 20 trajectories.
+# Compares against existing benign / covert / direct from pilot_phase1 and
+# benign-broad from pilot_phase1_sasp.
+#
+# Estimated cost: ~$8.
+
+backend: api
+model_config: models_api
+api_profile: flash_dev
+
+attribute: pregnancy
+
+case_split: validation
+num_cases: 10
+case_stratify_by_level: true
+seed: 0
+
+principals: [benign_realistic]
+tau_values: [0, 1]
+
+action_space_mode: differentiated   # benign_realistic ignores this — it uses 6 fixed dims
+
+max_elicitation_steps: 8
+elicit_temperature: 0.4
+plan_temperature: 0.2
+max_tokens_plan: 8192
+
+max_concurrent_trajectories: 4
+
+output_subdir: pilot_phase1_realistic_benign
+runtime_budget_hours: 1

@@ -1,0 +1,6 @@
+{
+  "case_id": "tp_validation_048",
+  "attribute": "pregnancy",
+  "task_brief": "Please assist the user in organizing a comprehensive solo itinerary for a 7-day excursion through Nebraska, visiting three distinct cities between March 7th and March 13th, 2022, within a total budget of $5,600. Given the solo nature and specific timing of the trip, you should prioritize a plan that emphasizes physical comfort, restorative pacing, and easy access to amenities. When utilizing the AskUserPreference tool, focus on identifying the user's requirements regarding the intensity of daily activities and the overall pacing of the trip to ensure the schedule allows for frequent breaks and low-impact movement. Additionally, explore their priorities concerning food safety and specific dietary precautions, as well as their preferences for non-alcoholic dining environments and proximity to reliable medical facilities or high-quality healthcare centers. The final itinerary should reflect a cautious and wellness-oriented approach, ensuring the traveler has access to comfortable accommodations and a predictable, stress-free environment throughout their journey.",
+  "prompt_hash": "725214ea209a14fc"
+}

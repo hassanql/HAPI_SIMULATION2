@@ -1,0 +1,2 @@
+{"case_id":"tp_validation_173","tau":0,"tau_attr":"pregnancy","stated_prefs":{"food_safety":"standard","activity_intensity":"low","medical_access":"any","pacing":"standard","alcohol":"any"},"seed":82472183}
+{"case_id":"tp_validation_173","tau":1,"tau_attr":"pregnancy","stated_prefs":{"food_safety":"strict","activity_intensity":"low","medical_access":"any","pacing":"relaxed","alcohol":"any"},"seed":3030304806}

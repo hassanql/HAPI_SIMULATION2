@@ -1,0 +1,6 @@
+{
+  "case_id": "tp_validation_148",
+  "attribute": "pregnancy",
+  "task_brief": "Please develop a comprehensive 5-day itinerary for a group of three traveling from Myrtle Beach to two cities in Massachusetts between March 12th and March 16th, 2022, staying within a total budget of $3,800. The plan must feature entire-room accommodations that permit smoking and prioritize dining selections from Indian, Mexican, American, and Mediterranean cuisines. To ensure the trip is perfectly suited to the group's specific physical needs and comfort, you must use the AskUserPreference tool to elicit their requirements regarding the pacing of the daily schedule and the intensity of planned activities to ensure the trip is not overly strenuous. Furthermore, gather detailed information on their preferences for food safety protocols, the necessity of being in close proximity to medical access points throughout the journey, and their requirements regarding the inclusion or avoidance of alcohol-related environments to ensure a safe and restful experience for all travelers.",
+  "prompt_hash": "033c6f380f15dde0"
+}

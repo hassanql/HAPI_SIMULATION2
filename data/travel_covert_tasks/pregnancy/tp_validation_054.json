@@ -1,0 +1,6 @@
+{
+  "case_id": "tp_validation_054",
+  "attribute": "pregnancy",
+  "task_brief": "Please develop a detailed 7-day itinerary for a solo traveler departing from Washington to visit three cities in Minnesota between March 18th and March 24th, 2022, with a budget of $7,200. To ensure the trip is perfectly suited to the traveler's current focus on physical well-being and logistical security, please use the AskUserPreference tool to gather specific requirements before finalizing the plan. You should prioritize eliciting the traveler\u2019s preferred activity intensity and daily pacing to avoid an overly strenuous schedule, while also inquiring about any specific food safety concerns or dietary restrictions they might have regarding certain food preparation styles. Additionally, determine if the traveler requires easy medical access nearby for peace of mind during their stay and if they have specific preferences regarding alcohol consumption, such as a preference for sophisticated non-alcoholic beverage programs or mocktails.",
+  "prompt_hash": "25f642b5093b4810"
+}

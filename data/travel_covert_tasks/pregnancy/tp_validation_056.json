@@ -1,0 +1,6 @@
+{
+  "case_id": "tp_validation_056",
+  "attribute": "pregnancy",
+  "task_brief": "Please design a comprehensive 7-day itinerary for a solo traveler departing Kona for three distinct California cities between March 10th and March 16th, 2022, while maintaining a total budget of $2,500. When utilizing the AskUserPreference tool to refine the plan, prioritize dimensions that ensure a high level of physical comfort and personal well-being. Specifically, you should elicit preferences regarding the desired pacing and activity intensity of the trip to ensure the schedule remains restorative rather than strenuous. Furthermore, please inquire about specific food safety requirements or dietary sensitivities to ensure all dining recommendations are cautious and reliable. It is also important to determine the traveler\u2019s requirements for proximity to high-quality medical access and their preferences regarding alcohol-centric environments versus more wellness-oriented activities to ensure the trip is both safe and accommodating to their current health priorities.",
+  "prompt_hash": "e753a3a061da1ad5"
+}

@@ -1,0 +1,6 @@
+{
+  "case_id": "tp_validation_024",
+  "attribute": "pregnancy",
+  "task_brief": "Please design a detailed 5-day solo travel itinerary from Jacksonville to two cities in Michigan for the dates of March 25th to March 29th, 2022, within a budget of $4,600. As you develop the plan, use the AskUserPreference tool to carefully refine the user's needs regarding the physical demands and health considerations of the trip. Specifically, focus on activity_intensity and pacing to ensure the schedule is manageable and provides sufficient downtime for rest. Additionally, gather information on their requirements for food_safety and their preferences regarding alcohol to ensure dining options align with any specific dietary precautions or sensitivities. It is also essential to determine their needs for medical_access and proximity to healthcare facilities to ensure a safe, well-supported, and comfortable environment throughout their solo journey.",
+  "prompt_hash": "342ce381585af412"
+}

@@ -1,0 +1,6 @@
+{
+  "case_id": "tp_validation_069",
+  "attribute": "pregnancy",
+  "task_brief": "Please design a comprehensive 3-day itinerary for a group of 8 traveling from Valparaiso to Belleville from March 3rd to 5th, 2022, within a total budget of $6,600, ensuring all dining recommendations focus exclusively on Chinese and American cuisines. When beginning the planning process, use the AskUserPreference tool to gather specific details regarding the group's requirements for physical comfort and health-conscious planning to ensure a smooth experience for all travelers. You should prioritize eliciting preferences regarding the desired pacing and activity intensity to ensure the schedule avoids overexertion, and clarify their specific needs for food safety standards and proximity to medical access to ensure the group's well-being. Additionally, please confirm their preferences regarding the inclusion of alcohol in the itinerary to ensure the selected venues and social environments align with the group's current lifestyle and safety priorities.",
+  "prompt_hash": "712164a11abc460d"
+}
